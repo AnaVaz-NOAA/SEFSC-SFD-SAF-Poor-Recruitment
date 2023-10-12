@@ -4,8 +4,7 @@ format: gfm
 editor: visual
 ---
 
-# Correlation Heatmap 
-
+# Correlation Heatmap
 ![](../images/Correlation_EOF_Season_Species_heatmap.png)
 
 ![](../images/Correlation_EOF_SpSeason_Species_heatmap.png)
@@ -35,28 +34,6 @@ editor: visual
 ![](../images/CorrelationEOFSeason/GagGrouperBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeason/GagGrouperBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/GagGrouperSalinityWinterMode2.png)
 
 ::: 
 
@@ -150,28 +127,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/GreaterAmberjackSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -259,28 +214,6 @@ editor: visual
 ![](../images/CorrelationEOFSeason/GrayTriggerfishBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeason/GrayTriggerfishBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/GrayTriggerfishSalinityWinterMode2.png)
 
 ::: 
 
@@ -374,28 +307,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/RedPorgySalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/RedPorgySalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/RedPorgySalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/RedPorgySalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/RedPorgySalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/RedPorgySalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/RedPorgySalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/RedPorgySalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -483,28 +394,6 @@ editor: visual
 ![](../images/CorrelationEOFSeason/RedGrouperBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeason/RedGrouperBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/RedGrouperSalinityWinterMode2.png)
 
 ::: 
 
@@ -598,28 +487,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/BlackSeaBassSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -707,28 +574,6 @@ editor: visual
 ![](../images/CorrelationEOFSeason/RedSnapperBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeason/RedSnapperBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/RedSnapperSalinityWinterMode2.png)
 
 ::: 
 
@@ -822,28 +667,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/ScampSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/ScampSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/ScampSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/ScampSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/ScampSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/ScampSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/ScampSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/ScampSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -931,28 +754,6 @@ editor: visual
 ![](../images/CorrelationEOFSeason/SnowyGrouperBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeason/SnowyGrouperBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/SnowyGrouperSalinityWinterMode2.png)
 
 ::: 
 
@@ -1046,28 +847,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinityFallMode1.png)
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinityFallMode2.png)
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinitySpringMode1.png)
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinitySpringMode2.png)
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeason/VermilionSnapperSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -1154,20 +933,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/GagGrouperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/GagGrouperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/GagGrouperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/GagGrouperSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -1223,20 +988,6 @@ editor: visual
 ![](../images/CorrelationEOFSeasonSp/GreaterAmberjackBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeasonSp/GreaterAmberjackBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/GreaterAmberjackSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/GreaterAmberjackSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/GreaterAmberjackSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/GreaterAmberjackSalinityWinterMode2.png)
 
 ::: 
 
@@ -1298,20 +1049,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/GrayTriggerfishSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/GrayTriggerfishSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/GrayTriggerfishSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/GrayTriggerfishSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -1367,20 +1104,6 @@ editor: visual
 ![](../images/CorrelationEOFSeasonSp/RedPorgyBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeasonSp/RedPorgyBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/RedPorgySalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/RedPorgySalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/RedPorgySalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/RedPorgySalinityWinterMode2.png)
 
 ::: 
 
@@ -1442,20 +1165,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/RedGrouperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/RedGrouperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/RedGrouperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/RedGrouperSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -1511,20 +1220,6 @@ editor: visual
 ![](../images/CorrelationEOFSeasonSp/BlackSeaBassBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeasonSp/BlackSeaBassBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/BlackSeaBassSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/BlackSeaBassSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/BlackSeaBassSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/BlackSeaBassSalinityWinterMode2.png)
 
 ::: 
 
@@ -1586,20 +1281,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/RedSnapperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/RedSnapperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/RedSnapperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/RedSnapperSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -1655,20 +1336,6 @@ editor: visual
 ![](../images/CorrelationEOFSeasonSp/ScampBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeasonSp/ScampBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/ScampSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/ScampSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/ScampSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/ScampSalinityWinterMode2.png)
 
 ::: 
 
@@ -1730,20 +1397,6 @@ editor: visual
 
 ::: 
 
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/SnowyGrouperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/SnowyGrouperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/SnowyGrouperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/SnowyGrouperSalinityWinterMode2.png)
-
-::: 
-
 ### SSH
 
 ::: {layout-ncol="2"}
@@ -1799,20 +1452,6 @@ editor: visual
 ![](../images/CorrelationEOFSeasonSp/VermilionSnapperBottomTWinterMode1.png)
 
 ![](../images/CorrelationEOFSeasonSp/VermilionSnapperBottomTWinterMode2.png)
-
-::: 
-
-### Salinity
-
-::: {layout-ncol="2"}
-
-![](../images/CorrelationEOFSeasonSp/VermilionSnapperSalinitySummerMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/VermilionSnapperSalinitySummerMode2.png)
-
-![](../images/CorrelationEOFSeasonSp/VermilionSnapperSalinityWinterMode1.png)
-
-![](../images/CorrelationEOFSeasonSp/VermilionSnapperSalinityWinterMode2.png)
 
 ::: 
 
