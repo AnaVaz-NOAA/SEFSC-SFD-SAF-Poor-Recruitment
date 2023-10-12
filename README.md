@@ -4,16 +4,16 @@ Poor Recruitment South Atlantic
 # Methods
 
 Methods are described
-[here](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/Methods_readme.md)
+[here](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Methods_readme.md)
 
 # Results CNAPS (shelf up to 700m)
 
-## [Anomalies](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/CNAPS_anomalies.md)
+## [Anomalies](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/CNAPS_anomalies.md)
 
 Anomalies are calculated based on average values for the entire study
 region (bounded by the shelf limit, 700m depth)
 
-## [EOF and PCAs](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/CNAPS_EOF.md)
+## [EOF and PCAs](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/CNAPS_EOF.md)
 
 EOF were performed on time series which were de-trended using a constant
 value (average over time).
@@ -21,17 +21,17 @@ value (average over time).
 The monthly analyses were de-trended seasonally (monthly averages
 removed from each month).
 
-## [Correlation](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/Correlations.md)
+## [Correlation](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Correlations.md)
 
 Simple linear correlation between recruitment deviations and
 
-## [Change Point](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/ChangePoint.md)
+## [Change Point](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/ChangePoint.md)
 
 Change point analyses of time-series using two different algorithms.
 Considered average of environmental co-variates as well as the PCA from
 the first and second modes obtained with EOF analyses.
 
-## [Averages, Standard Deviations and Trends](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/AverageTrend.md)
+## [Averages, Standard Deviations and Trends](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/AverageTrend.md)
 
 Spatial visualization of averages/variability/trends for different
 environmental co-variates. In order to consider variability overtime,
@@ -45,7 +45,7 @@ period and at decadal intervals.
 
 Hovmoller diagrams show the variability of
 
-## [Colwell Constancy](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/Colwell.md)
+## [Colwell Constancy](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Colwell.md)
 
 Barneche et al., 2018: Considers two components of environmental
 predictability: seasonality and colour.
@@ -73,14 +73,14 @@ future the environmental state is likely to stay the same.
 
 ## \[Spectral analyses\]
 
-## [Draft of Paper](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/poorrecpaper.md)
+## [Draft of Paper](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/poorrecpaper.md)
 
 ## Meeting notes
 
 Notes of previous meetings are
-[here](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/MeetingNotes.md)
+[here](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/MeetingNotes.md)
 
 ## Older Results
 
 Older results are
-[here](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/OlderResults.md)
+[here](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/OlderResults.md)
