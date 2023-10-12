@@ -24,20 +24,6 @@ editor:
 
 ::: {layout-ncol="2"}
 
-## Salinity Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_temporal_mode1_CNAPS.png)
-
-## Salinity Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_temporal_mode2_CNAPS.png)
-
-::: 
-
-::: {layout-ncol="2"}
-
 ## SSH Mode 1
 
 ![](../images/CNAPS_constant/ssh_constant_mode1_CNAPS.png)
@@ -123,52 +109,6 @@ editor:
 
 ![](../images/CNAPS_constant/bottomT_constant_Fall_mode2_CNAPS.png)
 ![](../images/CNAPS_constant/bottomT_constant_Fall_temporal_mode2_CNAPS.png)
-
-::: 
-
-## Salinity
-
-::: {layout-ncol="2"}
-
-### Salinity Winter Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Winter_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Winter_temporal_mode1_CNAPS.png)
-
-### Salinity Winter Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Winter_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Winter_temporal_mode2_CNAPS.png)
-
-### Salinity Spring Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Spring_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spring_temporal_mode1_CNAPS.png)
-
-### Salinity Spring Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Spring_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spring_temporal_mode2_CNAPS.png)
-
-### Salinity Summer Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Summer_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Summer_temporal_mode1_CNAPS.png)
-
-### Salinity Summer Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Summer_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Summer_temporal_mode2_CNAPS.png)
-
-### Salinity Fall Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Fall_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Fall_temporal_mode1_CNAPS.png)
-
-### Salinity Fall Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Fall_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Fall_temporal_mode2_CNAPS.png)
 
 ::: 
 
@@ -338,32 +278,6 @@ editor:
 
 ::: 
 
-## Salinity
-
-::: {layout-ncol="2"}
-
-### Salinity Spawning Winter Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Winter_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Winter_temporal_mode1_CNAPS.png)
-
-### Salinity Spawning Winter Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Winter_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Winter_temporal_mode2_CNAPS.png)
-
-### Salinity Spawning Summer Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Summer_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Summer_temporal_mode1_CNAPS.png)
-
-### Salinity Spawning Summer Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Summer_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spawning_Summer_temporal_mode2_CNAPS.png)
-
-::: 
-
 ## SSH
 
 ::: {layout-ncol="2"}
@@ -467,32 +381,6 @@ editor:
 
 ![](../images/CNAPS_constant/bottomT_constant_Spring_Sp_AllM_mode2_CNAPS.png)
 ![](../images/CNAPS_constant/bottomT_constant_Spring_Sp_AllM_temporal_mode2_CNAPS.png)
-
-::: 
-
-## Salinity
-
-::: {layout-ncol="2"}
-
-### Salinity Spawning Winter Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Winter_Sp_AllM_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Winter_Sp_AllM_temporal_mode1_CNAPS.png)
-
-### Salinity Spawning Winter Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Winter_Sp_AllM_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Winter_Sp_AllM_temporal_mode2_CNAPS.png)
-
-### Salinity Spawning Spring Mode 1
-
-![](../images/CNAPS_constant/Salinity_constant_Spring_Sp_AllM_mode1_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spring_Sp_AllM_temporal_mode1_CNAPS.png)
-
-### Salinity Spawning Spring Mode 2
-
-![](../images/CNAPS_constant/Salinity_constant_Spring_Sp_AllM_mode2_CNAPS.png)
-![](../images/CNAPS_constant/Salinity_constant_Spring_Sp_AllM_temporal_mode2_CNAPS.png)
 
 ::: 
 

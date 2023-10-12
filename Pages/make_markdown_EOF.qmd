@@ -10,13 +10,13 @@ echo: true
 ``` {r}
 
 # Names of Variables to plot
-NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
 NameSeason <- c("Winter","Spring","Summer","Fall")
 NameSeasonSp <- c("Winter","Summer")
 NameModes  <- c("Mode 1","Mode 2")
 
-myname <- c("bottomT","Salinity","ssh","sst","mixedlayer")
-mynameUp <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+myname <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp <- c("BottomT","SSH","SST","MixedLayer")
 
 # create combinations of names and combine the names
 aux <- expand.grid(NameModes,NameSeason,NamePlot)
