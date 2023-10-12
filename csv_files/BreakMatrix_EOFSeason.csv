@@ -1,0 +1,116 @@
+,Variable,Method,Breaks
+1,Bottom T Fall Mode 1,CPT,2014
+2,Bottom T Fall Mode 1,CPT,2021
+3,Bottom T Fall Mode 1,Breakpoints,2014
+4,Bottom T Fall Mode 2,CPT,2020
+5,Bottom T Fall Mode 2,CPT,2021
+6,Bottom T Spring Mode 1,CPT,2020
+7,Bottom T Spring Mode 1,CPT,2021
+8,Bottom T Spring Mode 1,Breakpoints,2013
+9,Bottom T Spring Mode 2,CPT,2020
+10,Bottom T Spring Mode 2,CPT,2021
+11,Bottom T Spring Mode 2,Breakpoints,1996
+12,Bottom T Summer Mode 1,CPT,2020
+13,Bottom T Summer Mode 1,CPT,2021
+14,Bottom T Summer Mode 1,Breakpoints,2013
+15,Bottom T Summer Mode 2,CPT,2020
+16,Bottom T Summer Mode 2,CPT,2021
+17,Bottom T Summer Mode 2,Breakpoints,1999
+18,Bottom T Winter Mode 1,CPT,2020
+19,Bottom T Winter Mode 1,CPT,2021
+20,Bottom T Winter Mode 1,Breakpoints,2000
+21,Bottom T Winter Mode 1,Breakpoints,2011
+22,Bottom T Winter Mode 2,CPT,2020
+23,Bottom T Winter Mode 2,CPT,2021
+24,Bottom T Winter Mode 2,Breakpoints,2013
+25,Mixed Layer Fall Mode 1,CPT,2020
+26,Mixed Layer Fall Mode 1,CPT,2021
+27,Mixed Layer Fall Mode 2,CPT,2020
+28,Mixed Layer Fall Mode 2,CPT,2021
+29,Mixed Layer Fall Mode 2,Breakpoints,2013
+30,Mixed Layer Spring Mode 1,CPT,2020
+31,Mixed Layer Spring Mode 1,CPT,2021
+32,Mixed Layer Spring Mode 1,Breakpoints,2019
+33,Mixed Layer Spring Mode 2,CPT,2020
+34,Mixed Layer Spring Mode 2,CPT,2021
+35,Mixed Layer Spring Mode 2,Breakpoints,2000
+36,Mixed Layer Summer Mode 1,CPT,2020
+37,Mixed Layer Summer Mode 1,CPT,2021
+38,Mixed Layer Summer Mode 1,Breakpoints,2011
+39,Mixed Layer Summer Mode 2,CPT,2020
+40,Mixed Layer Summer Mode 2,CPT,2021
+41,Mixed Layer Summer Mode 2,Breakpoints,2002
+42,Mixed Layer Summer Mode 2,Breakpoints,2013
+43,Mixed Layer Winter Mode 1,CPT,2020
+44,Mixed Layer Winter Mode 1,CPT,2021
+45,Mixed Layer Winter Mode 2,CPT,2020
+46,Mixed Layer Winter Mode 2,CPT,2021
+47,Mixed Layer Winter Mode 2,Breakpoints,2001
+48,Mixed Layer Winter Mode 2,Breakpoints,2016
+49,Salinity Fall Mode 1,CPT,2020
+50,Salinity Fall Mode 1,CPT,2021
+51,Salinity Fall Mode 2,CPT,2020
+52,Salinity Fall Mode 2,CPT,2021
+53,Salinity Spring Mode 1,CPT,2020
+54,Salinity Spring Mode 1,CPT,2021
+55,Salinity Spring Mode 2,CPT,2020
+56,Salinity Spring Mode 2,CPT,2021
+57,Salinity Spring Mode 2,Breakpoints,2014
+58,Salinity Spring Mode 2,Breakpoints,2016
+59,Salinity Summer Mode 1,CPT,2020
+60,Salinity Summer Mode 1,CPT,2021
+61,Salinity Summer Mode 2,CPT,2020
+62,Salinity Summer Mode 2,CPT,2021
+63,Salinity Summer Mode 2,Breakpoints,2014
+64,Salinity Winter Mode 1,CPT,2020
+65,Salinity Winter Mode 1,CPT,2021
+66,Salinity Winter Mode 2,CPT,2020
+67,Salinity Winter Mode 2,CPT,2021
+68,Salinity Winter Mode 2,Breakpoints,1998
+69,SSH Fall Mode 1,CPT,2020
+70,SSH Fall Mode 1,CPT,2021
+71,SSH Fall Mode 1,Breakpoints,2013
+72,SSH Fall Mode 2,CPT,2020
+73,SSH Fall Mode 2,CPT,2021
+74,SSH Spring Mode 1,CPT,2020
+75,SSH Spring Mode 1,CPT,2021
+76,SSH Spring Mode 1,Breakpoints,2011
+77,SSH Spring Mode 2,CPT,2020
+78,SSH Spring Mode 2,CPT,2021
+79,SSH Summer Mode 1,CPT,2020
+80,SSH Summer Mode 1,CPT,2021
+81,SSH Summer Mode 1,Breakpoints,2013
+82,SSH Summer Mode 2,CPT,2020
+83,SSH Summer Mode 2,CPT,2021
+84,SSH Summer Mode 2,Breakpoints,1997
+85,SSH Winter Mode 1,CPT,2013
+86,SSH Winter Mode 1,CPT,2021
+87,SSH Winter Mode 1,Breakpoints,2013
+88,SSH Winter Mode 2,CPT,2020
+89,SSH Winter Mode 2,CPT,2021
+90,SST Fall Mode 1,CPT,2020
+91,SST Fall Mode 1,CPT,2021
+92,SST Fall Mode 1,Breakpoints,2014
+93,SST Fall Mode 2,CPT,2020
+94,SST Fall Mode 2,CPT,2021
+95,SST Fall Mode 2,Breakpoints,2007
+96,SST Spring Mode 1,CPT,2020
+97,SST Spring Mode 1,CPT,2021
+98,SST Spring Mode 1,Breakpoints,2014
+99,SST Spring Mode 2,CPT,2020
+100,SST Spring Mode 2,CPT,2021
+101,SST Spring Mode 2,Breakpoints,2008
+102,SST Spring Mode 2,Breakpoints,2012
+103,SST Summer Mode 1,CPT,2020
+104,SST Summer Mode 1,CPT,2021
+105,SST Summer Mode 1,Breakpoints,2013
+106,SST Summer Mode 2,CPT,2020
+107,SST Summer Mode 2,CPT,2021
+108,SST Winter Mode 1,CPT,2020
+109,SST Winter Mode 1,CPT,2021
+110,SST Winter Mode 1,Breakpoints,2000
+111,SST Winter Mode 1,Breakpoints,2011
+112,SST Winter Mode 2,CPT,2020
+113,SST Winter Mode 2,CPT,2021
+114,SST Winter Mode 2,Breakpoints,2000
+115,SST Winter Mode 2,Breakpoints,2013

@@ -1,0 +1,79 @@
+
+```{r}
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAFB-Poor-Recruitment/Pages/")
+
+cat("Seasonality: fraction of the total variance that is due to predictable seasonal periodicity \n")
+
+cat("Color: White noise occurs when there is no correlation between one measurement and the next, while for reddened noise, there is some correlation between measurements separated by a finite time-scale \n")
+
+cat("Constancy (C): measures the extent to which the environment is the same for all months in all years \n")
+
+cat("Contingency (M): measures the extent to which the environmental differences between months are the same in all years \n")
+
+cat("Predictability (P): is the sum of Constancy (C) and Contingency (M) \n\n")
+ 
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","SSH","SST","MixedLayer")
+col_names  <- c("BSeasonal", "Colour", "Constancy", 
+                "Contigency","Predictability")
+Full_names <- c("Seasonality", "Colour",
+                "Constancy","Contigency","Predictability")
+
+pathfigs <- ("../images/analyses/")
+
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# ",Full_names[iaux]," \n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    file_list <- list.files(path = pathfigs, pattern = paste0("^", col_names[iaux], "\\d*_", myname[iVar], "\\.png$"))
+    
+    cat("::: {layout-ncol=\"3\"}\n\n")
+    # find pattern in the length
+    for (iFile in 1:length(file_list)) {
+      switch(iFile,
+             {cat(paste0("## ", NamePlot[iVar], " 1993-2021 \n"))},
+             {cat(paste0("## ", NamePlot[iVar], " 1993-2009 \n"))},
+             {cat(paste0("## ", NamePlot[iVar], " 2010-2021 \n"))})
+      fig_name <- paste0(pathfigs,file_list[iFile])
+      cat(paste0('![](', fig_name, ')\n\n'),sep="")
+    }
+    cat("::: \n\n")
+  }
+}
+
+cat("# Colwell Seasonality \n")
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","SSH","SST","MixedLayer")
+col_names  <- c("Constancy","Contigency","Predictability")
+Full_names <- c("Constancy","Contigency","Predictability")
+seasons <- c("Fall", "Summer", "Spring", "Winter")
+
+pathfigs <- ("../images/analyses/")
+
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# ",Full_names[iaux]," \n\n"))
+  for (iVar in seq_along(NamePlot)) {
+    for (season in seasons) {
+      cat(paste0("# ", season, "\n\n"))
+      file_list <- list.files(path = pathfigs, pattern = paste0("^", col_names[iaux], "\\d*_", myname[iVar], "_", season, "\\.png$"))
+      
+      cat("::: {layout-ncol=\"3\"}\n\n")
+      # find pattern in the length
+      for (iFile in 1:length(file_list)) {
+        switch(iFile,
+               {cat(paste0("## ", NamePlot[iVar], " 1993-2021 \n"))},
+               {cat(paste0("## ", NamePlot[iVar], " 1993-2009 \n"))},
+               {cat(paste0("## ", NamePlot[iVar], " 2010-2021 \n"))})
+        fig_name <- paste0(pathfigs,file_list[iFile])
+        cat(paste0('![](', fig_name, ')\n\n'),sep="")
+      }
+      cat("::: \n\n")
+    }
+  }
+}
+```

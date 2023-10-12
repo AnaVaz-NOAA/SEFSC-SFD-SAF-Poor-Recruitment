@@ -1,0 +1,67 @@
+---
+title: "Poor Recruitment South Atlantic"
+format: gfm
+bibliography: references.bib
+---
+
+# Methods
+
+Methods are described [here](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/Methods_readme.md) 
+
+# Results CNAPS (shelf up to 700m)
+
+## [Anomalies](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/CNAPS_anomalies.md)
+
+Anomalies are calculated based on average values for the entire study region (bounded by the shelf limit, 700m depth)
+ 
+## [EOF and PCAs](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/CNAPS_EOF.md)
+
+EOF were performed on time series which were de-trended using a constant value (average over time).
+
+The monthly analyses were de-trended seasonally (monthly averages removed from each month).
+
+## [Correlation](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/Correlations.md)
+
+Simple linear correlation between recruitment deviations and 
+
+## [Change Point](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/ChangePoint.md)
+
+Change point analyses of time-series using two different algorithms. Considered average of environmental co-variates as well as the PCA from the first and second modes obtained with EOF analyses. 
+
+## [Averages, Standard Deviations and Trends](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/AverageTrend.md)
+
+Spatial visualization of averages/variability/trends for different environmental co-variates.
+In order to consider variability overtime, results are taken over 1) the entire data set, 2) the first 20 years (1993-2014), and 3) the most recent 10 years. 
+
+We also look at the seasonal averages/variability/trends, for the entire period and at decadal intervals. 
+
+## [Hovmoller Diagrams]
+
+Hovmoller diagrams show the variability of 
+
+## [Colwell Constancy](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/Colwell.md)
+
+Barneche et al., 2018: Considers two components of environmental predictability: seasonality and colour.
+
+Seasonality represents the regularity in the timing and magnitude of fluctuations in the average environmental state over seasons. Colour of environmental noise represents how predictable and similar the environment is between successive time points, or how far into the future the environmental state is likely to stay the same. 
+
+- Seasonality: fraction of the total variance that is due to predictable seasonal periodicity 
+
+- Color: White noise occurs when there is no correlation between one measurement and the next, while for reddened noise, there is some correlation between measurements separated by a finite time-scale 
+
+- Constancy (C): measures the extent to which the environment is the same for all months in all years 
+
+- Contingency (M): measures the extent to which the environmental differences between months are the same in all years 
+
+- Predictability (P): is the sum of Constancy (C) and Contingency (M) 
+
+## [Spectral analyses]
+
+## [Draft of Paper](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/poorrecpaper.md)
+
+## Meeting notes
+
+Notes of previous meetings are [here](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/MeetingNotes.md)
+
+## Older Results
+Older results are [here](https://github.com/AnaVaz-NOAA/Poor-Recruitment-South-Atlantic/blob/main/Pages/OlderResults.md)

@@ -1,0 +1,48 @@
+---
+title: "MeetingNotes"
+format: gfm
+editor: visual
+---
+Notes from group meeting on 08/04
+
+Paper 1 - Ideas and directions
+
+-   Spawning data issues
+
+-   Unaccounted for discards in the assessment
+
+    -   so hidden mortality happening due to discards and need to be looked into
+
+-   Recruitment overfishing
+
+-   Protogyny - sperm limitations
+
+-   Environment affecting reproduction (eg., pollution with endocrine disruptors).
+
+-   Environmental Hypothesis
+
+For environmental Hypothesis
+
+-   refine the statistics with random forest and GAMs for instance.
+
+-   consider oceanographic effects on reproduction - expand the analyses techniques used
+
+-   Consider Ekman transport, as wind patterns might have shifted recently
+
+-   Look at processes driving larvae inshore
+
+    -   Links to the wind above
+
+    -   Make sure to include period of larval transport (30-60 days post spawning)
+
+    -   There are two explanations: transport and/or conditions not adequate to survival
+
+    -   There is also the large scale drives affecting near-shore to offshore transport
+
+-   Look at Chlorophyll - consider match and mismatch hypothesis
+
+    -   2 Chlorophyll series - MODIS and blended product from Copernicus
+
+    -   MODIS: look at northern and southern and winter vs summer
+
+-   Seasonality: is spawning changing with changing conditions? Any indication?

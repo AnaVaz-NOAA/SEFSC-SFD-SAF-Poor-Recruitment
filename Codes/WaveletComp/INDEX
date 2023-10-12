@@ -1,0 +1,41 @@
+FXtrade.transactions    Series of FX trade transactions
+SurrogateData           Simulation of surrogates for a given time
+                        series x, subject to the specified method and
+                        parameters
+USelection2016.Instagram
+                        Hourly time series of the number of
+                        candidate-related media posted on Instagram
+                        during the week before the 2016 US presidential
+                        election
+WaveletComp-package     Computational Wavelet Analysis
+analyze.coherency       Computation of the cross-wavelet power and
+                        wavelet coherence spectrum of two time series
+analyze.wavelet         Computation of the wavelet power spectrum of a
+                        single time series
+marriages.Turkey        Series of monthly marriages in Turkey
+periodic.series         Computation of a (deterministic) periodic time
+                        series of linearly changing period.
+reconstruct             Reconstruction of a (detrended) time series
+                        from output provided by an object of class
+                        '"analyze.wavelet"' or '"analyze.coherency"'
+wc.avg                  Plot cross-wavelet power averages and wavelet
+                        coherence averages across time of two time
+                        series
+wc.image                Image plot of the cross-wavelet power spectrum
+                        and wavelet coherence spectrum of two time
+                        series
+wc.phasediff.image      Image plot of phase differences of periodic
+                        components for two time series
+wc.sel.phases           Comparison plot of phases for selected periodic
+                        components of two time series
+weather.radiation.Mannheim
+                        Series of weather data and ambient gamma dose
+                        rate readings
+wt.avg                  Plot of wavelet power averages across time of a
+                        single time series
+wt.image                Image plot of the wavelet power spectrum of a
+                        single time series
+wt.phase.image          Image plot of the phases of periodic components
+                        for a single time series
+wt.sel.phases           Plot phases for selected periodic components of
+                        a single time series

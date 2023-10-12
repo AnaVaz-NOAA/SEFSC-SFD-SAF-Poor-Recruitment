@@ -1,0 +1,253 @@
+---
+title: "EOF Seasonal Shelf 500m"
+format: gfm
+---
+
+# Seasonal Averages
+
+::: {layout-ncol="4"}
+### SST
+
+![](images/500m_FigsSeasonal/SeasonalAvg_sst_Winter_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_sst_Spring_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_sst_Summer_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_sst_Fall_shelf500m.png)
+
+### Salinity
+
+![](images/500m_FigsSeasonal/SeasonalAvg_Salinity_Winter_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_Salinity_Spring_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_Salinity_Summer_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_Salinity_Fall_shelf500m.png)
+
+### Bottom Temperature
+
+![](images/500m_FigsSeasonal/SeasonalAvg_bottomT_Winter_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_bottomT_Spring_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_bottomT_Summer_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_bottomT_Fall_shelf500m.png)
+
+### Mixed Layer
+
+![](images/500m_FigsSeasonal/SeasonalAvg_mixedlayer_Winter_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_mixedlayer_Spring_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_mixedlayer_Summer_shelf500m.png) ![](images/500m_FigsSeasonal/SeasonalAvg_mixedlayer_Fall_shelf500m.png)
+:::
+
+### SST
+
+::: {layout-ncol="4"}
+### Winter Mode 1
+
+![](images/500m_FigsSeasonal/sst_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Winter_temporal_mode1_shelf500m.png)
+
+### Winter Mode 2
+
+![](images/500m_FigsSeasonal/sst_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Winter_temporal_mode2_shelf500m.png)
+
+### Spring Mode 1
+
+![](images/500m_FigsSeasonal/sst_Spring_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Spring_temporal_mode1_shelf500m.png)
+
+### Spring Mode 2
+
+![](images/500m_FigsSeasonal/sst_Spring_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Spring_temporal_mode2_shelf500m.png)
+
+### Summer Mode 1
+
+![](images/500m_FigsSeasonal/sst_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Summer_temporal_mode1_shelf500m.png)
+
+### Summer Mode 2
+
+![](images/500m_FigsSeasonal/sst_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Summer_temporal_mode2_shelf500m.png)
+
+### Fall Mode 1
+
+![](images/500m_FigsSeasonal/sst_Fall_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Fall_temporal_mode1_shelf500m.png)
+
+### Fall Mode 2
+
+![](images/500m_FigsSeasonal/sst_Fall_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Fall_temporal_mode2_shelf500m.png)
+:::
+
+# Salinity
+
+::: {layout-ncol="4"}
+### Winter Mode 1
+
+![](images/500m_FigsSeasonal/Salinity_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Winter_temporal_mode1_shelf500m.png)
+
+### Winter Mode 2
+
+![](images/500m_FigsSeasonal/Salinity_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Winter_temporal_mode2_shelf500m.png)
+
+### Spring Mode 1
+
+![](images/500m_FigsSeasonal/Salinity_Spring_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Spring_temporal_mode1_shelf500m.png)
+
+### Spring Mode 2
+
+![](images/500m_FigsSeasonal/Salinity_Spring_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Spring_temporal_mode2_shelf500m.png)
+
+### Summer Mode 1
+
+![](images/500m_FigsSeasonal/Salinity_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Summer_temporal_mode1_shelf500m.png)
+
+### Summer Mode 2
+
+![](images/500m_FigsSeasonal/Salinity_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Summer_temporal_mode2_shelf500m.png)
+
+### Fall Mode 1
+
+![](images/500m_FigsSeasonal/Salinity_Fall_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Fall_temporal_mode1_shelf500m.png)
+
+### Fall Mode 2
+
+![](images/500m_FigsSeasonal/Salinity_Fall_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Fall_temporal_mode2_shelf500m.png)
+:::
+
+# Bottom Temperature
+
+::: {layout-ncol="4"}
+### Winter Mode 1
+
+![](images/500m_FigsSeasonal/bottomT_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Winter_temporal_mode1_shelf500m.png)
+
+### Winter Mode 2
+
+![](images/500m_FigsSeasonal/bottomT_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Winter_temporal_mode2_shelf500m.png)
+
+### Spring Mode 1
+
+![](images/500m_FigsSeasonal/bottomT_Spring_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Spring_temporal_mode1_shelf500m.png)
+
+### Spring Mode 2
+
+![](images/500m_FigsSeasonal/bottomT_Spring_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Spring_temporal_mode2_shelf500m.png)
+
+### Summer Mode 1
+
+![](images/500m_FigsSeasonal/bottomT_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Summer_temporal_mode1_shelf500m.png)
+
+### Summer Mode 2
+
+![](images/500m_FigsSeasonal/bottomT_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Summer_temporal_mode2_shelf500m.png)
+
+### Fall Mode 1
+
+![](images/500m_FigsSeasonal/bottomT_Fall_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Fall_temporal_mode1_shelf500m.png)
+
+### Fall Mode 2
+
+![](images/500m_FigsSeasonal/bottomT_Fall_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Fall_temporal_mode2_shelf500m.png)
+:::
+
+# Mixed Layer
+
+::: {layout-ncol="4"}
+### Winter Mode 1
+
+![](images/500m_FigsSeasonal/mixedlayer_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Winter_temporal_mode1_shelf500m.png)
+
+### Winter Mode 2
+
+![](images/500m_FigsSeasonal/mixedlayer_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Winter_temporal_mode2_shelf500m.png)
+
+### Spring Mode 1
+
+![](images/500m_FigsSeasonal/mixedlayer_Spring_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Spring_temporal_mode1_shelf500m.png)
+
+### Spring Mode 2
+
+![](images/500m_FigsSeasonal/mixedlayer_Spring_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Spring_temporal_mode2_shelf500m.png)
+
+### Summer Mode 1
+
+![](images/500m_FigsSeasonal/mixedlayer_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Summer_temporal_mode1_shelf500m.png)
+
+### Summer Mode 2
+
+![](images/500m_FigsSeasonal/mixedlayer_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Summer_temporal_mode2_shelf500m.png)
+
+### Fall Mode 1
+
+![](images/500m_FigsSeasonal/mixedlayer_Fall_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Fall_temporal_mode1_shelf500m.png)
+
+### Fall Mode 2
+
+![](images/500m_FigsSeasonal/mixedlayer_Fall_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Fall_temporal_mode2_shelf500m.png)
+:::
+
+# Spawning Seasons
+
+-   Winter spawning species: February to April
+-   Summer spawning species: June to August
+
+# SST
+
+::: {layout-ncol="4"}
+### Winter(Feb-Apr) Mode 1
+
+![](images/500m_FigsSeasonal/sst_Spawning_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Spawning_Winter_temporal_mode1_shelf500m.png)
+
+### Winter(Feb-Apr) Mode 2
+
+![](images/500m_FigsSeasonal/sst_Spawning_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Spawning_Winter_temporal_mode2_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 1
+
+![](images/500m_FigsSeasonal/sst_Spawning_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Spawning_Summer_temporal_mode1_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 2
+
+![](images/500m_FigsSeasonal/sst_Spawning_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/sst_Spawning_Summer_temporal_mode2_shelf500m.png)
+:::
+
+# Salinity
+
+::: {layout-ncol="4"}
+### Winter(Feb-Apr) Mode 1
+
+![](images/500m_FigsSeasonal/Salinity_Spawning_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Spawning_Winter_temporal_mode1_shelf500m.png)
+
+### Winter(Feb-Apr) Mode 2
+
+![](images/500m_FigsSeasonal/Salinity_Spawning_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Spawning_Winter_temporal_mode2_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 1
+
+![](images/500m_FigsSeasonal/Salinity_Spawning_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Spawning_Summer_temporal_mode1_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 2
+
+![](images/500m_FigsSeasonal/Salinity_Spawning_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/Salinity_Spawning_Summer_temporal_mode2_shelf500m.png)
+:::
+
+# Bottom Temperature
+
+::: {layout-ncol="4"}
+### Winter(Feb-Apr) Mode 1
+
+![](images/500m_FigsSeasonal/bottomT_Spawning_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Spawning_Winter_temporal_mode1_shelf500m.png)
+
+### Winter(Feb-Apr) Mode 2
+
+![](images/500m_FigsSeasonal/bottomT_Spawning_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Spawning_Winter_temporal_mode2_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 1
+
+![](images/500m_FigsSeasonal/bottomT_Spawning_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Spawning_Summer_temporal_mode1_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 2
+
+![](images/500m_FigsSeasonal/bottomT_Spawning_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/bottomT_Spawning_Summer_temporal_mode2_shelf500m.png)
+:::
+
+# Mixed Layer
+
+::: {layout-ncol="4"}
+### Winter(Feb-Apr) Mode 1
+
+![](images/500m_FigsSeasonal/mixedlayer_Spawning_Winter_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Spawning_Winter_temporal_mode1_shelf500m.png)
+
+### Winter(Feb-Apr) Mode 2
+
+![](images/500m_FigsSeasonal/mixedlayer_Spawning_Winter_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Spawning_Winter_temporal_mode2_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 1
+
+![](images/500m_FigsSeasonal/mixedlayer_Spawning_Summer_mode1_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Spawning_Summer_temporal_mode1_shelf500m.png)
+
+### Summer(Jun-Aug) Mode 2
+
+![](images/500m_FigsSeasonal/mixedlayer_Spawning_Summer_mode2_shelf500m.png) ![](images/500m_FigsSeasonal/mixedlayer_Spawning_Summer_temporal_mode2_shelf500m.png)
+:::

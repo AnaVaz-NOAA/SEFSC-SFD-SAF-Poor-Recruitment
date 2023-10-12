@@ -1,0 +1,104 @@
+# Create markdown for CNAPS_no trend
+
+```{r}
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+NameSeason <- c("Winter","Spring","Summer","Fall")
+NameSeasonSp <- c("Winter","Summer")
+NameModes  <- c("Mode 1","Mode 2")
+
+myname <- c("bottomT","Salinity","ssh","sst","mixedlayer")
+mynameUp <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeason,NamePlot)
+NamePlotModesSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeasonSp,NamePlot)
+NamePlotModesSpawnSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NamePlot, NameModes)
+NamePlotModes <- paste(aux$Var1, aux$Var2)
+
+spNamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
+
+NameIndexes <- c("AMO","MEI","NAO")
+
+cat("# Correlation Heatmap \n\n")
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAFB-Poor-Recruitment/Pages/")
+
+filedir <- "../images/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+file_plot <- file_list[grep("^Correlation.*\\.png$",file_list)]
+ 
+for (i in seq_along(file_plot)) {
+  cat(paste0('![](', filedir,file_plot[i], ')\n\n'),sep="")
+}
+
+cat("# Correlations EOF Season \n\n")
+
+filedir <- "../images/CorrelationEOFSeason/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+
+for (iSp in seq_along(spNamePlot)) {
+  cat(paste0("## ", spNamePlot[iSp], "\n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    cat(paste0("### ", NamePlot[iVar], "\n\n"))
+    
+    cat("::: {layout-ncol=\"2\"}\n\n")
+    
+    file_plot <- file_list[grep(gsub(" ","",
+                                     paste0("^", spNamePlot[iSp], 
+                                     mynameUp[iVar], ".*\\.png$")),
+                                     file_list)]
+    if (length(file_plot) > 0) {
+      for (iplot in 1:length(file_plot)){
+        fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+        cat(paste0('![](', fig_name, ')\n\n'),sep="")
+      }
+    }
+    cat("::: \n\n")
+  }
+}
+
+cat("::: \n\n")
+
+cat("# Correlations EOF Season Spawning \n\n")
+
+filedir <- "../images/CorrelationEOFSeasonSp/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+
+for (iSp in seq_along(spNamePlot)) {
+  cat(paste0("## ", spNamePlot[iSp], "\n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    cat(paste0("### ", NamePlot[iVar], "\n\n"))
+  
+    cat("::: {layout-ncol=\"2\"}\n\n")
+      
+    file_plot <- file_list[grep(gsub(" ","",
+                                     paste0("^", spNamePlot[iSp], 
+                                     mynameUp[iVar], ".*\\.png$")), 
+                                file_list)]
+    if (length(file_plot) > 0) {
+      for (iplot in 1:length(file_plot)){
+        fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+        cat(paste0('![](', fig_name, ')\n\n'),sep="")
+      }
+    }
+    cat("::: \n\n")
+  }
+}
+
+cat("::: \n\n")
+```

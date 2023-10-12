@@ -1,0 +1,59 @@
+---
+title: "EOF analyses for shelf"
+format: gfm
+---
+
+# SST
+
+## EOF (average and seasonality removed)
+
+::: {layout-ncol="2"}
+
+### Mode 1
+![](images/500m_Figs/MonthlyAvg_sst_mode1_deseason_shelf_500.png) 
+![](images/500m_Figs/MonthlyAvg_sst_temporal_mode1_season_shelf_500.png)
+
+### Mode 2
+![](images/500m_Figs/MonthlyAvg_sst_mode2_deseason_shelf_500.png) 
+![](images/500m_Figs/MonthlyAvg_sst_temporal_mode2_season_shelf_500.png)
+:::
+
+# Salinity
+
+## EOF (average and seasonality removed)
+
+::: {layout-ncol="2"}
+### Mode 1
+![](images/500m_Figs/MonthlyAvg_Salinity_mode1_deseason_shelf_500.png) 
+![](images/500m_Figs/MonthlyAvg_Salinity_temporal_mode1_season_shelf_500.png)
+
+### Mode 2
+![](images/500m_Figs/MonthlyAvg_Salinity_mode2_deseason_shelf_500.png) 
+![](images/500m_Figs/MonthlyAvg_Salinity_temporal_mode2_season_shelf_500.png)
+:::
+
+# Bottom Temperature
+
+## EOF (average and seasonality removed)
+
+::: {layout-ncol="2"}
+### Mode 1
+![](images/500m_Figs/MonthlyAvg_bottomT_mode1_deseason_shelf_500.png) ![](images/500m_Figs/MonthlyAvg_bottomT_temporal_mode1_season_shelf_500.png)
+
+### Mode 2
+![](images/500m_Figs/MonthlyAvg_bottomT_mode2_deseason_shelf_500.png) ![](images/500m_Figs/MonthlyAvg_bottomT_temporal_mode2_season_shelf_500.png)
+:::
+
+# Mixed Layer
+
+## EOF (average and seasonality removed)
+
+::: {layout-ncol="2"}
+### Mode 1
+![](images/500m_Figs/MonthlyAvg_mixedlayer_mode1_deseason_shelf_500.png) 
+![](images/500m_Figs/MonthlyAvg_mixedlayer_temporal_mode1_season_shelf_500.png)
+
+### Mode 2
+![](images/500m_Figs/MonthlyAvg_mixedlayer_mode2_deseason_shelf_500.png) 
+![](images/500m_Figs/MonthlyAvg_mixedlayer_temporal_mode2_season_shelf_500.png)
+:::

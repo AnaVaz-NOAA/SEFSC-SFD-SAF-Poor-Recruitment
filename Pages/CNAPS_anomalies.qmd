@@ -1,0 +1,201 @@
+---
+title: "Anomalies CNAPS"
+format: gfm
+editor: visual
+---
+
+# Monthly anomalies 
+
+::: {layout-ncol="2"}
+
+## Bottom Temperature
+![](../images/anomalies/bottomT_anomaly.png)
+
+## SSH
+![](../images/anomalies/ssh_anomaly.png)
+
+## SST
+![](../images/anomalies/sst_anomaly.png)
+
+## Mixed Layer
+![](../images/anomalies/mixedlayer_anomaly.png)
+
+::: 
+
+# Spawning Season Anomalies 
+
+- Winter: February, March, April 
+
+- Summer: June, July, August 
+
+::: {layout-ncol="2"}
+
+## Bottom Temperature Winter
+![](../images/anomalies/bottomT_constant_Spawning_Winter_anomaly.png)
+
+## Bottom Temperature Summer
+![](../images/anomalies/bottomT_constant_Spawning_Summer_anomaly.png)
+
+## SSH Winter
+![](../images/anomalies/ssh_constant_Spawning_Winter_anomaly.png)
+
+## SSH Summer
+![](../images/anomalies/ssh_constant_Spawning_Summer_anomaly.png)
+
+## SST Winter
+![](../images/anomalies/sst_constant_Spawning_Winter_anomaly.png)
+
+## SST Summer
+![](../images/anomalies/sst_constant_Spawning_Summer_anomaly.png)
+
+## Mixed Layer Winter
+![](../images/anomalies/mixedlayer_constant_Spawning_Winter_anomaly.png)
+
+## Mixed Layer Summer
+![](../images/anomalies/mixedlayer_constant_Spawning_Summer_anomaly.png)
+
+::: 
+
+# Seasonal Anomalies 
+
+::: {layout-ncol="2"}
+
+## Bottom Temperature Winter
+![](../images/anomalies/bottomT_Winter_anomaly_constant.png)
+
+## Bottom Temperature Spring
+![](../images/anomalies/bottomT_Spring_anomaly_constant.png)
+
+## Bottom Temperature Summer
+![](../images/anomalies/bottomT_Summer_anomaly_constant.png)
+
+## Bottom Temperature Fall
+![](../images/anomalies/bottomT_Fall_anomaly_constant.png)
+
+## SSH Winter
+![](../images/anomalies/ssh_Winter_anomaly_constant.png)
+
+## SSH Spring
+![](../images/anomalies/ssh_Spring_anomaly_constant.png)
+
+## SSH Summer
+![](../images/anomalies/ssh_Summer_anomaly_constant.png)
+
+## SSH Fall
+![](../images/anomalies/ssh_Fall_anomaly_constant.png)
+
+## SST Winter
+![](../images/anomalies/sst_Winter_anomaly_constant.png)
+
+## SST Spring
+![](../images/anomalies/sst_Spring_anomaly_constant.png)
+
+## SST Summer
+![](../images/anomalies/sst_Summer_anomaly_constant.png)
+
+## SST Fall
+![](../images/anomalies/sst_Fall_anomaly_constant.png)
+
+## Mixed Layer Winter
+![](../images/anomalies/mixedlayer_Winter_anomaly_constant.png)
+
+## Mixed Layer Spring
+![](../images/anomalies/mixedlayer_Spring_anomaly_constant.png)
+
+## Mixed Layer Summer
+![](../images/anomalies/mixedlayer_Summer_anomaly_constant.png)
+
+## Mixed Layer Fall
+![](../images/anomalies/mixedlayer_Fall_anomaly_constant.png)
+
+::: 
+
+# Seasonal Anomalies (by Months) 
+
+Here we have 3 points of observations for each season 
+
+::: {layout-ncol="2"}
+
+## Bottom Temperature Winter
+![](../images/anomalies/bottomT_Winter_AllM_anomaly_constant.png)
+
+## Bottom Temperature Spring
+![](../images/anomalies/bottomT_Spring_AllM_anomaly_constant.png)
+
+## Bottom Temperature Summer
+![](../images/anomalies/bottomT_Summer_AllM_anomaly_constant.png)
+
+## Bottom Temperature Fall
+![](../images/anomalies/bottomT_Fall_AllM_anomaly_constant.png)
+
+## SSH Winter
+![](../images/anomalies/ssh_Winter_AllM_anomaly_constant.png)
+
+## SSH Spring
+![](../images/anomalies/ssh_Spring_AllM_anomaly_constant.png)
+
+## SSH Summer
+![](../images/anomalies/ssh_Summer_AllM_anomaly_constant.png)
+
+## SSH Fall
+![](../images/anomalies/ssh_Fall_AllM_anomaly_constant.png)
+
+## SST Winter
+![](../images/anomalies/sst_Winter_AllM_anomaly_constant.png)
+
+## SST Spring
+![](../images/anomalies/sst_Spring_AllM_anomaly_constant.png)
+
+## SST Summer
+![](../images/anomalies/sst_Summer_AllM_anomaly_constant.png)
+
+## SST Fall
+![](../images/anomalies/sst_Fall_AllM_anomaly_constant.png)
+
+## Mixed Layer Winter
+![](../images/anomalies/mixedlayer_Winter_AllM_anomaly_constant.png)
+
+## Mixed Layer Spring
+![](../images/anomalies/mixedlayer_Spring_AllM_anomaly_constant.png)
+
+## Mixed Layer Summer
+![](../images/anomalies/mixedlayer_Summer_AllM_anomaly_constant.png)
+
+## Mixed Layer Fall
+![](../images/anomalies/mixedlayer_Fall_AllM_anomaly_constant.png)
+
+::: 
+
+# Spawning Season Anomalies 
+
+- Winter: February, March, April 
+
+- Spring: June, July, August 
+
+::: {layout-ncol="2"}
+
+## Bottom Temperature Winter
+![](../images/anomalies/bottomT_Winter_Sp_AllM_anomaly_constant.png)
+
+## Bottom Temperature Spring
+![](../images/anomalies/bottomT_Spring_Sp_AllM_anomaly_constant.png)
+
+## SSH Winter
+![](../images/anomalies/ssh_Winter_Sp_AllM_anomaly_constant.png)
+
+## SSH Spring
+![](../images/anomalies/ssh_Spring_Sp_AllM_anomaly_constant.png)
+
+## SST Winter
+![](../images/anomalies/sst_Winter_Sp_AllM_anomaly_constant.png)
+
+## SST Spring
+![](../images/anomalies/sst_Spring_Sp_AllM_anomaly_constant.png)
+
+## Mixed Layer Winter
+![](../images/anomalies/mixedlayer_Winter_Sp_AllM_anomaly_constant.png)
+
+## Mixed Layer Spring
+![](../images/anomalies/mixedlayer_Spring_Sp_AllM_anomaly_constant.png)
+
+::: 

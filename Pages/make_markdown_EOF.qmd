@@ -1,0 +1,109 @@
+---
+title: "EOF"
+output:
+  format: gfm
+execute: 
+  eval: true
+echo: true
+---
+
+``` {r}
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+NameSeason <- c("Winter","Spring","Summer","Fall")
+NameSeasonSp <- c("Winter","Summer")
+NameModes  <- c("Mode 1","Mode 2")
+
+myname <- c("bottomT","Salinity","ssh","sst","mixedlayer")
+mynameUp <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeason,NamePlot)
+NamePlotModesSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeasonSp,NamePlot)
+NamePlotModesSpawnSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NamePlot, NameModes)
+NamePlotModes <- paste(aux$Var1, aux$Var2)
+
+spNamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
+
+NameIndexes <- c("AMO","MEI","NAO")
+
+pathfigs <- ("../images/CNAPS_constant/")
+
+cat("# EOF Monthly \n\n")
+
+for (iVar in seq_along(NamePlot)) {
+  cat("::: {layout-ncol=\"2\"}\n\n")
+  
+  for (iMode in seq_along(NameModes)) {
+    cat(paste0("## ", NamePlot[iVar], " ",NameModes[iMode], "\n\n"))
+    fig_name <- paste0(pathfigs, myname[iVar],'_constant_mode',iMode,'_CNAPS.png')
+    cat(paste0('![](', fig_name, ')\n'),sep="")
+    fig_name <- paste0(pathfigs, myname[iVar],'_constant_temporal_mode',iMode,'_CNAPS.png')
+    cat(paste0('![](', fig_name, ')\n\n'))
+  }
+  cat("::: \n\n")
+}
+
+cat("# EOF Seasonal \n\n")
+
+for (iVar in seq_along(NamePlot)) {
+  cat(paste0("## ", NamePlot[iVar], "\n\n"))
+  cat("::: {layout-ncol=\"2\"}\n\n")
+  
+  for (iSeason in seq_along(NameSeason)) {
+    for (iMode in seq_along(NameModes)) {
+      cat(paste0("### ", NamePlot[iVar]," ",NameSeason[iSeason]," ",NameModes[iMode], "\n\n"))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_',NameSeason[iSeason],'_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n'))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_',NameSeason[iSeason],'_temporal_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n\n'))
+    }  
+  }
+  cat("::: \n\n")
+}
+
+cat("# EOF Seasonal Spawning \n\n")
+
+for (iVar in seq_along(NamePlot)) {
+  cat(paste0("## ", NamePlot[iVar], "\n\n"))
+  cat("::: {layout-ncol=\"2\"}\n\n")
+  
+  for (iSeason in seq_along(NameSeasonSp)) {
+    for (iMode in seq_along(NameModes)) {
+      cat(paste0("### ", NamePlot[iVar]," Spawning ",NameSeasonSp[iSeason]," ",NameModes[iMode], "\n\n"))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_Spawning_',NameSeasonSp[iSeason],'_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n'))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_Spawning_',NameSeasonSp[iSeason],'_temporal_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n\n'))
+    }  
+  }  
+  cat("::: \n\n")
+}
+
+NameSeasonSp <- c("Winter","Spring")
+
+cat("# EOF Seasonal Spawning All Months \n\n")
+
+for (iVar in seq_along(NamePlot)) {
+  cat(paste0("## ", NamePlot[iVar], "\n\n"))
+  cat("::: {layout-ncol=\"2\"}\n\n")
+  
+  for (iSeason in seq_along(NameSeasonSp)) {
+    for (iMode in seq_along(NameModes)) {
+      cat(paste0("### ", NamePlot[iVar]," Spawning ",NameSeasonSp[iSeason]," ",NameModes[iMode], "\n\n"))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_',NameSeasonSp[iSeason],'_Sp_AllM_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n'))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_',NameSeasonSp[iSeason],'_Sp_AllM_temporal_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n\n'))
+    }  
+  }  
+  cat("::: \n\n")
+}
+```

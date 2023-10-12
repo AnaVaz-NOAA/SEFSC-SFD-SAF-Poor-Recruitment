@@ -1,0 +1,493 @@
+---
+title: "EOF_CNAPS_TrendRemoved"
+format: gfm
+editor: visual
+---
+
+# Monthly anomalies
+
+::: {layout-ncol="2"}
+## Bottom Temperature
+
+![](./images/CNAPS/bottomT_anomaly.png)
+
+## Salinity
+
+![](./images/CNAPS/Salinity_anomaly.png)
+
+## SSH
+
+![](./images/CNAPS/ssh_anomaly.png)
+
+## SST
+
+![](./images/CNAPS/sst_anomaly.png)
+
+## Mixed Layer
+
+![](./images/CNAPS/mixedlayer_anomaly.png)
+:::
+
+# EOF Monthly
+
+::: {layout-ncol="2"}
+## Bottom Temperature Mode 1
+
+![](./images/CNAPS/bottomT_linear_mode1_CNAPS.png) ![](./images/CNAPS/bottomT_linear_temporal_mode1_CNAPS.png)
+
+## Bottom Temperature Mode 2
+
+![](./images/CNAPS/bottomT_linear_mode2_CNAPS.png) ![](./images/CNAPS/bottomT_linear_temporal_mode2_CNAPS.png)
+:::
+
+::: {layout-ncol="2"}
+## Salinity Mode 1
+
+![](./images/CNAPS/Salinity_linear_mode1_CNAPS.png) ![](./images/CNAPS/Salinity_linear_temporal_mode1_CNAPS.png)
+
+## Salinity Mode 2
+
+![](./images/CNAPS/Salinity_linear_mode2_CNAPS.png) ![](./images/CNAPS/Salinity_linear_temporal_mode2_CNAPS.png)
+:::
+
+::: {layout-ncol="2"}
+## SSH Mode 1
+
+![](./images/CNAPS/ssh_linear_mode1_CNAPS.png) ![](./images/CNAPS/ssh_linear_temporal_mode1_CNAPS.png)
+
+## SSH Mode 2
+
+![](./images/CNAPS/ssh_linear_mode2_CNAPS.png) ![](./images/CNAPS/ssh_linear_temporal_mode2_CNAPS.png)
+:::
+
+::: {layout-ncol="2"}
+## SST Mode 1
+
+![](./images/CNAPS/sst_linear_mode1_CNAPS.png) ![](./images/CNAPS/sst_linear_temporal_mode1_CNAPS.png)
+
+## SST Mode 2
+
+![](./images/CNAPS/sst_linear_mode2_CNAPS.png) ![](./images/CNAPS/sst_linear_temporal_mode2_CNAPS.png)
+:::
+
+::: {layout-ncol="2"}
+## Mixed Layer Mode 1
+
+![](./images/CNAPS/mixedlayer_linear_mode1_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_temporal_mode1_CNAPS.png)
+
+## Mixed Layer Mode 2
+
+![](./images/CNAPS/mixedlayer_linear_mode2_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_temporal_mode2_CNAPS.png)
+:::
+
+# Spawning season anomalies
+
+::: {layout-ncol="2"}
+## Bottom Temperature Winter
+
+![](./images/CNAPS/bottomT_Spawning_Winter_anomaly.png)
+
+## Bottom Temperature Summer
+
+![](./images/CNAPS/bottomT_Spawning_Summer_anomaly.png)
+
+## Salinity Winter
+
+![](./images/CNAPS/Salinity_Spawning_Winter_anomaly.png)
+
+## Salinity Summer
+
+![](./images/CNAPS/Salinity_Spawning_Summer_anomaly.png)
+
+## SSH Winter
+
+![](./images/CNAPS/ssh_Spawning_Winter_anomaly.png)
+
+## SSH Summer
+
+![](./images/CNAPS/ssh_Spawning_Summer_anomaly.png)
+
+## SST Winter
+
+![](./images/CNAPS/sst_Spawning_Winter_anomaly.png)
+
+## SST Summer
+
+![](./images/CNAPS/sst_Spawning_Summer_anomaly.png)
+
+## Mixed Layer Winter
+
+![](./images/CNAPS/mixedlayer_Spawning_Winter_anomaly.png)
+
+## Mixed Layer Summer
+
+![](./images/CNAPS/mixedlayer_Spawning_Summer_anomaly.png)
+:::
+
+# EOF Seasonal
+
+## Bottom Temperature
+
+::: {layout-ncol="2"}
+### Bottom Temperature Winter Mode 1
+
+![](./images/CNAPS/bottomT_linear_Winter_mode1_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Winter_temporal_mode1_CNAPS.png)
+
+### Bottom Temperature Winter Mode 2
+
+![](./images/CNAPS/bottomT_linear_Winter_mode2_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Winter_temporal_mode2_CNAPS.png)
+
+### Bottom Temperature Spring Mode 1
+
+![](./images/CNAPS/bottomT_linear_Spring_mode1_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Spring_temporal_mode1_CNAPS.png)
+
+### Bottom Temperature Spring Mode 2
+
+![](./images/CNAPS/bottomT_linear_Spring_mode2_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Spring_temporal_mode2_CNAPS.png)
+
+### Bottom Temperature Summer Mode 1
+
+![](./images/CNAPS/bottomT_linear_Summer_mode1_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Summer_temporal_mode1_CNAPS.png)
+
+### Bottom Temperature Summer Mode 2
+
+![](./images/CNAPS/bottomT_linear_Summer_mode2_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Summer_temporal_mode2_CNAPS.png)
+
+### Bottom Temperature Fall Mode 1
+
+![](./images/CNAPS/bottomT_linear_Fall_mode1_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Fall_temporal_mode1_CNAPS.png)
+
+### Bottom Temperature Fall Mode 2
+
+![](./images/CNAPS/bottomT_linear_Fall_mode2_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Fall_temporal_mode2_CNAPS.png)
+:::
+
+## Salinity
+
+::: {layout-ncol="2"}
+### Salinity Winter Mode 1
+
+![](./images/CNAPS/Salinity_linear_Winter_mode1_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Winter_temporal_mode1_CNAPS.png)
+
+### Salinity Winter Mode 2
+
+![](./images/CNAPS/Salinity_linear_Winter_mode2_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Winter_temporal_mode2_CNAPS.png)
+
+### Salinity Spring Mode 1
+
+![](./images/CNAPS/Salinity_linear_Spring_mode1_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Spring_temporal_mode1_CNAPS.png)
+
+### Salinity Spring Mode 2
+
+![](./images/CNAPS/Salinity_linear_Spring_mode2_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Spring_temporal_mode2_CNAPS.png)
+
+### Salinity Summer Mode 1
+
+![](./images/CNAPS/Salinity_linear_Summer_mode1_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Summer_temporal_mode1_CNAPS.png)
+
+### Salinity Summer Mode 2
+
+![](./images/CNAPS/Salinity_linear_Summer_mode2_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Summer_temporal_mode2_CNAPS.png)
+
+### Salinity Fall Mode 1
+
+![](./images/CNAPS/Salinity_linear_Fall_mode1_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Fall_temporal_mode1_CNAPS.png)
+
+### Salinity Fall Mode 2
+
+![](./images/CNAPS/Salinity_linear_Fall_mode2_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Fall_temporal_mode2_CNAPS.png)
+:::
+
+## SSH
+
+::: {layout-ncol="2"}
+### SSH Winter Mode 1
+
+![](./images/CNAPS/ssh_linear_Winter_mode1_CNAPS.png) ![](./images/CNAPS/ssh_linear_Winter_temporal_mode1_CNAPS.png)
+
+### SSH Winter Mode 2
+
+![](./images/CNAPS/ssh_linear_Winter_mode2_CNAPS.png) ![](./images/CNAPS/ssh_linear_Winter_temporal_mode2_CNAPS.png)
+
+### SSH Spring Mode 1
+
+![](./images/CNAPS/ssh_linear_Spring_mode1_CNAPS.png) ![](./images/CNAPS/ssh_linear_Spring_temporal_mode1_CNAPS.png)
+
+### SSH Spring Mode 2
+
+![](./images/CNAPS/ssh_linear_Spring_mode2_CNAPS.png) ![](./images/CNAPS/ssh_linear_Spring_temporal_mode2_CNAPS.png)
+
+### SSH Summer Mode 1
+
+![](./images/CNAPS/ssh_linear_Summer_mode1_CNAPS.png) ![](./images/CNAPS/ssh_linear_Summer_temporal_mode1_CNAPS.png)
+
+### SSH Summer Mode 2
+
+![](./images/CNAPS/ssh_linear_Summer_mode2_CNAPS.png) ![](./images/CNAPS/ssh_linear_Summer_temporal_mode2_CNAPS.png)
+
+### SSH Fall Mode 1
+
+![](./images/CNAPS/ssh_linear_Fall_mode1_CNAPS.png) ![](./images/CNAPS/ssh_linear_Fall_temporal_mode1_CNAPS.png)
+
+### SSH Fall Mode 2
+
+![](./images/CNAPS/ssh_linear_Fall_mode2_CNAPS.png) ![](./images/CNAPS/ssh_linear_Fall_temporal_mode2_CNAPS.png)
+:::
+
+## SST
+
+::: {layout-ncol="2"}
+### SST Winter Mode 1
+
+![](./images/CNAPS/sst_linear_Winter_mode1_CNAPS.png) ![](./images/CNAPS/sst_linear_Winter_temporal_mode1_CNAPS.png)
+
+### SST Winter Mode 2
+
+![](./images/CNAPS/sst_linear_Winter_mode2_CNAPS.png) ![](./images/CNAPS/sst_linear_Winter_temporal_mode2_CNAPS.png)
+
+### SST Spring Mode 1
+
+![](./images/CNAPS/sst_linear_Spring_mode1_CNAPS.png) ![](./images/CNAPS/sst_linear_Spring_temporal_mode1_CNAPS.png)
+
+### SST Spring Mode 2
+
+![](./images/CNAPS/sst_linear_Spring_mode2_CNAPS.png) ![](./images/CNAPS/sst_linear_Spring_temporal_mode2_CNAPS.png)
+
+### SST Summer Mode 1
+
+![](./images/CNAPS/sst_linear_Summer_mode1_CNAPS.png) ![](./images/CNAPS/sst_linear_Summer_temporal_mode1_CNAPS.png)
+
+### SST Summer Mode 2
+
+![](./images/CNAPS/sst_linear_Summer_mode2_CNAPS.png) ![](./images/CNAPS/sst_linear_Summer_temporal_mode2_CNAPS.png)
+
+### SST Fall Mode 1
+
+![](./images/CNAPS/sst_linear_Fall_mode1_CNAPS.png) ![](./images/CNAPS/sst_linear_Fall_temporal_mode1_CNAPS.png)
+
+### SST Fall Mode 2
+
+![](./images/CNAPS/sst_linear_Fall_mode2_CNAPS.png) ![](./images/CNAPS/sst_linear_Fall_temporal_mode2_CNAPS.png)
+:::
+
+## Mixed Layer
+
+::: {layout-ncol="2"}
+### Mixed Layer Winter Mode 1
+
+![](./images/CNAPS/mixedlayer_linear_Winter_mode1_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Winter_temporal_mode1_CNAPS.png)
+
+### Mixed Layer Winter Mode 2
+
+![](./images/CNAPS/mixedlayer_linear_Winter_mode2_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Winter_temporal_mode2_CNAPS.png)
+
+### Mixed Layer Spring Mode 1
+
+![](./images/CNAPS/mixedlayer_linear_Spring_mode1_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Spring_temporal_mode1_CNAPS.png)
+
+### Mixed Layer Spring Mode 2
+
+![](./images/CNAPS/mixedlayer_linear_Spring_mode2_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Spring_temporal_mode2_CNAPS.png)
+
+### Mixed Layer Summer Mode 1
+
+![](./images/CNAPS/mixedlayer_linear_Summer_mode1_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Summer_temporal_mode1_CNAPS.png)
+
+### Mixed Layer Summer Mode 2
+
+![](./images/CNAPS/mixedlayer_linear_Summer_mode2_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Summer_temporal_mode2_CNAPS.png)
+
+### Mixed Layer Fall Mode 1
+
+![](./images/CNAPS/mixedlayer_linear_Fall_mode1_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Fall_temporal_mode1_CNAPS.png)
+
+### Mixed Layer Fall Mode 2
+
+![](./images/CNAPS/mixedlayer_linear_Fall_mode2_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Fall_temporal_mode2_CNAPS.png)
+:::
+
+# Seasonal anomalies
+
+::: {layout-ncol="2"}
+## Bottom Temperature Winter
+
+![](./images/CNAPS/bottomT_Winter_anomaly.png)
+
+## Bottom Temperature Spring
+
+![](./images/CNAPS/bottomT_Spring_anomaly.png)
+
+## Bottom Temperature Summer
+
+![](./images/CNAPS/bottomT_Summer_anomaly.png)
+
+## Bottom Temperature Fall
+
+![](./images/CNAPS/bottomT_Fall_anomaly.png)
+
+## Salinity Winter
+
+![](./images/CNAPS/Salinity_Winter_anomaly.png)
+
+## Salinity Spring
+
+![](./images/CNAPS/Salinity_Spring_anomaly.png)
+
+## Salinity Summer
+
+![](./images/CNAPS/Salinity_Summer_anomaly.png)
+
+## Salinity Fall
+
+![](./images/CNAPS/Salinity_Fall_anomaly.png)
+
+## SSH Winter
+
+![](./images/CNAPS/ssh_Winter_anomaly.png)
+
+## SSH Spring
+
+![](./images/CNAPS/ssh_Spring_anomaly.png)
+
+## SSH Summer
+
+![](./images/CNAPS/ssh_Summer_anomaly.png)
+
+## SSH Fall
+
+![](./images/CNAPS/ssh_Fall_anomaly.png)
+
+## SST Winter
+
+![](./images/CNAPS/sst_Winter_anomaly.png)
+
+## SST Spring
+
+![](./images/CNAPS/sst_Spring_anomaly.png)
+
+## SST Summer
+
+![](./images/CNAPS/sst_Summer_anomaly.png)
+
+## SST Fall
+
+![](./images/CNAPS/sst_Fall_anomaly.png)
+
+## Mixed Layer Winter
+
+![](./images/CNAPS/mixedlayer_Winter_anomaly.png)
+
+## Mixed Layer Spring
+
+![](./images/CNAPS/mixedlayer_Spring_anomaly.png)
+
+## Mixed Layer Summer
+
+![](./images/CNAPS/mixedlayer_Summer_anomaly.png)
+
+## Mixed Layer Fall
+
+![](./images/CNAPS/mixedlayer_Fall_anomaly.png)
+:::
+
+# EOF Seasonal Spawning
+
+## Bottom Temperature
+
+::: {layout-ncol="2"}
+### Bottom Temperature Spawning Winter Mode 1
+
+![](./images/CNAPS/bottomT_linear_Spawning_Winter_mode1_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Spawning_Winter_temporal_mode1_CNAPS.png)
+
+### Bottom Temperature Spawning Winter Mode 2
+
+![](./images/CNAPS/bottomT_linear_Spawning_Winter_mode2_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Spawning_Winter_temporal_mode2_CNAPS.png)
+
+### Bottom Temperature Spawning Summer Mode 1
+
+![](./images/CNAPS/bottomT_linear_Spawning_Summer_mode1_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Spawning_Summer_temporal_mode1_CNAPS.png)
+
+### Bottom Temperature Spawning Summer Mode 2
+
+![](./images/CNAPS/bottomT_linear_Spawning_Summer_mode2_CNAPS.png) ![](./images/CNAPS/bottomT_linear_Spawning_Summer_temporal_mode2_CNAPS.png)
+:::
+
+## Salinity
+
+::: {layout-ncol="2"}
+### Salinity Spawning Winter Mode 1
+
+![](./images/CNAPS/Salinity_linear_Spawning_Winter_mode1_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Spawning_Winter_temporal_mode1_CNAPS.png)
+
+### Salinity Spawning Winter Mode 2
+
+![](./images/CNAPS/Salinity_linear_Spawning_Winter_mode2_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Spawning_Winter_temporal_mode2_CNAPS.png)
+
+### Salinity Spawning Summer Mode 1
+
+![](./images/CNAPS/Salinity_linear_Spawning_Summer_mode1_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Spawning_Summer_temporal_mode1_CNAPS.png)
+
+### Salinity Spawning Summer Mode 2
+
+![](./images/CNAPS/Salinity_linear_Spawning_Summer_mode2_CNAPS.png) ![](./images/CNAPS/Salinity_linear_Spawning_Summer_temporal_mode2_CNAPS.png)
+:::
+
+## SSH
+
+::: {layout-ncol="2"}
+### SSH Spawning Winter Mode 1
+
+![](./images/CNAPS/ssh_linear_Spawning_Winter_mode1_CNAPS.png) ![](./images/CNAPS/ssh_linear_Spawning_Winter_temporal_mode1_CNAPS.png)
+
+### SSH Spawning Winter Mode 2
+
+![](./images/CNAPS/ssh_linear_Spawning_Winter_mode2_CNAPS.png) ![](./images/CNAPS/ssh_linear_Spawning_Winter_temporal_mode2_CNAPS.png)
+
+### SSH Spawning Summer Mode 1
+
+![](./images/CNAPS/ssh_linear_Spawning_Summer_mode1_CNAPS.png) ![](./images/CNAPS/ssh_linear_Spawning_Summer_temporal_mode1_CNAPS.png)
+
+### SSH Spawning Summer Mode 2
+
+![](./images/CNAPS/ssh_linear_Spawning_Summer_mode2_CNAPS.png) ![](./images/CNAPS/ssh_linear_Spawning_Summer_temporal_mode2_CNAPS.png)
+:::
+
+## SST
+
+::: {layout-ncol="2"}
+### SST Spawning Winter Mode 1
+
+![](./images/CNAPS/sst_linear_Spawning_Winter_mode1_CNAPS.png) ![](./images/CNAPS/sst_linear_Spawning_Winter_temporal_mode1_CNAPS.png)
+
+### SST Spawning Winter Mode 2
+
+![](./images/CNAPS/sst_linear_Spawning_Winter_mode2_CNAPS.png) ![](./images/CNAPS/sst_linear_Spawning_Winter_temporal_mode2_CNAPS.png)
+
+### SST Spawning Summer Mode 1
+
+![](./images/CNAPS/sst_linear_Spawning_Summer_mode1_CNAPS.png) ![](./images/CNAPS/sst_linear_Spawning_Summer_temporal_mode1_CNAPS.png)
+
+### SST Spawning Summer Mode 2
+
+![](./images/CNAPS/sst_linear_Spawning_Summer_mode2_CNAPS.png) ![](./images/CNAPS/sst_linear_Spawning_Summer_temporal_mode2_CNAPS.png)
+:::
+
+## Mixed Layer
+
+::: {layout-ncol="2"}
+### Mixed Layer Spawning Winter Mode 1
+
+![](./images/CNAPS/mixedlayer_linear_Spawning_Winter_mode1_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Spawning_Winter_temporal_mode1_CNAPS.png)
+
+### Mixed Layer Spawning Winter Mode 2
+
+![](./images/CNAPS/mixedlayer_linear_Spawning_Winter_mode2_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Spawning_Winter_temporal_mode2_CNAPS.png)
+
+### Mixed Layer Spawning Summer Mode 1
+
+![](./images/CNAPS/mixedlayer_linear_Spawning_Summer_mode1_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Spawning_Summer_temporal_mode1_CNAPS.png)
+
+### Mixed Layer Spawning Summer Mode 2
+
+![](./images/CNAPS/mixedlayer_linear_Spawning_Summer_mode2_CNAPS.png) ![](./images/CNAPS/mixedlayer_linear_Spawning_Summer_temporal_mode2_CNAPS.png)
+:::

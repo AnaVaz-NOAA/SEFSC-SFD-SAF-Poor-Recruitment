@@ -1,0 +1,68 @@
+
+```{r}
+
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAFB-Poor-Recruitment/Pages/")
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","Salinity","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+col_names  <- c("TrendLinear", "Trend", "Avg", "Std")
+Full_names <- c("Trend Linear", "Trend", "Average", "Standard Deviation")
+
+pathfigs <- ("../images/analyses/")
+
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# ",Full_names[iaux]," \n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    file_list <- list.files(path = pathfigs, pattern = paste0("^", col_names[iaux], "\\d*_", myname[iVar], "\\.png$"))
+    
+    cat("::: {layout-ncol=\"3\"}\n\n")
+    # find pattern in the length
+    for (iFile in 1:length(file_list)) {
+      switch(iFile,
+             {cat(paste0("## ", NamePlot[iVar], " 1993-2021 \n"))},
+             {cat(paste0("## ", NamePlot[iVar], " 1993-2009 \n"))},
+             {cat(paste0("## ", NamePlot[iVar], " 2010-2021 \n"))})
+      fig_name <- paste0(pathfigs,file_list[iFile])
+      cat(paste0('![](', fig_name, ')\n\n'),sep="")
+    }
+    cat("::: \n\n")
+  }
+}
+
+cat("# Seasonal Trends and Averages \n")
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","Salinity","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+col_names  <- c("TrendLinear", "Trend", "Avg", "Std")
+Full_names <- c("Trend Linear", "Trend", "Average", "Standard Deviation")
+seasons <- c("Fall", "Summer", "Spring", "Winter")
+
+pathfigs <- ("../images/analyses/")
+
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# ",Full_names[iaux]," \n\n"))
+  for (iVar in seq_along(NamePlot)) {
+    for (season in seasons) {
+      cat(paste0("# ", season, "\n\n"))
+      file_list <- list.files(path = pathfigs, pattern = paste0("^", col_names[iaux], "\\d*_", myname[iVar], "_", season, "\\.png$"))
+      
+      cat("::: {layout-ncol=\"3\"}\n\n")
+      # find pattern in the length
+      for (iFile in 1:length(file_list)) {
+        switch(iFile,
+               {cat(paste0("## ", NamePlot[iVar], " 1993-2021 \n"))},
+               {cat(paste0("## ", NamePlot[iVar], " 1993-2009 \n"))},
+               {cat(paste0("## ", NamePlot[iVar], " 2010-2021 \n"))})
+        fig_name <- paste0(pathfigs,file_list[iFile])
+        cat(paste0('![](', fig_name, ')\n\n'),sep="")
+      }
+      cat("::: \n\n")
+    }
+  }
+}
+```

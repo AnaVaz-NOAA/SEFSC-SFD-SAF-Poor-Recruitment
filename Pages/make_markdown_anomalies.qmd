@@ -1,0 +1,122 @@
+---
+title: "Anomalies"
+output:
+   format: gfm
+execute: 
+  eval: true
+echo: true
+---
+ 
+``` {r}
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAFB-Poor-Recruitment/Pages/")
+pathfigs <- ("../images/anomalies/")
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
+NameSeason <- c("Winter","Spring","Summer","Fall")
+NameSeasonSp <- c("Winter","Summer")
+NameModes  <- c("Mode 1","Mode 2")
+
+myname <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp <- c("BottomT","SSH","SST","MixedLayer")
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeason,NamePlot)
+NamePlotModesSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeasonSp,NamePlot)
+NamePlotModesSpawnSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NamePlot, NameModes)
+NamePlotModes <- paste(aux$Var1, aux$Var2)
+
+spNamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
+
+NameIndexes <- c("AMO","MEI","NAO")
+
+cat("# Monthly anomalies \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomlies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  cat(paste0("## ", NamePlot[iVar], "\n"))
+  fig_name <- paste0(pathfigs, myname[iVar],'_anomaly.png')
+  cat(paste0('![](', fig_name, ')\n\n'),sep="")
+}
+
+cat("::: \n\n")
+
+cat("# Spawning Season Anomalies \n\n")
+
+cat("- Winter: February, March, April \n\n")
+cat("- Summer: June, July, August \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomalies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  for (iSeason in seq_along(NameSeasonSp)) {
+    cat(paste0("## ", NamePlot[iVar],' ',NameSeasonSp[iSeason], "\n"))
+    fig_name <- paste0(pathfigs, myname[iVar],'_constant_Spawning_',NameSeasonSp[iSeason],'_anomaly.png')
+    cat(paste0('![](', fig_name, ')\n\n'),sep="")
+  }
+}
+
+cat("::: \n\n")
+
+cat("# Seasonal Anomalies \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomalies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  for (iSeason in seq_along(NameSeason)) {
+    cat(paste0("## ", NamePlot[iVar],' ',NameSeason[iSeason], "\n"))
+    fig_name <- paste0(pathfigs, myname[iVar],'_',NameSeason[iSeason],'_anomaly_constant.png')
+    cat(paste0('![](', fig_name, ')\n\n'),sep="")
+  }
+}
+
+cat("::: \n\n")
+
+cat("# Seasonal Anomalies (by Months) \n\n")
+
+cat("Here we have 3 points of observations for each season \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomalies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  for (iSeason in seq_along(NameSeason)) {
+    cat(paste0("## ", NamePlot[iVar],' ',NameSeason[iSeason], "\n"))
+    fig_name <- paste0(pathfigs, myname[iVar],'_',NameSeason[iSeason],'_AllM_anomaly_constant.png')
+    cat(paste0('![](', fig_name, ')\n\n'),sep="")
+  }
+}
+
+NameSeasonSp <- c("Winter","Spring")
+
+cat("::: \n\n")
+
+cat("# Spawning Season Anomalies \n\n")
+
+cat("- Winter: February, March, April \n\n")
+cat("- Spring: June, July, August \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomalies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  for (iSeason in seq_along(NameSeasonSp)) {
+    cat(paste0("## ", NamePlot[iVar],' ',NameSeasonSp[iSeason], "\n"))
+    fig_name <- paste0(pathfigs, myname[iVar], '_', NameSeasonSp[iSeason], '_Sp_AllM_anomaly_constant.png')
+    cat(paste0('![](', fig_name, ')\n\n'),sep="")
+  }
+}
+
+cat("::: \n\n")
+
+```

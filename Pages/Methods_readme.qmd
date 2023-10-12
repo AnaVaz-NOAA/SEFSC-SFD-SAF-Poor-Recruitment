@@ -1,0 +1,135 @@
+---
+title: "Methods Poor Recruitment South Atlantic"
+format: gfm
+bibliography: references.bib
+---
+  
+  ## Data used for spatial-temporal analyses
+  
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | Data                     | Type                                                                  | Years     | Source                                                                                    | Comments             |
+  +==========================+=======================================================================+===========+===========================================================================================+======================+
+  | Chlorophyll              | Satellite (SeaWiFS, MODIS, MERIS, VIIRS-SNPP & JPSS1, OLCI-S3A & S3B) | 1998-2021 | <https://data.marine.copernicus.eu/product/OCEANCOLOUR_GLO_BGC_L4_MY_009_104/description> | Daily resolution     |
+  |                          |                                                                       |           |                                                                                           |                      |
+  |                          |                                                                       |           |                                                                                           | 4 km horizontal grid |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | SST                      | Observation                                                           |           |                                                                                           |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | SST                      | Model Reanalyses                                                      | 1993-2021 | CNAPS2                                                                                    | Daily resolution     |
+  |                          |                                                                       |           |                                                                                           |                      |
+  |                          |                                                                       |           |                                                                                           | 4 km horizontal grid |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | Bottom Temperature       | Model Reanalyses                                                      | 1993-2021 | CNAPS2                                                                                    |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | Surface Salinity         | Model Reanalyses                                                      | 1993-2021 | CNAPS2                                                                                    |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | Depth Mixed Layer        | Model Reanalyses                                                      | 1993-2021 | CNAPS2                                                                                    |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | **Preliminary Analyses** |                                                                       |           |                                                                                           |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | SST                      | Model Reanalyses                                                      | 1998-2020 | <https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/services>         | Daily resolution     |
+  |                          |                                                                       |           |                                                                                           |                      |
+  |                          |                                                                       |           |                                                                                           | 8 km horizontal grid |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | Bottom Temperature       | Model Reanalyses                                                      | 1998-2020 | <https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/services>         |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | Surface Salinity         | Model Reanalyses                                                      | 1998-2020 | <https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/services>         |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  | Depth Mixed Layer        | Model Reanalyses                                                      | 1998-2020 | <https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/services>         |                      |
+  +--------------------------+-----------------------------------------------------------------------+-----------+-------------------------------------------------------------------------------------------+----------------------+
+  
+  ## **Indexes temporal characterization**
+  
+  +----------------------------------+--------------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------------------------------+----------------------------------------------------------------+
+  | Index                            | Source                                                             | Filename                                          | Temporal Resolution                                                           | Observation                                                    |
+  +==================================+====================================================================+===================================================+===============================================================================+================================================================+
+  | North Atlantic Oscillation (NAO) | https://www.cpc.ncep.noaa.gov/products/precip/CWlink/pna/nao.shtml | 1\) norm.daily.nao.cdas.z500.19500101_current.csv | 1.  Daily                                                                     | See [^1]                                                       |
+  |                                  |                                                                    |                                                   |                                                                               |                                                                |
+  |                                  |                                                                    | 2\) norm.nao.monthly.b5001.current.ascii.txt      | 2.  Monthly                                                                   | Refs [^2]                                                      |
+  +----------------------------------+--------------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------------------------------+----------------------------------------------------------------+
+  | Atlantic Meridional Oscillation  | https://psl.noaa.gov/data/timeseries/AMO/                          | 1\) smooth                                        | Monthly                                                                       | Refs [^3]                                                      |
+  |                                  |                                                                    |                                                   |                                                                               |                                                                |
+  |                                  |                                                                    | amon.sm.data.txt                                  |                                                                               |                                                                |
+  |                                  |                                                                    |                                                   |                                                                               |                                                                |
+  |                                  |                                                                    | 2\) unsmooth                                      |                                                                               |                                                                |
+  |                                  |                                                                    |                                                   |                                                                               |                                                                |
+  |                                  |                                                                    | amon.us.data.txt                                  |                                                                               |                                                                |
+  +----------------------------------+--------------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------------------------------+----------------------------------------------------------------+
+  | ENSO (Multivariate Index)        | https://psl.noaa.gov/enso/mei/                                     | meiv2.data.txt                                    | Bi-Monthly (centered between two months, eg, data for Dec-Jan is labeled Jan) |                                                                |
+  +----------------------------------+--------------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------------------------------+----------------------------------------------------------------+
+  | ENSO Niño 4                      | https://www.cpc.ncep.noaa.gov/data/indices/                        | nina4.anom.data.txt                               | Monthly                                                                       | Did not use on comparison yet, MEIV presented good correlation |
+  +----------------------------------+--------------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------------------------------+----------------------------------------------------------------+
+  
+  [^1]: NAO can be measured in many different ways (the spatial extent can change), so we can measure it by difference of pressure between stations (eg, Ireland and Azores), or by looking at temporal evolution through seasons (eg, using EOFs). There are two series from Jim Hurrel I am not able to access at NCAR (one of them is many series composed of NAO calculated for several seasons and/or months).
+
+https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-pc-based
+
+https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-station-based
+
+[^2]: Hurrell, J.W., 1995: Decadal trends in the North Atlantic Oscillation and relationships to regional temperature and precipitation. Science 269, 676-679.
+
+Jones, P.D., Jónsson, T. and Wheeler, D., 1997: Extension to the North Atlantic Oscillation using early instrumental pressure observations from Gibraltar and South-West Iceland. Int. J. Climatol. 17, 1433-1450.
+
+[^3]: Renfield, D.B., A. M. Mestas-Nunez and P.J. Trimble, 2001: The Atlantic multidecadal oscillation and it's relation to rainfall and river flows in the continental U.S.. Geophysical Research Letters, Vol. 28, 2077-2080.
+
+**Other indexes:**
+
+Comprehensive updated list on: https://psl.noaa.gov/data/climateindices/list/
+
+-   **Atlantic Meridional Mode (AMM)** SST Index
+
+    -   https://psl.noaa.gov/data/timeseries/monthly/AMM/
+
+    -   2007 Kossin, J. P. and D. J. Vimont: "A more general framework for understanding Atlantic hurricane variability and trends". Bull. Amer. Meteor. Soc., accepted 5/24/2007
+
+    -   2007 Vimont, D. J., and J. P. Kossin: "The Atlantic Meridional Mode and hurricane activity", Geophys. Res. Lett., 34, L07709, doi:10.1029/2007GL029683
+
+    -   2004 Chiang, J. C. H., and D. J. Vimont: Analogous meridional modes of atmosphere-ocean variability in the tropical Pacific and tropical Atlantic. J. Climate,17(21), 4143-4158
+
+-   **North Tropical Atlantic (NTA) SST Index**
+
+    -   https://psl.noaa.gov/forecasts/sstlim/fornta.html
+
+    -   Penland, C., and L. Matrosova, 1998: "Prediction of tropical Atlantic sea surface temperatures using Linear Inverse Modeling," J. Climate, March, 483-496 pp.
+
+### Did not work:
+
+-   FNMOC Regional Navy Coastal Model: long time-series and good horizontal resolution, but too many temporal gaps to allow for use for the entire time period.
+
+-   MODIS alone - too many spatial points lost to cloud coverage.
+
+-   Other products with good spatial coverage do not extend for enough time (or do not extend to recent years).
+
+### List from Taylor:
+
+-   Daily 4km and 9km SST and Chl from MODIS from 2002-present.
+
+-   SeaWIFS Chl goes back to 1997 so you can get a few more years.
+
+-   NOAA Optimally Integrated SST product (1981-2019)
+
+-   Monthly averaged 9km NPP from Oregon State's VGPM from 2002-present
+
+-   3D biogeochemical fields for GoM (1993-2012) https://bg.copernicus.org/articles/17/3385/2020/
+  
+  # **Methods**
+  
+  **Analyses:** Our initial, prospective, analyses include EOFs, seasonal regression maps, and trend analysis, as described below.
+
+1.  EOFs of environmental fields, including:
+  
+  1.  Characterizing the temporal timescales of the principal-component-analyses (PCA) associated with each major EOF mode (by means of a power spectrum analysis).
+
+2.  Analyzing if the temporal variability of the series are related with the Atlantic Multidecadal Oscillation (AMO), the North Atlantic Oscillation (NAO), or other indexes associated with high and low frequency variability in the South Atlantic (by means of correlation of PCAs with relevant indexes).
+
+3.  Exploration of possible patterns by considering seasonal-reliant EOFs or other methods that can consider interannual variability of individual seasons (by correlation of PCAs of individual seasons with recruitment series).
+
+4.  Comparison of principal spatial EOF modes with spatial distribution of the species presenting recruitment changes (negative and positive).
+
+2.  Characterization of seasonal mean anomalies.
+
+1.  Explore regression maps for different environmental variables to characterize possible match-mismatch patterns between seasons (particularly relevant for the rate of CHL change).
+
+3.  Explore temporal-trends of environmental parameters for our study region, considering different spatio-temporal configurations (trends within seasons, for areas with species distribution, etc).
+
+Apply Low-frequency component analysis (LFCA) to identify low-frequency patterns and low-frequency components that might be associated with multidecadal oscillations and long term regime shifts (following @wills2018).

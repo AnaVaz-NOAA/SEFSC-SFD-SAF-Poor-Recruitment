@@ -1,0 +1,278 @@
+---
+title: "Spectral"
+format: gfm
+editor: visual
+---
+Calculate spectral density. Define frequency band cutoffs based on Muñiz et al., 2021 
+(1) Interannual frequencies 384–1152 days (>1-3 years) 
+(2) Annual frequencies 101–383 days 
+(3) Intra-seasonal frequencies 20–100 days 
+(4) Synoptic frequencies 16–19 days 
+Normalize the band energy by the total spectral density to find the relative contributions 
+# Inter-Annual 
+
+::: {layout-ncol="3"}
+
+## Bottom Temperature 1993-2021 
+![](../images/analyses/InterAnnual_bottomT.png)
+
+## Bottom Temperature 1993-2009 
+![](../images/analyses/InterAnnual1_bottomT.png)
+
+## Bottom Temperature 2010-2021 
+![](../images/analyses/InterAnnual2_bottomT.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Salinity 1993-2021 
+![](../images/analyses/InterAnnual_Salinity.png)
+
+## Salinity 1993-2009 
+![](../images/analyses/InterAnnual1_Salinity.png)
+
+## Salinity 2010-2021 
+![](../images/analyses/InterAnnual2_Salinity.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SSH 1993-2021 
+![](../images/analyses/InterAnnual_ssh.png)
+
+## SSH 1993-2009 
+![](../images/analyses/InterAnnual1_ssh.png)
+
+## SSH 2010-2021 
+![](../images/analyses/InterAnnual2_ssh.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SST 1993-2021 
+![](../images/analyses/InterAnnual_sst.png)
+
+## SST 1993-2009 
+![](../images/analyses/InterAnnual1_sst.png)
+
+## SST 2010-2021 
+![](../images/analyses/InterAnnual2_sst.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Mixed Layer 1993-2021 
+![](../images/analyses/InterAnnual_mixedlayer.png)
+
+## Mixed Layer 1993-2009 
+![](../images/analyses/InterAnnual1_mixedlayer.png)
+
+## Mixed Layer 2010-2021 
+![](../images/analyses/InterAnnual2_mixedlayer.png)
+
+::: 
+
+# Annual 
+
+::: {layout-ncol="3"}
+
+## Bottom Temperature 1993-2021 
+![](../images/analyses/Annual_bottomT.png)
+
+## Bottom Temperature 1993-2009 
+![](../images/analyses/Annual1_bottomT.png)
+
+## Bottom Temperature 2010-2021 
+![](../images/analyses/Annual2_bottomT.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Salinity 1993-2021 
+![](../images/analyses/Annual_Salinity.png)
+
+## Salinity 1993-2009 
+![](../images/analyses/Annual1_Salinity.png)
+
+## Salinity 2010-2021 
+![](../images/analyses/Annual2_Salinity.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SSH 1993-2021 
+![](../images/analyses/Annual_ssh.png)
+
+## SSH 1993-2009 
+![](../images/analyses/Annual1_ssh.png)
+
+## SSH 2010-2021 
+![](../images/analyses/Annual2_ssh.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SST 1993-2021 
+![](../images/analyses/Annual_sst.png)
+
+## SST 1993-2009 
+![](../images/analyses/Annual1_sst.png)
+
+## SST 2010-2021 
+![](../images/analyses/Annual2_sst.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Mixed Layer 1993-2021 
+![](../images/analyses/Annual_mixedlayer.png)
+
+## Mixed Layer 1993-2009 
+![](../images/analyses/Annual1_mixedlayer.png)
+
+## Mixed Layer 2010-2021 
+![](../images/analyses/Annual2_mixedlayer.png)
+
+::: 
+
+# Intra-Annual 
+
+::: {layout-ncol="3"}
+
+## Bottom Temperature 1993-2021 
+![](../images/analyses/IntraAnnual_bottomT.png)
+
+## Bottom Temperature 1993-2009 
+![](../images/analyses/IntraAnnual1_bottomT.png)
+
+## Bottom Temperature 2010-2021 
+![](../images/analyses/IntraAnnual2_bottomT.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Salinity 1993-2021 
+![](../images/analyses/IntraAnnual_Salinity.png)
+
+## Salinity 1993-2009 
+![](../images/analyses/IntraAnnual1_Salinity.png)
+
+## Salinity 2010-2021 
+![](../images/analyses/IntraAnnual2_Salinity.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SSH 1993-2021 
+![](../images/analyses/IntraAnnual_ssh.png)
+
+## SSH 1993-2009 
+![](../images/analyses/IntraAnnual1_ssh.png)
+
+## SSH 2010-2021 
+![](../images/analyses/IntraAnnual2_ssh.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SST 1993-2021 
+![](../images/analyses/IntraAnnual_sst.png)
+
+## SST 1993-2009 
+![](../images/analyses/IntraAnnual1_sst.png)
+
+## SST 2010-2021 
+![](../images/analyses/IntraAnnual2_sst.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Mixed Layer 1993-2021 
+![](../images/analyses/IntraAnnual_mixedlayer.png)
+
+## Mixed Layer 1993-2009 
+![](../images/analyses/IntraAnnual1_mixedlayer.png)
+
+## Mixed Layer 2010-2021 
+![](../images/analyses/IntraAnnual2_mixedlayer.png)
+
+::: 
+
+# Synoptic 
+
+::: {layout-ncol="3"}
+
+## Bottom Temperature 1993-2021 
+![](../images/analyses/Synoptic_bottomT.png)
+
+## Bottom Temperature 1993-2009 
+![](../images/analyses/Synoptic1_bottomT.png)
+
+## Bottom Temperature 2010-2021 
+![](../images/analyses/Synoptic2_bottomT.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Salinity 1993-2021 
+![](../images/analyses/Synoptic_Salinity.png)
+
+## Salinity 1993-2009 
+![](../images/analyses/Synoptic1_Salinity.png)
+
+## Salinity 2010-2021 
+![](../images/analyses/Synoptic2_Salinity.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SSH 1993-2021 
+![](../images/analyses/Synoptic_ssh.png)
+
+## SSH 1993-2009 
+![](../images/analyses/Synoptic1_ssh.png)
+
+## SSH 2010-2021 
+![](../images/analyses/Synoptic2_ssh.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SST 1993-2021 
+![](../images/analyses/Synoptic_sst.png)
+
+## SST 1993-2009 
+![](../images/analyses/Synoptic1_sst.png)
+
+## SST 2010-2021 
+![](../images/analyses/Synoptic2_sst.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Mixed Layer 1993-2021 
+![](../images/analyses/Synoptic_mixedlayer.png)
+
+## Mixed Layer 1993-2009 
+![](../images/analyses/Synoptic1_mixedlayer.png)
+
+## Mixed Layer 2010-2021 
+![](../images/analyses/Synoptic2_mixedlayer.png)
+
+::: 

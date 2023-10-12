@@ -1,0 +1,82 @@
+---
+title: "South Atlantic Poor Recruitment Preliminary"
+format: revealjs
+editor: visual
+---
+
+## Introduction
+
+Signs of recent low recruitment for several species in the grouper-snapper complex in the South Atlantic
+
+![](images/TimeSeries/RecDev.png){fig-align="center" width="500" height="500"}
+
+# Introduction
+
+-   Low recruitment pattern on Winter spawners ![](images/TimeSeries/spawningseason.png){fig-align="center" width="800" height="600"}
+
+## Data used for spatial-temporal analyses
+
+-   Preliminary results 1998-2021
+
+-   Merged Satellite Chrolophyll from Copernicus (SeaWiFS, MODIS, MERIS, VIIRS-SNPP & JPSS1, OLCI-S3A & S3B)
+
+-   Mercator Glorys Model Reanalyses (8km resolution)
+
+    -   SST
+    -   Bottom Temperature
+    -   Surface Salinity
+    -   Depth Mixed Layer
+
+## EOF analyses
+
+-   Sensitivity around the study area and time resolution.
+-   **Study area:**
+    -   currently bounded at Cape Canaveral (\~28.5ºN) and Cape Hatteras (\~35ºN) from shore to the 500m isobath
+-   **Time:**
+    -   Monthly Averaged time series for 1998-2020
+    -   Seasonally Averaged (Winter - JFM, Spring - AMJ, Summer - JAS, Fall - OND)
+    -   Spawning Seasonal Averages - Winter: FMA, Summer: JJA
+
+## SST Example (Monthly averages)
+
+::: columns
+::: {.column width="50%"}
+![](images/TimeSeries/sst_mode1.png){.absolute top="75" left="20" width="350" height="350"}
+
+![](images/TimeSeries/SST_temporal_mode1.png){.absolute bottom="50" left="20" width="350" height="200"}
+:::
+
+::: {.column width="50%"}
+![](images/TimeSeries/sst_mode2.png){.absolute top="75" right="120" width="350" height="350"}
+
+![](images/TimeSeries/SST_temporal_mode2.png){.absolute bottom="50" right="120" width="350" height="200"}
+:::
+:::
+
+## SST Example (Seasonal averages)
+
+::: columns
+::: {.column width="50%"}
+![](images/TimeSeries/sst_Summer_mode1.png){.absolute top="75" left="20" width="350" height="350"}
+
+![](images/TimeSeries/sst_Summer_temporal_mode1.png){.absolute bottom="50" left="20" width="350" height="200"}
+:::
+
+::: {.column width="50%"}
+![](images/TimeSeries/sst_Summer_mode2.png){.absolute top="75" right="120" width="350" height="350"}
+
+![](images/TimeSeries/sst_Summer_temporal_mode2.png){.absolute bottom="50" right="120" width="350" height="200"}
+:::
+:::
+
+## Correlation
+
+![](images/TimeSeries/RedPorgyBottomTWinterMode1.png){fig-align="center" width="550" height="600"}
+
+## Correlations
+
+![](images/TimeSeries/Correlation_EOF_Season_Species_heatmap.png){fig-align="center" width="600" height="600"}
+
+## Point Change Analyses
+
+![](images/TimeSeries/RedGrouper_changepoint.png){fig-align="center" width="550" height="600"}
