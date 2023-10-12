@@ -1,18 +1,11 @@
 
 ```{r}
-setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAFB-Poor-Recruitment/Pages/")
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAF-Poor-Recruitment/Pages/")
 
-cat("Calculate spectral density. Define frequency band cutoffs based on Muñiz et al., 2021 \n")
-cat("(1) Interannual frequencies 384–1152 days (>1-3 years) \n")
-cat("(2) Annual frequencies 101–383 days \n")
-cat("(3) Intra-seasonal frequencies 20–100 days \n")
-cat("(4) Synoptic frequencies 16–19 days \n")
-cat("Normalize the band energy by the total spectral density to find the relative contributions \n")
- 
 # Names of Variables to plot
-NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
-myname     <- c("bottomT","Salinity","ssh","sst","mixedlayer")
-mynameUp   <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","SSH","SST","MixedLayer")
 col_names  <- c("InterAnnual", "Annual", "IntraAnnual", "Synoptic")
 Full_names <- c("Inter-Annual", "Annual", "Intra-Annual", "Synoptic")
 

@@ -73,7 +73,21 @@ future the environmental state is likely to stay the same.
 
 - Predictability (P): is the sum of Constancy (C) and Contingency (M)
 
-## \[Spectral analyses\]
+## [Spectral analyses](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Spectral.md)
+
+Calculate spectral density. Define frequency band cutoffs based on Muñiz
+et al., 2021
+
+- 1)  Interannual frequencies 384–1152 days (\>1-3 years)
+
+- 2)  Annual frequencies 101–383 days
+
+- 3)  Intra-seasonal frequencies 20–100 days
+
+- 4)  Synoptic frequencies 16–19 days
+
+- Normalize the band energy by the total spectral density to find the
+  relative contributions
 
 ## [Draft of Paper](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/poorrecpaper.md)
 
