@@ -4,107 +4,99 @@ format: gfm
 editor: source
 ---
 
-# Monthly averages 
+# Monthly averages
 
-Here, each time data point is the average over one month 
+Here, each time data point is the average over one month
 
-# Latitude 29 
+# Latitude 29
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
+# Bottom Temperature
 
 ![](../images/hovmoller/hovmoller_monthly_bottomT_29.png)
 
-# SSH 
+# SSH
 
 ![](../images/hovmoller/hovmoller_monthly_ssh_29.png)
 
-# SST 
+# SST
 
 ![](../images/hovmoller/hovmoller_monthly_sst_29.png)
 
-# Mixed Layer 
+# Mixed Layer
 
 ![](../images/hovmoller/hovmoller_monthly_mixedlayer_29.png)
+:::
 
-::: 
-
-# Latitude 30 
+# Latitude 30
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
+# Bottom Temperature
 
 ![](../images/hovmoller/hovmoller_monthly_bottomT_30.png)
 
-# SSH 
+# SSH
 
 ![](../images/hovmoller/hovmoller_monthly_ssh_30.png)
 
-# SST 
+# SST
 
 ![](../images/hovmoller/hovmoller_monthly_sst_30.png)
 
-# Mixed Layer 
+# Mixed Layer
 
 ![](../images/hovmoller/hovmoller_monthly_mixedlayer_30.png)
+:::
 
-::: 
-
-# Latitude 31 
+# Latitude 31
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
+# Bottom Temperature
 
 ![](../images/hovmoller/hovmoller_monthly_bottomT_31.png)
 
-# SSH 
+# SSH
 
 ![](../images/hovmoller/hovmoller_monthly_ssh_31.png)
 
-# SST 
+# SST
 
 ![](../images/hovmoller/hovmoller_monthly_sst_31.png)
 
-# Mixed Layer 
+# Mixed Layer
 
 ![](../images/hovmoller/hovmoller_monthly_mixedlayer_31.png)
+:::
 
-::: 
-
-# Latitude 32 
+# Latitude 32
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
+# Bottom Temperature
 
 ![](../images/hovmoller/hovmoller_monthly_bottomT_32.png)
 
-# SSH 
+# SSH
 
 ![](../images/hovmoller/hovmoller_monthly_ssh_32.png)
 
-# SST 
+# SST
 
 ![](../images/hovmoller/hovmoller_monthly_sst_32.png)
 
-# Mixed Layer 
+# Mixed Layer
 
 ![](../images/hovmoller/hovmoller_monthly_mixedlayer_32.png)
+:::
 
-::: 
+# Daily Seasonal
 
-# Daily Seasonal 
-Here, each time data point is one day of the season 
+Here, each time data point is one day of the season
 
-# Latitude 29 
+# Latitude 29
+
+# Bottom Temperature
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
-
 # Fall
 
 ![](../images/hovmoller/hovmoller_bottomT_29_Fall.png)
@@ -120,11 +112,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_bottomT_29_Winter.png)
+:::
 
-::: 
+# SSH
 
-# SSH 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_ssh_29_Fall.png)
@@ -140,11 +132,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_ssh_29_Winter.png)
+:::
 
-::: 
+# SST
 
-# SST 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_sst_29_Fall.png)
@@ -160,11 +152,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_sst_29_Winter.png)
+:::
 
-::: 
+# Mixed Layer
 
-# Mixed Layer 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_mixedlayer_29_Fall.png)
@@ -180,15 +172,13 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_mixedlayer_29_Winter.png)
+:::
 
-::: 
+# Latitude 30
 
-# Latitude 30 
+# Bottom Temperature
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
-
 # Fall
 
 ![](../images/hovmoller/hovmoller_bottomT_30_Fall.png)
@@ -204,11 +194,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_bottomT_30_Winter.png)
+:::
 
-::: 
+# SSH
 
-# SSH 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_ssh_30_Fall.png)
@@ -224,11 +214,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_ssh_30_Winter.png)
+:::
 
-::: 
+# SST
 
-# SST 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_sst_30_Fall.png)
@@ -244,11 +234,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_sst_30_Winter.png)
+:::
 
-::: 
+# Mixed Layer
 
-# Mixed Layer 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_mixedlayer_30_Fall.png)
@@ -264,15 +254,13 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_mixedlayer_30_Winter.png)
+:::
 
-::: 
+# Latitude 31
 
-# Latitude 31 
+# Bottom Temperature
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
-
 # Fall
 
 ![](../images/hovmoller/hovmoller_bottomT_31_Fall.png)
@@ -288,11 +276,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_bottomT_31_Winter.png)
+:::
 
-::: 
+# SSH
 
-# SSH 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_ssh_31_Fall.png)
@@ -308,11 +296,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_ssh_31_Winter.png)
+:::
 
-::: 
+# SST
 
-# SST 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_sst_31_Fall.png)
@@ -328,11 +316,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_sst_31_Winter.png)
+:::
 
-::: 
+# Mixed Layer
 
-# Mixed Layer 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_mixedlayer_31_Fall.png)
@@ -348,15 +336,13 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_mixedlayer_31_Winter.png)
+:::
 
-::: 
+# Latitude 32
 
-# Latitude 32 
+# Bottom Temperature
 
 ::: {layout-ncol="4"}
-
-# Bottom Temperature 
-
 # Fall
 
 ![](../images/hovmoller/hovmoller_bottomT_32_Fall.png)
@@ -372,11 +358,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_bottomT_32_Winter.png)
+:::
 
-::: 
+# SSH
 
-# SSH 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_ssh_32_Fall.png)
@@ -392,11 +378,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_ssh_32_Winter.png)
+:::
 
-::: 
+# SST
 
-# SST 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_sst_32_Fall.png)
@@ -412,11 +398,11 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_sst_32_Winter.png)
+:::
 
-::: 
+# Mixed Layer
 
-# Mixed Layer 
-
+::: {layout-ncol="4"}
 # Fall
 
 ![](../images/hovmoller/hovmoller_mixedlayer_32_Fall.png)
@@ -432,5 +418,4 @@ Here, each time data point is one day of the season
 # Winter
 
 ![](../images/hovmoller/hovmoller_mixedlayer_32_Winter.png)
-
-::: 
+:::

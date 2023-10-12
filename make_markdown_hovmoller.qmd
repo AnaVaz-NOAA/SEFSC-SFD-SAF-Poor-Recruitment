@@ -38,11 +38,9 @@ cat("Here, each time data point is one day of the season \n\n")
 for (iaux in seq_along(col_names)) {
   cat(paste0("# Latitude ",colnames[iaux]," \n\n"))
   
-  cat("::: {layout-ncol=\"4\"}\n\n")
-  
   for (iVar in seq_along(NamePlot)) {
     cat(paste0("# ",NamePlot[iVar]," \n\n"))
-    
+    cat("::: {layout-ncol=\"4\"}\n\n")
     for (season in seasons) {
       cat(paste0("# ", season, "\n\n"))
       fig_name <- paste0(pathfigs, "hovmoller_", myname[iVar], "_",colnames[iaux], "_", season, ".png")
