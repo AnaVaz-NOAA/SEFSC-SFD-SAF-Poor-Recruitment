@@ -1,0 +1,54 @@
+---
+title: "Make markdown hovmoller"
+format: html
+editor: visual
+---
+
+```{r}
+
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAF-Poor-Recruitment/Pages/")
+pathfigs <- ("../images/hovmoller/")
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","SSH","SST","MixedLayer")
+seasons <- c("Fall", "Summer", "Spring", "Winter")
+colnames <- seq(29,34,1)
+
+cat("# Monthly averages \n\n")
+
+cat("Here, each time data point is the average over one month \n\n")
+
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# Latitude ",colnames[iaux]," \n\n"))
+  cat("::: {layout-ncol=\"4\"}\n\n")
+  for (iVar in seq_along(NamePlot)) {
+    cat(paste0("# ",NamePlot[iVar]," \n\n"))
+    fig_name <- paste0(pathfigs, "hovmoller_monthly_", myname[iVar], "_",colnames[iaux], ".png")
+    cat(paste0('![](', fig_name, ')\n\n'),sep="")
+  }
+  cat("::: \n\n")
+}
+
+cat("# Daily Seasonal \n")
+
+cat("Here, each time data point is one day of the season \n\n")
+
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# Latitude ",colnames[iaux]," \n\n"))
+  
+  cat("::: {layout-ncol=\"4\"}\n\n")
+  
+  for (iVar in seq_along(NamePlot)) {
+    cat(paste0("# ",NamePlot[iVar]," \n\n"))
+    
+    for (season in seasons) {
+      cat(paste0("# ", season, "\n\n"))
+      fig_name <- paste0(pathfigs, "hovmoller_", myname[iVar], "_",colnames[iaux], "_", season, ".png")
+      cat(paste0('![](', fig_name, ')\n\n'),sep="")
+    }
+    cat("::: \n\n")
+    }
+  }
+```

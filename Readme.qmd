@@ -34,7 +34,7 @@ Spatial visualization of averages/variability/trends for different environmental
 
 We also look at the seasonal averages/variability/trends, for the entire period and at decadal intervals.
 
-## \[Hovmoller Diagrams\]
+## [Hovmoller Diagrams](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Hovmoller.md)
 
 Hovmoller diagrams show the variability of environmental covariates at certain latitudes overtime. 
 

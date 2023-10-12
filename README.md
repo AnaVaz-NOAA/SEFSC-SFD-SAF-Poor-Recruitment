@@ -42,7 +42,7 @@ results are taken over 1) the entire data set, 2) the first 20 years
 We also look at the seasonal averages/variability/trends, for the entire
 period and at decadal intervals.
 
-## \[Hovmoller Diagrams\]
+## [Hovmoller Diagrams](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Hovmoller.md)
 
 Hovmoller diagrams show the variability of environmental covariates at
 certain latitudes overtime.
