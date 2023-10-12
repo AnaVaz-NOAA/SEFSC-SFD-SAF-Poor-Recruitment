@@ -4,6 +4,28 @@ format: gfm
 editor: visual
 ---
 
+# Change Point Summary 
+
+::: {layout-ncol="2"}
+
+![](../images/ChangePoint/BreaksMonthly_Variable.png)
+
+![](../images/ChangePoint/BreaksMonthly.png)
+
+![](../images/ChangePoint/BreaksRecDev_species.png)
+
+![](../images/ChangePoint/BreaksRecDev.png)
+
+![](../images/ChangePoint/BreaksSeason_Variable.png)
+
+![](../images/ChangePoint/BreaksSeason.png)
+
+![](../images/ChangePoint/BreaksSpSeason_Variable.png)
+
+![](../images/ChangePoint/BreaksSpSeason.png)
+
+::: 
+
 # Change Point 
 
 ::: {layout-ncol="2"}
@@ -27,26 +49,6 @@ editor: visual
 ![](../images/ChangePoint/BottomTWinterMode1_changepoint.png)
 
 ![](../images/ChangePoint/BottomTWinterMode2_changepoint.png)
-
-![](../images/ChangePoint/SalinityFallMode1_changepoint.png)
-
-![](../images/ChangePoint/SalinityFallMode2_changepoint.png)
-
-![](../images/ChangePoint/SalinityMode1_changepoint.png)
-
-![](../images/ChangePoint/SalinityMode2_changepoint.png)
-
-![](../images/ChangePoint/SalinitySpringMode1_changepoint.png)
-
-![](../images/ChangePoint/SalinitySpringMode2_changepoint.png)
-
-![](../images/ChangePoint/SalinitySummerMode1_changepoint.png)
-
-![](../images/ChangePoint/SalinitySummerMode2_changepoint.png)
-
-![](../images/ChangePoint/SalinityWinterMode1_changepoint.png)
-
-![](../images/ChangePoint/SalinityWinterMode2_changepoint.png)
 
 ![](../images/ChangePoint/SSHFallMode1_changepoint.png)
 

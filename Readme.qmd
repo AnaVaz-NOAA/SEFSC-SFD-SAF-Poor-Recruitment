@@ -22,7 +22,7 @@ The monthly analyses were de-trended seasonally (monthly averages removed from e
 
 ## [Correlation](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Correlations.md)
 
-Simple linear correlation between recruitment deviations and
+Simple linear correlation between recruitment deviations and environmental co-variates. 
 
 ## [Change Point](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/ChangePoint.md)
 
@@ -36,7 +36,7 @@ We also look at the seasonal averages/variability/trends, for the entire period 
 
 ## \[Hovmoller Diagrams\]
 
-Hovmoller diagrams show the variability of
+Hovmoller diagrams show the variability of environmental covariates at certain latitudes overtime. 
 
 ## [Colwell Constancy](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Colwell.md)
 
@@ -55,6 +55,8 @@ Seasonality represents the regularity in the timing and magnitude of fluctuation
 -   Predictability (P): is the sum of Constancy (C) and Contingency (M)
 
 ## \[Spectral analyses\]
+
+
 
 ## [Draft of Paper](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/poorrecpaper.md)
 

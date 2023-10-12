@@ -24,6 +24,7 @@ removed from each month).
 ## [Correlation](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Correlations.md)
 
 Simple linear correlation between recruitment deviations and
+environmental co-variates.
 
 ## [Change Point](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/ChangePoint.md)
 
@@ -43,7 +44,8 @@ period and at decadal intervals.
 
 ## \[Hovmoller Diagrams\]
 
-Hovmoller diagrams show the variability of
+Hovmoller diagrams show the variability of environmental covariates at
+certain latitudes overtime.
 
 ## [Colwell Constancy](https://github.com/AnaVaz-NOAA/SEFSC-SFD-SAF-Poor-Recruitment/blob/main/Pages/Colwell.md)
 

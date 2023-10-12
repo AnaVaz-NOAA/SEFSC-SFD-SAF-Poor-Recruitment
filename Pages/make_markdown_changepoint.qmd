@@ -1,16 +1,16 @@
 
 ```{r}
 
-setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAFB-Poor-Recruitment/Pages/")
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAF-Poor-Recruitment/Pages/")
 
 # Names of Variables to plot
-NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
 NameSeason <- c("Winter","Spring","Summer","Fall")
 NameSeasonSp <- c("Winter","Summer")
 NameModes  <- c("Mode 1","Mode 2")
 
-myname <- c("bottomT","Salinity","ssh","sst","mixedlayer")
-mynameUp <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+myname <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp <- c("BottomT","SSH","SST","MixedLayer")
 
 # create combinations of names and combine the names
 aux <- expand.grid(NameModes,NameSeason,NamePlot)
@@ -39,7 +39,7 @@ cat("::: {layout-ncol=\"2\"}\n\n")
 
 for (iVar in 1:length(file_list)) {
   file_plot <- file_list[iVar]
-  fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+  fig_name <- gsub(" ","",paste0(filedir, file_plot))
   cat(paste0('![](', fig_name, ')\n\n'),sep="")
 }
 

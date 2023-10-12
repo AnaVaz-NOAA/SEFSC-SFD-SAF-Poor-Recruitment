@@ -1,6 +1,96 @@
 ChangePoint
 ================
 
+# Change Point Summary
+
+<div>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksMonthly_Variable.png"
+data-fig.extended="false" /></p>
+</div></td>
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksMonthly.png"
+data-fig.extended="false" /></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksRecDev_species.png"
+data-fig.extended="false" /></p>
+</div></td>
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksRecDev.png"
+data-fig.extended="false" /></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksSeason_Variable.png"
+data-fig.extended="false" /></p>
+</div></td>
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksSeason.png"
+data-fig.extended="false" /></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksSpSeason_Variable.png"
+data-fig.extended="false" /></p>
+</div></td>
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<p><img src="../images/ChangePoint/BreaksSpSeason.png"
+data-fig.extended="false" /></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
 # Change Point
 
 <div>
@@ -104,111 +194,6 @@ data-fig.extended="false" /></p>
 <td style="text-align: center;"><div width="50.0%"
 data-layout-align="center">
 <p><img src="../images/ChangePoint/BottomTWinterMode2_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinityFallMode1_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinityFallMode2_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinityMode1_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinityMode2_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinitySpringMode1_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinitySpringMode2_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinitySummerMode1_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinitySummerMode2_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinityWinterMode1_changepoint.png"
-data-fig.extended="false" /></p>
-</div></td>
-<td style="text-align: center;"><div width="50.0%"
-data-layout-align="center">
-<p><img src="../images/ChangePoint/SalinityWinterMode2_changepoint.png"
 data-fig.extended="false" /></p>
 </div></td>
 </tr>
