@@ -1,12 +1,12 @@
 
 ```{r}
 
-setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAFB-Poor-Recruitment/Pages/")
+setwd("/Users/anavaz/Stuff/github/SEFSC-SFD-SAF-Poor-Recruitment/Pages/")
 
 # Names of Variables to plot
-NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
-myname     <- c("bottomT","Salinity","ssh","sst","mixedlayer")
-mynameUp   <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","SSH","SST","MixedLayer")
 col_names  <- c("TrendLinear", "Trend", "Avg", "Std")
 Full_names <- c("Trend Linear", "Trend", "Average", "Standard Deviation")
 
@@ -35,9 +35,9 @@ for (iaux in seq_along(col_names)) {
 cat("# Seasonal Trends and Averages \n")
 
 # Names of Variables to plot
-NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
-myname     <- c("bottomT","Salinity","ssh","sst","mixedlayer")
-mynameUp   <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+NamePlot   <- c("Bottom Temperature","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","SSH","SST","MixedLayer")
 col_names  <- c("TrendLinear", "Trend", "Avg", "Std")
 Full_names <- c("Trend Linear", "Trend", "Average", "Standard Deviation")
 seasons <- c("Fall", "Summer", "Spring", "Winter")
