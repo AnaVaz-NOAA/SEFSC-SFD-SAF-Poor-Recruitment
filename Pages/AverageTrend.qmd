@@ -4,931 +4,400 @@ format: gfm
 editor: visual
 ---
 
-# Trend Linear 
+# Trend
 
 ::: {layout-ncol="3"}
+## Bottom Temperature 1993-2021
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/TrendLinear_bottomT.png)
-
-## Bottom Temperature 1993-2009 
-![](../images/analyses/TrendLinear1_bottomT.png)
-
-## Bottom Temperature 2010-2021 
-![](../images/analyses/TrendLinear2_bottomT.png)
-
-::: 
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/TrendLinear_ssh.png)
-
-## SSH 1993-2009 
-![](../images/analyses/TrendLinear1_ssh.png)
-
-## SSH 2010-2021 
-![](../images/analyses/TrendLinear2_ssh.png)
-
-::: 
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/TrendLinear_sst.png)
-
-## SST 1993-2009 
-![](../images/analyses/TrendLinear1_sst.png)
-
-## SST 2010-2021 
-![](../images/analyses/TrendLinear2_sst.png)
-
-::: 
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/TrendLinear_mixedlayer.png)
-
-## Mixed Layer 1993-2009 
-![](../images/analyses/TrendLinear1_mixedlayer.png)
-
-## Mixed Layer 2010-2021 
-![](../images/analyses/TrendLinear2_mixedlayer.png)
-
-::: 
-
-# Trend 
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
 ![](../images/analyses/Trend_bottomT.png)
 
-## Bottom Temperature 1993-2009 
+## Bottom Temperature 1993-2009
+
 ![](../images/analyses/Trend1_bottomT.png)
 
-## Bottom Temperature 2010-2021 
-![](../images/analyses/Trend2_bottomT.png)
+## Bottom Temperature 2010-2021
 
-::: 
+![](../images/analyses/Trend2_bottomT.png)
+:::
 
 ::: {layout-ncol="3"}
+## SSH 1993-2021
 
-## SSH 1993-2021 
 ![](../images/analyses/Trend_ssh.png)
 
-## SSH 1993-2009 
+## SSH 1993-2009
+
 ![](../images/analyses/Trend1_ssh.png)
 
-## SSH 2010-2021 
-![](../images/analyses/Trend2_ssh.png)
+## SSH 2010-2021
 
-::: 
+![](../images/analyses/Trend2_ssh.png)
+:::
 
 ::: {layout-ncol="3"}
+## SST 1993-2021
 
-## SST 1993-2021 
 ![](../images/analyses/Trend_sst.png)
 
-## SST 1993-2009 
+## SST 1993-2009
+
 ![](../images/analyses/Trend1_sst.png)
 
-## SST 2010-2021 
-![](../images/analyses/Trend2_sst.png)
+## SST 2010-2021
 
-::: 
+![](../images/analyses/Trend2_sst.png)
+:::
 
 ::: {layout-ncol="3"}
+## Mixed Layer 1993-2021
 
-## Mixed Layer 1993-2021 
 ![](../images/analyses/Trend_mixedlayer.png)
 
-## Mixed Layer 1993-2009 
+## Mixed Layer 1993-2009
+
 ![](../images/analyses/Trend1_mixedlayer.png)
 
-## Mixed Layer 2010-2021 
+## Mixed Layer 2010-2021
+
 ![](../images/analyses/Trend2_mixedlayer.png)
+:::
 
-::: 
-
-# Average 
+# Average
 
 ::: {layout-ncol="3"}
+## Bottom Temperature 1993-2021
 
-## Bottom Temperature 1993-2021 
 ![](../images/analyses/Avg_bottomT.png)
 
-## Bottom Temperature 1993-2009 
+## Bottom Temperature 1993-2009
+
 ![](../images/analyses/Avg1_bottomT.png)
 
-## Bottom Temperature 2010-2021 
-![](../images/analyses/Avg2_bottomT.png)
+## Bottom Temperature 2010-2021
 
-::: 
+![](../images/analyses/Avg2_bottomT.png)
+:::
 
 ::: {layout-ncol="3"}
+## SSH 1993-2021
 
-## SSH 1993-2021 
 ![](../images/analyses/Avg_ssh.png)
 
-## SSH 1993-2009 
+## SSH 1993-2009
+
 ![](../images/analyses/Avg1_ssh.png)
 
-## SSH 2010-2021 
-![](../images/analyses/Avg2_ssh.png)
+## SSH 2010-2021
 
-::: 
+![](../images/analyses/Avg2_ssh.png)
+:::
 
 ::: {layout-ncol="3"}
+## SST 1993-2021
 
-## SST 1993-2021 
 ![](../images/analyses/Avg_sst.png)
 
-## SST 1993-2009 
+## SST 1993-2009
+
 ![](../images/analyses/Avg1_sst.png)
 
-## SST 2010-2021 
-![](../images/analyses/Avg2_sst.png)
+## SST 2010-2021
 
-::: 
+![](../images/analyses/Avg2_sst.png)
+:::
 
 ::: {layout-ncol="3"}
+## Mixed Layer 1993-2021
 
-## Mixed Layer 1993-2021 
 ![](../images/analyses/Avg_mixedlayer.png)
 
-## Mixed Layer 1993-2009 
+## Mixed Layer 1993-2009
+
 ![](../images/analyses/Avg1_mixedlayer.png)
 
-## Mixed Layer 2010-2021 
+## Mixed Layer 2010-2021
+
 ![](../images/analyses/Avg2_mixedlayer.png)
+:::
 
-::: 
-
-# Standard Deviation 
+# Standard Deviation
 
 ::: {layout-ncol="3"}
+## Bottom Temperature 1993-2021
 
-## Bottom Temperature 1993-2021 
 ![](../images/analyses/Std_bottomT.png)
 
-## Bottom Temperature 1993-2009 
+## Bottom Temperature 1993-2009
+
 ![](../images/analyses/Std1_bottomT.png)
 
-## Bottom Temperature 2010-2021 
-![](../images/analyses/Std2_bottomT.png)
+## Bottom Temperature 2010-2021
 
-::: 
+![](../images/analyses/Std2_bottomT.png)
+:::
 
 ::: {layout-ncol="3"}
+## SSH 1993-2021
 
-## SSH 1993-2021 
 ![](../images/analyses/Std_ssh.png)
 
-## SSH 1993-2009 
+## SSH 1993-2009
+
 ![](../images/analyses/Std1_ssh.png)
 
-## SSH 2010-2021 
-![](../images/analyses/Std2_ssh.png)
+## SSH 2010-2021
 
-::: 
+![](../images/analyses/Std2_ssh.png)
+:::
 
 ::: {layout-ncol="3"}
+## SST 1993-2021
 
-## SST 1993-2021 
 ![](../images/analyses/Std_sst.png)
 
-## SST 1993-2009 
+## SST 1993-2009
+
 ![](../images/analyses/Std1_sst.png)
 
-## SST 2010-2021 
-![](../images/analyses/Std2_sst.png)
+## SST 2010-2021
 
-::: 
+![](../images/analyses/Std2_sst.png)
+:::
 
 ::: {layout-ncol="3"}
+## Mixed Layer 1993-2021
 
-## Mixed Layer 1993-2021 
 ![](../images/analyses/Std_mixedlayer.png)
 
-## Mixed Layer 1993-2009 
+## Mixed Layer 1993-2009
+
 ![](../images/analyses/Std1_mixedlayer.png)
 
-## Mixed Layer 2010-2021 
+## Mixed Layer 2010-2021
+
 ![](../images/analyses/Std2_mixedlayer.png)
+:::
 
-::: 
+# Seasonal Trends and Averages
 
-# Seasonal Trends and Averages 
-# Trend Linear 
+# Trend
 
-# Fall
+::: {layout-ncol="4"}
+Fall
 
-::: {layout-ncol="3"}
+![](../images/analyses/bottomT_Fall_Trend_seasonal.png)
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
+Summer
 
-![](../images/analyses/)
+![](../images/analyses/bottomT_Summer_Trend_seasonal.png)
 
-::: 
+Spring
 
-# Summer
+![](../images/analyses/bottomT_Spring_Trend_seasonal.png)
 
-::: {layout-ncol="3"}
+Winter
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/bottomT_Winter_Trend_seasonal.png)
+:::
 
-![](../images/analyses/)
+::: {layout-ncol="4"}
+Fall
 
-::: 
+![](../images/analyses/ssh_Fall_Trend_seasonal.png)
 
-# Spring
+Summer
 
-::: {layout-ncol="3"}
+![](../images/analyses/ssh_Summer_Trend_seasonal.png)
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
+Spring
 
-![](../images/analyses/)
+![](../images/analyses/ssh_Spring_Trend_seasonal.png)
 
-::: 
+Winter
 
-# Winter
+![](../images/analyses/ssh_Winter_Trend_seasonal.png)
+:::
 
-::: {layout-ncol="3"}
+::: {layout-ncol="4"}
+Fall
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/sst_Fall_Trend_seasonal.png)
 
-![](../images/analyses/)
+Summer
 
-::: 
+![](../images/analyses/sst_Summer_Trend_seasonal.png)
 
-# Fall
+Spring
 
-::: {layout-ncol="3"}
+![](../images/analyses/sst_Spring_Trend_seasonal.png)
 
-## SSH 1993-2021 
-![](../images/analyses/NA)
+Winter
 
-![](../images/analyses/)
+![](../images/analyses/sst_Winter_Trend_seasonal.png)
+:::
 
-::: 
+::: {layout-ncol="4"}
+Fall
 
-# Summer
+![](../images/analyses/mixedlayer_Fall_Trend_seasonal.png)
 
-::: {layout-ncol="3"}
+Summer
 
-## SSH 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/mixedlayer_Summer_Trend_seasonal.png)
 
-![](../images/analyses/)
+Spring
 
-::: 
+![](../images/analyses/mixedlayer_Spring_Trend_seasonal.png)
 
-# Spring
+Winter
 
-::: {layout-ncol="3"}
+![](../images/analyses/mixedlayer_Winter_Trend_seasonal.png)
+:::
 
-## SSH 1993-2021 
-![](../images/analyses/NA)
+# Average
 
-![](../images/analyses/)
+::: {layout-ncol="4"}
+Fall
 
-::: 
+![](../images/analyses/bottomT_Fall_Avg_seasonal.png)
 
-# Winter
+Summer
 
-::: {layout-ncol="3"}
+![](../images/analyses/bottomT_Summer_Avg_seasonal.png)
 
-## SSH 1993-2021 
-![](../images/analyses/NA)
+Spring
 
-![](../images/analyses/)
+![](../images/analyses/bottomT_Spring_Avg_seasonal.png)
 
-::: 
+Winter
 
-# Fall
+![](../images/analyses/bottomT_Winter_Avg_seasonal.png)
+:::
 
-::: {layout-ncol="3"}
+::: {layout-ncol="4"}
+Fall
 
-## SST 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/ssh_Fall_Avg_seasonal.png)
 
-![](../images/analyses/)
+Summer
 
-::: 
+![](../images/analyses/ssh_Summer_Avg_seasonal.png)
 
-# Summer
+Spring
 
-::: {layout-ncol="3"}
+![](../images/analyses/ssh_Spring_Avg_seasonal.png)
 
-## SST 1993-2021 
-![](../images/analyses/NA)
+Winter
 
-![](../images/analyses/)
+![](../images/analyses/ssh_Winter_Avg_seasonal.png)
+:::
 
-::: 
+::: {layout-ncol="4"}
+Fall
 
-# Spring
+![](../images/analyses/sst_Fall_Avg_seasonal.png)
 
-::: {layout-ncol="3"}
+Summer
 
-## SST 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/sst_Summer_Avg_seasonal.png)
 
-![](../images/analyses/)
+Spring
 
-::: 
+![](../images/analyses/sst_Spring_Avg_seasonal.png)
 
-# Winter
+Winter
 
-::: {layout-ncol="3"}
+![](../images/analyses/sst_Winter_Avg_seasonal.png)
+:::
 
-## SST 1993-2021 
-![](../images/analyses/NA)
+::: {layout-ncol="4"}
+Fall
 
-![](../images/analyses/)
+![](../images/analyses/mixedlayer_Fall_Avg_seasonal.png)
 
-::: 
+Summer
 
-# Fall
+![](../images/analyses/mixedlayer_Summer_Avg_seasonal.png)
 
-::: {layout-ncol="3"}
+Spring
 
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/mixedlayer_Spring_Avg_seasonal.png)
 
-![](../images/analyses/)
+Winter
 
-::: 
+![](../images/analyses/mixedlayer_Winter_Avg_seasonal.png)
+:::
 
-# Summer
+# Standard Deviation
 
-::: {layout-ncol="3"}
+::: {layout-ncol="4"}
+Fall
 
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/bottomT_Fall_Std_seasonal.png)
 
-![](../images/analyses/)
+Summer
 
-::: 
+![](../images/analyses/bottomT_Summer_Std_seasonal.png)
 
-# Spring
+Spring
 
-::: {layout-ncol="3"}
+![](../images/analyses/bottomT_Spring_Std_seasonal.png)
 
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
+Winter
 
-![](../images/analyses/)
+![](../images/analyses/bottomT_Winter_Std_seasonal.png)
+:::
 
-::: 
+::: {layout-ncol="4"}
+Fall
 
-# Winter
+![](../images/analyses/ssh_Fall_Std_seasonal.png)
 
-::: {layout-ncol="3"}
+Summer
 
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/ssh_Summer_Std_seasonal.png)
 
-![](../images/analyses/)
+Spring
 
-::: 
+![](../images/analyses/ssh_Spring_Std_seasonal.png)
 
-# Trend 
+Winter
 
-# Fall
+![](../images/analyses/ssh_Winter_Std_seasonal.png)
+:::
 
-::: {layout-ncol="3"}
+::: {layout-ncol="4"}
+Fall
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/sst_Fall_Std_seasonal.png)
 
-![](../images/analyses/)
+Summer
 
-::: 
+![](../images/analyses/sst_Summer_Std_seasonal.png)
 
-# Summer
+Spring
 
-::: {layout-ncol="3"}
+![](../images/analyses/sst_Spring_Std_seasonal.png)
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
+Winter
 
-![](../images/analyses/)
+![](../images/analyses/sst_Winter_Std_seasonal.png)
+:::
 
-::: 
+::: {layout-ncol="4"}
+Fall
 
-# Spring
+![](../images/analyses/mixedlayer_Fall_Std_seasonal.png)
 
-::: {layout-ncol="3"}
+Summer
 
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
+![](../images/analyses/mixedlayer_Summer_Std_seasonal.png)
 
-![](../images/analyses/)
+Spring
 
-::: 
+![](../images/analyses/mixedlayer_Spring_Std_seasonal.png)
 
-# Winter
+Winter
 
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Average 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Standard Deviation 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## Bottom Temperature 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## SSH 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## SST 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Fall
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Summer
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Spring
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
-
-# Winter
-
-::: {layout-ncol="3"}
-
-## Mixed Layer 1993-2021 
-![](../images/analyses/NA)
-
-![](../images/analyses/)
-
-::: 
+![](../images/analyses/mixedlayer_Winter_Std_seasonal.png)
+:::

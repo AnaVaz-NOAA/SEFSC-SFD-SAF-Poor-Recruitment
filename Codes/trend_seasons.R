@@ -7,8 +7,22 @@ library(RColorBrewer)
 library(cmocean)
 # for a readmat function that works with HDF5
 library(raveio)
+library(R.matlab)
+library(mapdata)
+library(marmap)
 
-filepath <- ("./data/")
+load("/Users/anavaz/Stuff/Current/SAtlantic/data/world_map.RData") 
+# the object is called "maps" 
+head(maps)
+
+refaux <- read.csv("./csv_files/ssh_analyses.csv")
+#load bathymetry
+bathy <- getNOAA.bathy(min(refaux$Lon)-1,max(refaux$Lon)+1,min(refaux$Lat)-1,max(refaux$Lat)+1,resolution=1)
+rm(refaux)
+bathy_df <- fortify(bathy)
+rm(bathy)
+
+filepath <- ("/Users/anavaz/Stuff/Current/SAtlantic/data/")
 filename <- (gsub(" ","",paste(filepath,"timeAllCNAPS.mat")))
 timeAux  <- read_mat(filename)
 
@@ -29,12 +43,11 @@ col_names <- c("Lat","Lon","Avg1",  "Avg2",  "Avg3",  "Avg4",
                            "Std1",  "Std2",  "Std3",  "Std4",
                            "Trend1","Trend2","Trend3","Trend4")
 
-for (ivar in 1:5) {
+for (ivar in 1:4) {
   varname <- switch(ivar,
                     'ssh',
                     'bottomT',
                     'sst',
-                    'Salinity',
                     'mixedlayer')
   filename <- (gsub(" ","",paste(filepath,varname,"_CNAPS.mat")))
   VarMaux  <- read_mat(filename)
@@ -94,16 +107,14 @@ col_names <- c("Lat", "Lon", "Avg", "Std", "Trend")
 
 # plot now in space each one
 # load the file for each variable, then rotate to plot each column (analyes results)
-for (ivar in 1:5) {
+for (ivar in 1:4) {
   varname <- switch(ivar,
                     'bottomT',
-                    'Salinity',
                     'ssh',
                     'sst',
                     'mixedlayer')
   varnamePretty <- switch(ivar,
                           'Bottom Temperature',
-                          'Salinity',
                           'SSH',
                           'SST',
                           'Mixed Layer')
@@ -136,14 +147,14 @@ for (ivar in 1:5) {
         labs(x = "Longitude",y = "Latitude", title = varnamePretty) +
         theme(text = element_text(size = 20)) +
         theme_light()
-      if (ivar != 3) {
-         pl +  scale_colour_viridis_c() 
-      } else {
-        pl + scale_colour_gradient2(
+        if (i != 5){
+          pl + scale_colour_viridis_c()
+        }
+        else{
+          pl + scale_colour_gradient2(
           low = "dodgerblue4", mid = "white", high = "firebrick4",
-          midpoint = 0)
-      }
-      ggsave(gsub(" ","",paste("./images/analyses/",varname,"_",qname,"_seasonal.png")),device = "png")
+          midpoint = 0)}
+      ggsave(gsub(" ","",paste("./images/analyses/",varname,"_",qname,"_",col_names[i],"_seasonal.png")),device = "png")
     }
   }
 }
