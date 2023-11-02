@@ -12,8 +12,7 @@ library(WaveletComp)
 library(gridGraphics)
 library(ggpubr)
 
-filepath <- ("/Users/anavaz/Stuff/Current/SAtlantic/CNAPS_mat/")
-#filepath <- ("/Users/anacarolvaz/Stuff/current_work/SAtlantic/CNAPS_mat/")
+filepath <- ("/Users/anavaz/Stuff/Current/SAtlantic/data/")
 filename <- (gsub(" ","",paste(filepath,"timeAllCNAPS.mat")))
 timeAux  <- read_mat(filename)
 
@@ -38,6 +37,8 @@ dateMonth_numeric <- as.numeric(dateMonth)
 filename <- (gsub(" ","",paste(filepath,"latlon_CNAPS.mat")))
 latlon   <- read_mat(filename)
 latlon   <- latlon$latlon_CNAPS
+
+filepath <- ("~/Stuff/Current/SAtlantic/data/CNAPS/")
 
 # For mean series all regions
 # load matfile

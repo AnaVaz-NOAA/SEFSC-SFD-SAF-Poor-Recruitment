@@ -4,11 +4,12 @@ library(gplots)
 library(RColorBrewer)
 library(bcp)
 library(gridExtra)
+library(wesanderson)
 
 graphics.off()
 # load recdevs, indexes and EOF
 # set the diretory with the assessment files
-#setwd("./csv_files")
+setwd("./csv_files")
 EOFs        <- read.csv("EOF_CNAPS.csv")
 Indexes     <- read.csv("indexes_feb23.csv")
 RecDev      <- read.csv("RecruitmentResiduals_Feb23.csv")
@@ -80,9 +81,9 @@ for (iSpp in 1:10) {
     
     # Create the first panel with different axes
     plot1 <- ggplot(df, aes(x = yearsPlot)) +
-      geom_line(aes(y = x, color = "PCA"), linetype = "solid", size = 1.5) +
-      geom_line(aes(y = y, color = "Residuals"), linetype = "solid", size = 1.5) +
-      geom_hline(yintercept = 0, color = "gray70", linetype = "dashed", size = 1) +
+      geom_line(aes(y = x, color = "PCA"), linetype = "solid", linewidth = 1.5) +
+      geom_line(aes(y = y, color = "Residuals"), linetype = "solid", linewidth = 1.5) +
+      geom_hline(yintercept = 0, color = "gray70", linetype = "dashed", linewidth = 1) +
       geom_text(aes(label = paste("R=", format(estimate, digits = 2))), 
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
       geom_text(aes(label = paste("p=", format(p.value, digits = 2))), 

@@ -1,0 +1,60 @@
+,Variable,Method,Breaks
+1,Gag Grouper,CPT Mean,2018
+2,Gag Grouper,CPT Var,2018
+3,Gag Grouper,CPT MeanVar,2017
+4,Gag Grouper,CPT MeanVar,2018
+5,Gag Grouper,Breakpoints,2008
+6,Greater Amberjack,CPT Mean,2016
+7,Greater Amberjack,CPT Var,2016
+8,Greater Amberjack,CPT MeanVar,2015
+9,Greater Amberjack,CPT MeanVar,2016
+10,Greater Amberjack,Breakpoints,2004
+11,Gray Triggerfish,CPT Mean,2013
+12,Gray Triggerfish,CPT Var,2013
+13,Gray Triggerfish,CPT MeanVar,2012
+14,Gray Triggerfish,CPT MeanVar,2013
+15,Gray Triggerfish,Breakpoints,1988
+16,Gray Triggerfish,Breakpoints,1996
+17,Gray Triggerfish,Breakpoints,1998
+18, Red Porgy,CPT Mean,2016
+19, Red Porgy,CPT Var,2016
+20, Red Porgy,CPT MeanVar,2015
+21, Red Porgy,CPT MeanVar,2016
+22, Red Porgy,Breakpoints,2010
+23,Red Grouper,CPT Mean,2019
+24,Red Grouper,CPT Var,2019
+25,Red Grouper,CPT MeanVar,2003
+26,Red Grouper,CPT MeanVar,2019
+27,Red Grouper,Breakpoints,1981
+28,Red Grouper,Breakpoints,2003
+29,Black Sea Bass,CPT Mean,2016
+30,Black Sea Bass,CPT Var,2016
+31,Black Sea Bass,CPT MeanVar,2015
+32,Black Sea Bass,CPT MeanVar,2016
+33,Black Sea Bass,Breakpoints,1986
+34,Black Sea Bass,Breakpoints,2011
+35,Red Snapper,CPT Mean,2018
+36,Red Snapper,CPT Var,2018
+37,Red Snapper,CPT MeanVar,2017
+38,Red Snapper,CPT MeanVar,2018
+39,Red Snapper,Breakpoints,2012
+40,Scamp,CPT Mean,2007
+41,Scamp,CPT Mean,2018
+42,Scamp,CPT Var,2018
+43,Scamp,CPT MeanVar,2007
+44,Scamp,CPT MeanVar,2018
+45,Scamp,Breakpoints,2002
+46,Scamp,Breakpoints,2008
+47,Snowy Grouper ,CPT Mean,2016
+48,Snowy Grouper ,CPT Var,2016
+49,Snowy Grouper ,CPT MeanVar,2010
+50,Snowy Grouper ,CPT MeanVar,2016
+51,Snowy Grouper ,Breakpoints,1983
+52,Snowy Grouper ,Breakpoints,2009
+53,Vermilion Snapper,CPT Mean,2015
+54,Vermilion Snapper,CPT Var,2013
+55,Vermilion Snapper,CPT Var,2015
+56,Vermilion Snapper,CPT MeanVar,2014
+57,Vermilion Snapper,CPT MeanVar,2015
+58,Vermilion Snapper,Breakpoints,2004
+59,Vermilion Snapper,Breakpoints,2007

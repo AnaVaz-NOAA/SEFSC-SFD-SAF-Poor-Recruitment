@@ -9,7 +9,7 @@ library(cmocean)
 library(raveio)
 
 #filepath <- ("/Users/anavaz/Stuff/Current/SAtlantic/CNAPS_mat/")
-filepath <- ("/Users/anacarolvaz/Stuff/current_work/SAtlantic/CNAPS_mat/")
+filepath <- ("/Users/anavaz/Stuff/Current/SAtlantic/data/")
 filename <- (gsub(" ","",paste(filepath,"timeAllCNAPS.mat")))
 timeAux  <- read_mat(filename)
 
@@ -47,6 +47,7 @@ for (ivar in 1:5) {
                     'mixedlayer')
   # work the variable
   # loop all sites and do 1) envPred, 2) spectral analyses for entire time (breakdown in frequencies), 3) trend
+  filepath <- ("/Users/anavaz/Stuff/Current/SAtlantic/data/CNAPS/")
   filename <- (gsub(" ","",paste(filepath,varname,"_CNAPS.mat")))
   VarMaux  <- read_mat(filename)
   VarM     <- VarMaux$varM
