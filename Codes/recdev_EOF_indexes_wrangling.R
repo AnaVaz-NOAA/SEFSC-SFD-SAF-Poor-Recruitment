@@ -143,7 +143,7 @@ write.csv(File.out, file="./csv_files/indexes_feb23.csv", quote=F)
 # now read all EOF (PCA for time)
 
 # set the diretory with the assessment files
-filedir <- "./data/EOF_CNAPS/MonthlyConst/"
+filedir <- "~/Stuff/Current/SAtlantic/data/EOF_CNAPS/All/"
 
 # Get a list of all the files in the directory
 file_list <- list.files(filedir)
@@ -185,14 +185,13 @@ for (inFile in file_list) {
   }
 
 }
-dev.off()
 write.csv(File.out, file="./csv_files/EOF_CNAPS.csv", quote=F)
 
 ################################################################################
 # now read all EOF Seasonal (PCA for time)
 
 # set the diretory with the assessment files
-filedir <- "./data/EOF_CNAPS/SeasonConst/"
+filedir <- "~/Stuff/Current/SAtlantic/data/EOF_CNAPS/SeasonConst/"
 
 # Get a list of all the files in the directory
 file_list <- list.files(filedir)
@@ -248,7 +247,7 @@ write.csv(File.out, file="./csv_files/EOF_Seasonal_CNAPS.csv", quote=F)
 # now read all EOF Spawning Season (Winter - Feb to April, Summer - Jun to Aug
 
 # set the diretory with the assessment files
-filedir <- "./data/EOF_CNAPS/SpSeasonConst/"
+filedir <- "~/Stuff/Current/SAtlantic/data/EOF_CNAPS/SpSeasonConst/"
 
 # Get a list of all the files in the directory
 file_list <- list.files(filedir)
@@ -296,7 +295,6 @@ for (inFile in file_list) {
     index <- index +1
   }
 }
-dev.off()
 write.csv(File.out, file="./csv_files/EOF_Spawning_Seasonal_CNAPS.csv", quote=F)
 
 ################################################################################

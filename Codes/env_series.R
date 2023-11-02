@@ -8,7 +8,7 @@ library(cmocean)
 # for a readmat function that works with HDF5
 library(raveio)
 
-filepath <- ("./data/")
+filepath <- ("~/Stuff/Current/SAtlantic/data/")
 filename <- (gsub(" ","",paste(filepath,"timeAllCNAPS.mat")))
 timeAux  <- read_mat(filename)
 
@@ -50,6 +50,8 @@ bands <- list(
   synoptic = c(1/19, 1/16)
 )
 maxband <- 1/3650
+
+filepath <- ("~/Stuff/Current/SAtlantic/data/CNAPS/")
 
 # load matfile
 for (ivar in 1:5) {
