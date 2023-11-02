@@ -345,83 +345,196 @@
 <li>Low recruitment pattern on Winter spawners <img data-src="images/TimeSeries/spawningseason.png" data-fig-align="center" width="800" height="600"></li>
 </ul>
 </section>
-<section id="data-used-for-spatial-temporal-analyses" class="slide level2">
-<h2>Data used for spatial-temporal analyses</h2>
+<section id="methods" class="slide level2">
+<h2>Methods</h2>
+<p><strong>CNAPS (4km resolution)</strong> - SST - Bottom Temperature - SSH - Depth Mixed Layer - Initially considered in m, now as a fraction of local depth</p>
 <ul>
-<li><p>Preliminary results 1998-2021</p></li>
-<li><p>Merged Satellite Chrolophyll from Copernicus (SeaWiFS, MODIS, MERIS, VIIRS-SNPP &amp; JPSS1, OLCI-S3A &amp; S3B)</p></li>
-<li><p>Mercator Glorys Model Reanalyses (8km resolution)</p>
+<li>Surface Salinity
 <ul>
-<li>SST</li>
-<li>Bottom Temperature</li>
-<li>Surface Salinity</li>
-<li>Depth Mixed Layer</li>
+<li>Considered initially but removed as it was the variable with the least correlation and patterns)</li>
 </ul></li>
-</ul>
-</section>
-<section id="eof-analyses" class="slide level2">
-<h2>EOF analyses</h2>
+<li>For future incorporation: Chrolophyll
 <ul>
-<li>Sensitivity around the study area and time resolution.</li>
+<li>Merged Satellite Chrolophyll from Copernicus (SeaWiFS, MODIS, MERIS, VIIRS-SNPP &amp; JPSS1, OLCI-S3A &amp; S3B)</li>
+</ul></li>
 <li><strong>Study area:</strong>
 <ul>
-<li>currently bounded at Cape Canaveral (~28.5ºN) and Cape Hatteras (~35ºN) from shore to the 500m isobath</li>
+<li>currently bounded at Cape Canaveral (~28.5ºN) and Cape Hatteras (~35ºN) from shore to the 700m isobath</li>
 </ul></li>
 <li><strong>Time:</strong>
 <ul>
-<li>Monthly Averaged time series for 1998-2020</li>
+<li>Monthly Averaged time series for 1993-2023</li>
 <li>Seasonally Averaged (Winter - JFM, Spring - AMJ, Summer - JAS, Fall - OND)</li>
 <li>Spawning Seasonal Averages - Winter: FMA, Summer: JJA</li>
 </ul></li>
 </ul>
 </section>
-<section id="sst-example-monthly-averages" class="slide level2">
-<h2>SST Example (Monthly averages)</h2>
+<section id="correlations-seasonal" class="slide level2">
+<h2>Correlations (Seasonal)</h2>
+<p><img data-src="images/Correlation_EOF_Season_Species_heatmap2.png">{fig-align=“center”, width=“500” height=“600”}</p>
+</section>
+<section id="correlations-seasonal-spawning" class="slide level2">
+<h2>Correlations (Seasonal Spawning)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Correlation_EOF_SpSeason_Species_heatmap2.png" width="350" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="eofs-bottom-temperature" class="slide level2">
+<h2>EOFs Bottom Temperature</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/TimeSeries/sst_mode1.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 350px; "></p>
-<p><img data-src="images/TimeSeries/SST_temporal_mode1.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
+<ul>
+<li>Bottom Temperature Winter Mode 2</li>
+</ul>
+<p><img data-src="./images/CNAPS_constant/bottomT_constant_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
+<p><img data-src="./images/CNAPS_constant/bottomT_constant_Winter_temporal_mode2_CNAPS.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/TimeSeries/sst_mode2.png" class="absolute" style="top: 75px; right: 120px; width: 350px; height: 350px; "></p>
-<p><img data-src="images/TimeSeries/SST_temporal_mode2.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
+<ul>
+<li>Bottom Temperature Winter Spawning (Feb-April) Mode 2</li>
+</ul>
+<p><img data-src="./images/CNAPS_constant/bottomT_constant_Spawning_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
+<p><img data-src="./images/CNAPS_constant/bottomT_constant_Spawning_Winter_temporal_mode2_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
 </div>
 </div>
 </section>
-<section id="sst-example-seasonal-averages" class="slide level2">
-<h2>SST Example (Seasonal averages)</h2>
+<section id="eofs-sst" class="slide level2">
+<h2>EOFs SST</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/TimeSeries/sst_Summer_mode1.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 350px; "></p>
-<p><img data-src="images/TimeSeries/sst_Summer_temporal_mode1.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
+<ul>
+<li>SST Winter Mode 2</li>
+</ul>
+<p><img data-src="./images/CNAPS_constant/SST_constant_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
+<p><img data-src="./images/CNAPS_constant/SST_constant_Winter_temporal_mode2_CNAPS.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/TimeSeries/sst_Summer_mode2.png" class="absolute" style="top: 75px; right: 120px; width: 350px; height: 350px; "></p>
-<p><img data-src="images/TimeSeries/sst_Summer_temporal_mode2.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
+<ul>
+<li>SST Winter Spawning (Feb-April) Mode 2</li>
+</ul>
+<p><img data-src="./images/CNAPS_constant/SST_constant_Spawning_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
+<p><img data-src="./images/CNAPS_constant/SST_constant_Spawning_Winter_temporal_mode2_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
 </div>
 </div>
 </section>
-<section id="correlation" class="slide level2">
-<h2>Correlation</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/TimeSeries/RedPorgyBottomTWinterMode1.png" width="550" height="600"></p>
-</figure>
+<section id="eofs-ssh" class="slide level2">
+<h2>EOFs SSH</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ul>
+<li>SSH Spring Mode 1</li>
+</ul>
+<p><img data-src="./images/CNAPS_constant/SSH_constant_Spring_mode1_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
+<p><img data-src="./images/CNAPS_constant/SSH_constant_Spring_temporal_mode1_CNAPS.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
+</div><div class="column" style="width:33%;">
+<ul>
+<li>SSH Winter Mode 2</li>
+</ul>
+<p><img data-src="./images/CNAPS_constant/ssh_constant_Winter_mode1_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
+<p><img data-src="./images/CNAPS_constant/ssh_constant_Winter_temporal_mode1_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
+</div><div class="column" style="width:33%;">
+<ul>
+<li>SSH Winter Spawning (Feb-Apr) Mode 2</li>
+</ul>
+<p><img data-src="./images/CNAPS_constant/ssh_constant_Spawning_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
+<p><img data-src="./images/CNAPS_constant/ssh_constant_Spawning_Winter_temporal_mode2_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
+</div>
 </div>
 </section>
-<section id="correlations" class="slide level2">
-<h2>Correlations</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/TimeSeries/Correlation_EOF_Season_Species_heatmap.png" width="600" height="600"></p>
-</figure>
+<section id="bottom-temperature-winter-averages-and-trends" class="slide level2">
+<h2>Bottom Temperature Winter Averages and Trends</h2>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<p><img data-src="./images/bottomT_Winter_Avg_seasonal.png"></p>
+</div>
+<div class="column" style="width:50%;">
+<p><img data-src="./images/bottomT_Winter_seasonal.png"></p>
+</div>
 </div>
 </section>
-<section id="point-change-analyses" class="slide level2">
-<h2>Point Change Analyses</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/TimeSeries/RedGrouper_changepoint.png" width="550" height="600"></p>
-</figure>
+<section id="ssh-winter-averages-and-trends" class="slide level2">
+<h2>SSH Winter Averages and Trends</h2>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<p><img data-src="./images/analyses/SSH_Winter_Avg_seasonal.png"></p>
 </div>
+<div class="column" style="width:50%;">
+<p><img data-src="./images/analyses/SSH_Winter_seasonal.png"></p>
+</div>
+</div>
+</section>
+<section id="ssh-spring-averages-and-trends" class="slide level2">
+<h2>SSH Spring Averages and Trends</h2>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<p><img data-src="./images/analyses/SSH_Spring_Avg_seasonal.png"></p>
+</div>
+<div class="column" style="width:50%;">
+<p><img data-src="./images/analyses/SSH_Spring_seasonal.png"></p>
+</div>
+</div>
+</section>
+<section id="sst-winter-averages-and-trends" class="slide level2">
+<h2>SST Winter Averages and Trends</h2>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<p><img data-src="./images/analyses/SST_Winter_Avg_seasonal.png"></p>
+</div>
+<div class="column" style="width:50%;">
+<p><img data-src="./images/analyses/SST_Winter_seasonal.png"></p>
+</div>
+</div>
+</section>
+<section id="hovmoler-diagram-at-latitude-30-for-winter" class="slide level2">
+<h2>Hovmoler Diagram at latitude 30 for Winter</h2>
+<div class="{.columns&quot;}">
+<div class="column" style="width:30%;">
+<p>Bottom Temperature</p>
+<p><img data-src="images/hovmoller_bottomT_30_Winter.png" width="50" height="300"></p>
+</div>
+<div class="column" style="width:30%;">
+<p>SSH</p>
+<p><img data-src="images/hovmoller_ssh_30_Winter.png" width="50" height="300"></p>
+</div>
+<div class="column" style="width:30%;">
+<p>SST <img data-src="images/hovmoller_sst_30_Winter.png" width="50" height="300"></p>
+</div>
+</div>
+</section>
+<section id="wavelet" class="slide level2">
+<h2>Wavelet</h2>
+<p><img data-src="images/wavelet/wavelet_days_bottomT_smoothed1.png" width="300" height="100"> <img data-src="images/wavelet/wavelet_days_SSH_smoothed1.png" width="300" height="100"> <img data-src="images/wavelet/wavelet_days_SST_smoothed1.png" width="300" height="100"></p>
+</section>
+<section id="anomalies" class="slide level2">
+<h2>Anomalies</h2>
+<ul>
+<li>SSH Winter</li>
+</ul>
+<p><img data-src="images/ssh_Winter_anomaly_constant.png"></p>
+<ul>
+<li>SSH Spring</li>
+</ul>
+<p><img data-src="images/anomalies/ssh_Spring_anomaly_constant.png"></p>
+<ul>
+<li>SSH Winter Spawning</li>
+</ul>
+<p><img data-src="images/ssh_Winter_Sp_AllM_anomaly_constant.png"></p>
+<ul>
+<li>Bottom Temperature Winter</li>
+</ul>
+<p><img data-src="images/bottomT_Winter_anomaly_constant.png"></p>
+<ul>
+<li>Bottom Temperature Winter Spawning</li>
+</ul>
+<p><img data-src="images/bottomT_constant_Spawning_Winter_anomaly.png"></p>
+<ul>
+<li>SST Winter</li>
+</ul>
+<p><img data-src="images/sst_Winter_anomaly_constant.png"></p>
+<ul>
+<li>SST Winter Spawning</li>
+</ul>
+<p><img data-src="images/sst_constant_Spawning_Winter_anomaly.png"></p>
 <div class="footer footer-default">
 
 </div>
