@@ -147,61 +147,6 @@ title-slide-attributes:
 :::
 :::
 
-## Correlation Variables
-
-::: columns
-
-::: {.column width="33%"}
-
-![](images/Summary/BottomTWinterMode2SSHWinterMode1.png){width="400" height="400"}
-:::
-
-::: {.column width="33%"}
-
-![](images/Summary/BottomTWinterMode2SSTWinterMode2.png){width="400" height="400"}
-
-:::
-
-::: {.column width="33%"}
-
-![](images/Summary/SSHWinterMode1SSTWinterMode2.png){width="400" height="400"}
-
-:::
-
-:::
-
-
-## Anomalies
-
-::: columns
-::: {.column width="50%"}
-::: smaller
-SSH Winter
-:::
-
-![](images/Summary/ssh_Winter_anomaly_constant.png){width="500" height="200"}
-
-::: smaller
-SSH Spring
-:::
-
-![](images/anomalies/ssh_Spring_anomaly_constant.png){width="500" height="200"}
-:::
-
-::: {.column width="50%"}
-::: smaller
-Bottom Temperature Winter
-:::
-
-![](images/Summary/bottomT_Winter_anomaly_constant.png){width="500" height="200"}
-
-::: smaller
-SST Winter
-:::
-
-![](images/Summary/sst_Winter_anomaly_constant.png){width="500" height="200"}
-:::
-:::
 
 ## Winter Bottom Temperature
 
@@ -299,6 +244,78 @@ Trend
 :::
 :::
 
+
+## Correlation EOFs
+
+::: columns
+::: {.column width="33%"}
+![](images/Summary/BottomTWinterMode2SSHWinterMode1.png){width="400" height="400"}
+:::
+
+::: {.column width="33%"}
+![](images/Summary/BottomTWinterMode2SSTWinterMode2.png){width="400" height="400"}
+:::
+
+::: {.column width="33%"}
+![](images/Summary/SSHWinterMode1SSTWinterMode2.png){width="400" height="400"}
+:::
+:::
+
+## Anomalies
+
+::: columns
+::: {.column width="50%"}
+::: smaller
+SSH Winter
+:::
+
+![](images/Summary/ssh_Winter_anomaly_constant.png){width="500" height="200"}
+
+::: smaller
+SSH Spring
+:::
+
+![](images/anomalies/ssh_Spring_anomaly_constant.png){width="500" height="200"}
+:::
+
+::: {.column width="50%"}
+::: smaller
+Bottom Temperature Winter
+:::
+
+![](images/Summary/bottomT_Winter_anomaly_constant.png){width="500" height="200"}
+
+::: smaller
+SST Winter
+:::
+
+![](images/Summary/sst_Winter_anomaly_constant.png){width="500" height="200"}
+:::
+:::
+
+## Correlation Anomalies
+
+::: columns
+::: {.column width="75%"}
+::: r-stack
+![](./images/Summary/Correlation_Anomal_Season_Species_heatmap.png){.fragment fig-align="center" width="550" height="550"}
+
+![](./images/Summary/Correlation_Anomal_Season_Species_heatmap2.png){.fragment fig-align="center" width="550" height="550"}
+:::
+:::
+
+::: {.column width="25%"}
+::: smaller
+-   Bottom Temperature Winter
+
+-   SSH Spring
+
+-   SST Spring
+:::
+:::
+:::
+
+
 ## Hovmöller Diagram Winter 30o
 
 ::: columns
@@ -347,11 +364,11 @@ SST
 :::
 
 ::: {.column width="45%"}
-![](images/wavelet/wavelet_days_bottomT_smoothed1.png){width="400" height="150"}
+![](./images/wavelet/wavelet_days_bottomT_smoothed1.png){width="400" height="150"}
 
-![](images/wavelet/wavelet_days_SSH_smoothed1.png){width="400" height="150"}
+![](./images/wavelet/wavelet_days_SSH_smoothed1.png){width="400" height="150"}
 
-![](images/wavelet/wavelet_days_SST_smoothed1.png){width="400" height="150"}
+![](./images/wavelet/wavelet_days_SST_smoothed1.png){width="400" height="150"}
 :::
 
 ::: {.column width="35%"}
@@ -362,3 +379,106 @@ SST
 ![](images/wavelet/wavelet_period_sst.png){width="150" height="150"}
 :::
 :::
+
+## Power Bottom Temperature
+
+::: columns
+::: {.column width="50%"}
+::: smaller
+64-128 d
+:::
+
+![](./images/wavelet/power_bottomT_64_128.png){width="400" height="150"} ::: smaller 128-256 d
+:::
+
+![](./images/wavelet/power_bottomT_128_256.png){width="400" height="150"}
+:::
+
+::: {.column width="50%"}
+::: smaller
+256-512 d
+:::
+
+![](./images/wavelet/power_bottomT_256_512.png){width="400" height="150"} 
+
+::: smaller 
+512-1024 d
+:::
+
+![](./images/wavelet/power_bottomT_512_1024.png){width="400" height="150"} 
+
+::: :::
+
+## Power SSH
+
+::: columns
+
+::: {.column width="50%"}
+
+::: smaller
+64-128 d
+:::
+
+![](./images/wavelet/power_ssh_64_128.png){width="400" height="150"} 
+
+::: smaller 
+128-256 d
+:::
+
+![](./images/wavelet/power_ssh_128_256.png){width="400" height="150"}
+
+:::
+
+::: {.column width="50%"}
+
+::: smaller
+256-512 d
+:::
+
+![](./images/wavelet/power_ssh_256_512.png){width="400" height="150"} 
+
+::: smaller 
+512-1024 d
+:::
+
+![](./images/wavelet/power_ssh_512_1024.png){width="400" height="150"} 
+
+::: 
+:::
+
+## Power SST
+
+::: columns
+::: {.column width="50%"}
+::: smaller
+64-128 d
+:::
+
+![](./images/wavelet/power_sst_64_128.png){width="400" height="150"} 
+
+::: smaller 
+128-256 d
+:::
+
+![](./images/wavelet/power_sst_128_256.png){width="400" height="150"}
+:::
+
+::: {.column width="50%"}
+::: smaller
+256-512 d
+:::
+
+![](./images/wavelet/power_sst_256_512.png){width="400" height="150"} 
+
+::: smaller 
+512-1024 d
+:::
+
+![](./images/wavelet/power_sst_512_1024.png){width="400" height="150"} 
+
+::: 
+:::
+
+## Spatial Power
+
+![](images/Screen Shot 2023-11-06 at 9.11.55 AM.png){width="600" height="800"} 
