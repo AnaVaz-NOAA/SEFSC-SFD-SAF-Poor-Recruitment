@@ -1,0 +1,79 @@
+/*-- scss:defaults --*/
+// importing fonts
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i|IBM+Plex+Mono:400,500);
+@import url(//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css);
+
+// colors
+$light-blue: #56B4E9 !default;
+$pale-blue: #CEE9FF !default;
+$dark-blue: #0072B2 !default;
+$darker-blue: #1B457B;
+$light-grey: #EDEEEF !default;
+$grayish-black: #474747 !default;
+$grey: #BEBEBE !default;
+$dark-grey: #6C7B7F !default;
+$navy-blue:#102F82;
+
+// fonts
+$font-family-serif: 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif !default;
+
+// headings
+$presentation-heading-font: $font-family-serif !default;
+$presentation-heading-color: $darker-blue !default;
+$h1-font-size: 1.6em !default;
+$h2-font-size: 1.3em !default;
+$h3-font-size: 1.15em !default;
+
+#title-slide {
+  background-size: cover;
+  color: $darker-blue;
+}
+
+.footer {
+  font-family: $presentation-heading-font;
+}
+
+.reveal .footer {
+    color: $light-blue
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.SlideSubtitle { 
+  font-size: 130%;
+  font-weight: bold;
+  color: $light-blue;
+}
+
+.figCaption { 
+  font-size: 50%;
+  font-weight: normal;
+  font-style: italic;
+  color: $grey;
+}
+
+.citations { 
+  font-size: 45%;
+  font-weight: normal;
+  font-style: italic;
+  color: $dark-grey;
+}
+
+.smaller {
+   font-size: 75%;
+  font-weight: normal;
+}
+
+
+.video {
+    position: absolute;
+    right: 15%;
+    transform:translateX(15%);
+    top: 15%;
+}
+
+.rotateFig {
+    transform:rotate(90deg); /* Adjust the angle as needed */
+}

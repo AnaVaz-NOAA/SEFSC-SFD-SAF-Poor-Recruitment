@@ -7,9 +7,10 @@
 <link href="summary_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="summary_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="summary_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.335">
+  <meta name="generator" content="quarto-1.2.269">
 
-  <title>South Atlantic Poor Recruitment Preliminary</title>
+  <meta name="author" content="Ana Vaz, Kyle Shertzer, Kevin Craig">
+  <title>Poor Recruitment in the South Atlantic</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -322,10 +323,15 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">South Atlantic Poor Recruitment Preliminary</h1>
+<section id="title-slide" data-background-image="figures_general/noaa_background.png" data-background-opacity="1" data-background-size="cover" fontcolor="$navy-blue" class="quarto-title-block center">
+  <h1 class="title">Poor Recruitment in the South Atlantic</h1>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ana Vaz, Kyle Shertzer, Kevin Craig 
+</div>
+</div>
 </div>
 
 </section>
@@ -338,205 +344,269 @@
 </figure>
 </div>
 </section>
-<section>
-<section id="introduction-1" class="title-slide slide level1 center">
-<h1>Introduction</h1>
+<section id="introduction-1" class="slide level2">
+<h2>Introduction</h2>
 <ul>
-<li>Low recruitment pattern on Winter spawners <img data-src="images/TimeSeries/spawningseason.png" data-fig-align="center" width="800" height="600"></li>
+<li class="fragment">Low recruitment pattern restricted to Winter spawners</li>
+<li class="fragment">Suggests influence of enviromental patterns</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/TimeSeries/spawningseason.png" width="800" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
 </section>
 <section id="methods" class="slide level2">
 <h2>Methods</h2>
-<p><strong>CNAPS (4km resolution)</strong> - SST - Bottom Temperature - SSH - Depth Mixed Layer - Initially considered in m, now as a fraction of local depth</p>
+<p><strong>CNAPS (4km resolution)</strong></p>
 <ul>
-<li>Surface Salinity
+<li class="fragment"><p>SST</p></li>
+<li class="fragment"><p>Bottom Temperature</p></li>
+<li class="fragment"><p>SSH</p></li>
+<li class="fragment"><p>Depth Mixed Layer (as proportion of depth)</p></li>
+<li class="fragment"><p>Surface Salinity</p></li>
+</ul>
+<div class="smaller">
 <ul>
-<li>Considered initially but removed as it was the variable with the least correlation and patterns)</li>
+<li class="fragment"><p>For future incorporation: Chlorophyll (match-mismatch hypothesis)</p>
+<ul>
+<li class="fragment">Merged Satellite Chrolophyll from Copernicus (SeaWiFS, MODIS, MERIS, VIIRS-SNPP &amp; JPSS1, OLCI-S3A &amp; S3B)</li>
 </ul></li>
-<li>For future incorporation: Chrolophyll
+</ul>
+</div>
+</section>
+<section>
+<section id="study-area" class="title-slide slide level1 center">
+<h1>Study area</h1>
 <ul>
-<li>Merged Satellite Chrolophyll from Copernicus (SeaWiFS, MODIS, MERIS, VIIRS-SNPP &amp; JPSS1, OLCI-S3A &amp; S3B)</li>
-</ul></li>
-<li><strong>Study area:</strong>
+<li class="fragment"><p>Currently bounded at Cape Canaveral (~28.5ºN) and Cape Hatteras (~35ºN) from shore to the 700m isobath</p></li>
+<li class="fragment"><p><strong>Time:</strong></p>
 <ul>
-<li>currently bounded at Cape Canaveral (~28.5ºN) and Cape Hatteras (~35ºN) from shore to the 700m isobath</li>
-</ul></li>
-<li><strong>Time:</strong>
+<li class="fragment"><p>Monthly Averaged time series for 1993-2023</p></li>
+<li class="fragment"><p>Seasonally Averaged (Winter - JFM, Spring - AMJ, Summer - JAS, Fall - OND)</p></li>
+<li class="fragment"><p>Spawning Seasonal Averages</p>
 <ul>
-<li>Monthly Averaged time series for 1993-2023</li>
-<li>Seasonally Averaged (Winter - JFM, Spring - AMJ, Summer - JAS, Fall - OND)</li>
-<li>Spawning Seasonal Averages - Winter: FMA, Summer: JJA</li>
+<li class="fragment">Winter: FMA, Summer: JJA</li>
 </ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="analyses" class="slide level2">
+<h2>Analyses</h2>
+<ul>
+<li class="fragment"><p>Empirical Orthogonal Functions (EOF)</p>
+<ul>
+<li class="fragment">All fields at different temporal scales</li>
+<li class="fragment">Correlation of EOFs (PCAs) with recruitment deviations</li>
+</ul></li>
+<li class="fragment"><p>Averages, SD, trends</p></li>
+<li class="fragment"><p>Wavelet analyses</p></li>
+<li class="fragment"><p>Power at different frequencies and time periods</p></li>
+<li class="fragment"><p>Colwell constancy</p></li>
 </ul>
 </section>
 <section id="correlations-seasonal" class="slide level2">
 <h2>Correlations (Seasonal)</h2>
-<p><img data-src="images/Correlation_EOF_Season_Species_heatmap2.png">{fig-align=“center”, width=“500” height=“600”}</p>
+<div class="columns">
+<div class="column" style="width:75%;">
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Summary/Correlation_EOF_Season_Species_heatmap.png" class="fragment" width="550" height="550"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Summary/Correlation_EOF_Season_Species_heatmap2.png" class="fragment" width="550" height="550"></p>
+</figure>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="smaller">
+<ul>
+<li class="fragment"><p>Bottom Temperature Winter Mode 2</p></li>
+<li class="fragment"><p>SSH Spring Mode 1</p></li>
+<li class="fragment"><p>SSH Winter Mode 1</p></li>
+<li class="fragment"><p>SST Winter Mode 2</p></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="correlations-seasonal-spawning" class="slide level2">
 <h2>Correlations (Seasonal Spawning)</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Correlation_EOF_SpSeason_Species_heatmap2.png" width="350" height="600"></p>
+<p><img data-src="./images/Summary/Correlation_EOF_SpSeason_Species_heatmap.png" class="fragment" width="550" height="550"></p>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/Summary/Correlation_EOF_SpSeason_Species_heatmap2.png" class="fragment" width="550" height="550"></p>
+</figure>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="smaller">
+<ul>
+<li class="fragment"><p>Bottom Temperature Winter Spawning (Feb-Apr) Mode 2</p></li>
+<li class="fragment"><p>SSH Winter Spawning (Feb-Apr) Mode 1</p></li>
+<li class="fragment"><p>SST Winter Spawning (Feb-Apr) Mode 2</p></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="eofs-bottom-temperature" class="slide level2">
-<h2>EOFs Bottom Temperature</h2>
+<section id="anomalies" class="slide level2">
+<h2>Anomalies</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ul>
-<li>Bottom Temperature Winter Mode 2</li>
-</ul>
-<p><img data-src="./images/CNAPS_constant/bottomT_constant_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
-<p><img data-src="./images/CNAPS_constant/bottomT_constant_Winter_temporal_mode2_CNAPS.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
+<div class="smaller">
+<p>SSH Winter</p>
+</div>
+<p><img data-src="images/Summary/ssh_Winter_anomaly_constant.png" width="500" height="200"></p>
+<div class="smaller">
+<p>SSH Spring</p>
+</div>
+<p><img data-src="images/anomalies/ssh_Spring_anomaly_constant.png" width="500" height="200"></p>
 </div><div class="column" style="width:50%;">
-<ul>
-<li>Bottom Temperature Winter Spawning (Feb-April) Mode 2</li>
-</ul>
-<p><img data-src="./images/CNAPS_constant/bottomT_constant_Spawning_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
-<p><img data-src="./images/CNAPS_constant/bottomT_constant_Spawning_Winter_temporal_mode2_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
+<div class="smaller">
+<p>Bottom Temperature Winter</p>
+</div>
+<p><img data-src="images/Summary/bottomT_Winter_anomaly_constant.png" width="500" height="200"></p>
+<div class="smaller">
+<p>SST Winter</p>
+</div>
+<p><img data-src="images/Summary/sst_Winter_anomaly_constant.png" width="500" height="200"></p>
 </div>
 </div>
 </section>
-<section id="eofs-sst" class="slide level2">
-<h2>EOFs SST</h2>
+<section id="winter-bottom-temperature" class="slide level2">
+<h2>Winter Bottom Temperature</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ul>
-<li>SST Winter Mode 2</li>
-</ul>
-<p><img data-src="./images/CNAPS_constant/SST_constant_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
-<p><img data-src="./images/CNAPS_constant/SST_constant_Winter_temporal_mode2_CNAPS.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
+<div class="smaller absolute" style="top: 60px; left: 10px; ">
+<p>Average</p>
+</div>
+<p><img data-src="./images/Summary/bottomT_Winter_Avg_seasonal.png" class="absolute" style="top: 60px; left: 200px; width: 300px; height: 300px; "></p>
+<div class="smaller absolute" style="left: 10px; bottom: 250px; ">
+<p>EOF Mode 2</p>
+</div>
+<p><img data-src="./images/Summary/bottomT_constant_Winter_mode2_CNAPS.png" class="absolute" style="left: 200px; bottom: 10px; width: 300px; height: 300px; "></p>
 </div><div class="column" style="width:50%;">
-<ul>
-<li>SST Winter Spawning (Feb-April) Mode 2</li>
-</ul>
-<p><img data-src="./images/CNAPS_constant/SST_constant_Spawning_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
-<p><img data-src="./images/CNAPS_constant/SST_constant_Spawning_Winter_temporal_mode2_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
+<div class="smaller absolute" style="top: 60px; right: 100px; ">
+<p>STD</p>
+</div>
+<p><img data-src="./images/Summary/bottomT_Winter_Std_seasonal.png" class="absolute" style="top: 60px; right: 200px; width: 300px; height: 300px; "></p>
+<div class="smaller absolute" style="bottom: 250px; right: 100px; ">
+<p>Trend</p>
+</div>
+<p><img data-src="./images/Summary/bottomT_Winter_seasonal.png" class="absolute" style="bottom: 10px; right: 200px; width: 300px; height: 300px; "></p>
 </div>
 </div>
 </section>
-<section id="eofs-ssh" class="slide level2">
-<h2>EOFs SSH</h2>
+<section id="winter-ssh" class="slide level2">
+<h2>Winter SSH</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
-<ul>
-<li>SSH Spring Mode 1</li>
-</ul>
-<p><img data-src="./images/CNAPS_constant/SSH_constant_Spring_mode1_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
-<p><img data-src="./images/CNAPS_constant/SSH_constant_Spring_temporal_mode1_CNAPS.png" class="absolute" style="left: 20px; bottom: 50px; width: 350px; height: 200px; "></p>
-</div><div class="column" style="width:33%;">
-<ul>
-<li>SSH Winter Mode 2</li>
-</ul>
-<p><img data-src="./images/CNAPS_constant/ssh_constant_Winter_mode1_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
-<p><img data-src="./images/CNAPS_constant/ssh_constant_Winter_temporal_mode1_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
-</div><div class="column" style="width:33%;">
-<ul>
-<li>SSH Winter Spawning (Feb-Apr) Mode 2</li>
-</ul>
-<p><img data-src="./images/CNAPS_constant/ssh_constant_Spawning_Winter_mode2_CNAPS.png" class="absolute" style="top: 75px; left: 20px; width: 350px; height: 500px; "></p>
-<p><img data-src="./images/CNAPS_constant/ssh_constant_Spawning_Winter_temporal_mode2_CNAPS.png" class="absolute" style="bottom: 50px; right: 120px; width: 350px; height: 200px; "></p>
+<div class="column" style="width:50%;">
+<div class="smaller absolute" style="top: 60px; left: 10px; ">
+<p>Average</p>
+</div>
+<p><img data-src="./images/Summary/ssh_Winter_Avg_seasonal.png" class="absolute" style="top: 60px; left: 200px; width: 300px; height: 300px; "></p>
+<div class="smaller absolute" style="left: 10px; bottom: 250px; ">
+<p>EOF Mode 2</p>
+</div>
+<p><img data-src="./images/Summary/ssh_constant_Winter_mode2_CNAPS.png" class="absolute" style="left: 200px; bottom: 10px; width: 300px; height: 300px; "></p>
+</div><div class="column" style="width:50%;">
+<div class="smaller absolute" style="top: 60px; right: 100px; ">
+<p>STD</p>
+</div>
+<p><img data-src="./images/Summary/ssh_Winter_Std_seasonal.png" class="absolute" style="top: 60px; right: 200px; width: 300px; height: 300px; "></p>
+<div class="smaller absolute" style="bottom: 250px; right: 100px; ">
+<p>Trend</p>
+</div>
+<p><img data-src="./images/Summary/ssh_Winter_seasonal.png" class="absolute" style="bottom: 10px; right: 200px; width: 300px; height: 300px; "></p>
 </div>
 </div>
 </section>
-<section id="bottom-temperature-winter-averages-and-trends" class="slide level2">
-<h2>Bottom Temperature Winter Averages and Trends</h2>
-<div class="{columns}">
+<section id="winter-sst" class="slide level2">
+<h2>Winter SST</h2>
+<div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="./images/bottomT_Winter_Avg_seasonal.png"></p>
+<div class="smaller absolute" style="top: 60px; left: 10px; ">
+<p>Average</p>
 </div>
-<div class="column" style="width:50%;">
-<p><img data-src="./images/bottomT_Winter_seasonal.png"></p>
+<p><img data-src="./images/Summary/sst_Winter_Avg_seasonal.png" class="absolute" style="top: 60px; left: 200px; width: 300px; height: 300px; "></p>
+<div class="smaller absolute" style="left: 10px; bottom: 250px; ">
+<p>EOF Mode 2</p>
+</div>
+<p><img data-src="./images/Summary/sst_constant_Winter_mode2_CNAPS.png" class="absolute" style="left: 200px; bottom: 10px; width: 300px; height: 300px; "></p>
+</div><div class="column" style="width:50%;">
+<div class="smaller absolute" style="top: 60px; right: 100px; ">
+<p>STD</p>
+</div>
+<p><img data-src="./images/Summary/sst_Winter_Std_seasonal.png" class="absolute" style="top: 60px; right: 200px; width: 300px; height: 300px; "></p>
+<div class="smaller absolute" style="bottom: 250px; right: 100px; ">
+<p>Trend</p>
+</div>
+<p><img data-src="./images/Summary/sst_Winter_seasonal.png" class="absolute" style="bottom: 10px; right: 200px; width: 300px; height: 300px; "></p>
 </div>
 </div>
 </section>
-<section id="ssh-winter-averages-and-trends" class="slide level2">
-<h2>SSH Winter Averages and Trends</h2>
-<div class="{columns}">
-<div class="column" style="width:50%;">
-<p><img data-src="./images/analyses/SSH_Winter_Avg_seasonal.png"></p>
-</div>
-<div class="column" style="width:50%;">
-<p><img data-src="./images/analyses/SSH_Winter_seasonal.png"></p>
-</div>
-</div>
-</section>
-<section id="ssh-spring-averages-and-trends" class="slide level2">
-<h2>SSH Spring Averages and Trends</h2>
-<div class="{columns}">
-<div class="column" style="width:50%;">
-<p><img data-src="./images/analyses/SSH_Spring_Avg_seasonal.png"></p>
-</div>
-<div class="column" style="width:50%;">
-<p><img data-src="./images/analyses/SSH_Spring_seasonal.png"></p>
-</div>
-</div>
-</section>
-<section id="sst-winter-averages-and-trends" class="slide level2">
-<h2>SST Winter Averages and Trends</h2>
-<div class="{columns}">
-<div class="column" style="width:50%;">
-<p><img data-src="./images/analyses/SST_Winter_Avg_seasonal.png"></p>
-</div>
-<div class="column" style="width:50%;">
-<p><img data-src="./images/analyses/SST_Winter_seasonal.png"></p>
-</div>
-</div>
-</section>
-<section id="hovmoler-diagram-at-latitude-30-for-winter" class="slide level2">
-<h2>Hovmoler Diagram at latitude 30 for Winter</h2>
-<div class="{.columns&quot;}">
+<section id="hovmöller-diagram-winter-30o" class="slide level2">
+<h2>Hovmöller Diagram Winter 30o</h2>
+<div class="columns">
 <div class="column" style="width:30%;">
+<div class="smaller">
 <p>Bottom Temperature</p>
-<p><img data-src="images/hovmoller_bottomT_30_Winter.png" width="50" height="300"></p>
 </div>
-<div class="column" style="width:30%;">
+<p><img data-src="./images/Summary/hovmoller_bottomT_30_Winter.png" width="300" height="450"></p>
+</div><div class="column" style="width:30%;">
+<div class="smaller">
 <p>SSH</p>
-<p><img data-src="images/hovmoller_ssh_30_Winter.png" width="50" height="300"></p>
 </div>
-<div class="column" style="width:30%;">
-<p>SST <img data-src="images/hovmoller_sst_30_Winter.png" width="50" height="300"></p>
+<p><img data-src="images/Summary/hovmoller_ssh_30_Winter.png" width="300" height="450"></p>
+</div><div class="column" style="width:30%;">
+<div class="smaller">
+<p>SST</p>
+</div>
+<p><img data-src="images/Summary/hovmoller_sst_30_Winter.png" width="300" height="450"></p>
 </div>
 </div>
 </section>
 <section id="wavelet" class="slide level2">
 <h2>Wavelet</h2>
-<p><img data-src="images/wavelet/wavelet_days_bottomT_smoothed1.png" width="300" height="100"> <img data-src="images/wavelet/wavelet_days_SSH_smoothed1.png" width="300" height="100"> <img data-src="images/wavelet/wavelet_days_SST_smoothed1.png" width="300" height="100"></p>
-</section>
-<section id="anomalies" class="slide level2">
-<h2>Anomalies</h2>
-<ul>
-<li>SSH Winter</li>
-</ul>
-<p><img data-src="images/ssh_Winter_anomaly_constant.png"></p>
-<ul>
-<li>SSH Spring</li>
-</ul>
-<p><img data-src="images/anomalies/ssh_Spring_anomaly_constant.png"></p>
-<ul>
-<li>SSH Winter Spawning</li>
-</ul>
-<p><img data-src="images/ssh_Winter_Sp_AllM_anomaly_constant.png"></p>
-<ul>
-<li>Bottom Temperature Winter</li>
-</ul>
-<p><img data-src="images/bottomT_Winter_anomaly_constant.png"></p>
-<ul>
-<li>Bottom Temperature Winter Spawning</li>
-</ul>
-<p><img data-src="images/bottomT_constant_Spawning_Winter_anomaly.png"></p>
-<ul>
-<li>SST Winter</li>
-</ul>
-<p><img data-src="images/sst_Winter_anomaly_constant.png"></p>
-<ul>
-<li>SST Winter Spawning</li>
-</ul>
-<p><img data-src="images/sst_constant_Spawning_Winter_anomaly.png"></p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="smaller absolute" style="top: 100px; left: 0px; ">
+<p>Bottom</p>
+<p>Temperature</p>
+</div>
+<div class="smaller absolute" style="top: 300px; left: 0px; ">
+<p>SSH</p>
+</div>
+<div class="smaller absolute" style="left: 0px; bottom: 170px; ">
+<p>SST</p>
+</div>
+</div><div class="column" style="width:45%;">
+<p><img data-src="images/wavelet/wavelet_days_bottomT_smoothed1.png" width="400" height="150"></p>
+<p><img data-src="images/wavelet/wavelet_days_SSH_smoothed1.png" width="400" height="150"></p>
+<p><img data-src="images/wavelet/wavelet_days_SST_smoothed1.png" width="400" height="150"></p>
+</div><div class="column" style="width:35%;">
+<p><img data-src="images/wavelet/wavelet_period_bottomT.png" width="150" height="150"></p>
+<p><img data-src="images/wavelet/wavelet_period_ssh.png" width="150" height="150"></p>
+<p><img data-src="images/wavelet/wavelet_period_sst.png" width="150" height="150"></p>
+</div>
+</div>
+<p><img src="figures_general/CIMAS.png" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p>Poor-Recruitment Monthly Meeting | 10/05/23</p>
 </div>
 </section></section>
     </div>
