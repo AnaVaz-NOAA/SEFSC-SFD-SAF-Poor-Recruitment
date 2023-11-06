@@ -140,14 +140,14 @@ for (iSpp in 1:itot) {
     
     # Create the first panel with different axes
     plot1 <- ggplot(df, aes(x = yearsPlot)) +
-      geom_line(aes(y = x, color = "PCA"), linetype = "solid", linewidth = 1.5) +
-      geom_line(aes(y = y, color = "Residuals"), linetype = "solid", linewidth = 1.5) +
+      geom_line(aes(y = x, color = "PCA 1"), linetype = "solid", linewidth = 1.5) +
+      geom_line(aes(y = y, color = "PCA 2"), linetype = "solid", linewidth = 1.5) +
       geom_hline(yintercept = 0, color = "gray70", linetype = "dashed", linewidth = 1) +
       geom_text(aes(label = paste("R=", format(estimate, digits = 2))), 
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
       geom_text(aes(label = paste("p=", format(p.value, digits = 2))), 
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
-      scale_color_manual(values = c("PCA" = "#F21A00", "Residuals" = "#3B9AB2")) +
+      scale_color_manual(values = c("PCA 1" = "#F21A00", "PCA 2" = "#3B9AB2")) +
       labs(
         title = paste(NamePlotModesSeason[iEOF-1], NamePlotModesSeason[iSpp]),
         y = NULL,
@@ -170,8 +170,8 @@ for (iSpp in 1:itot) {
       ) +
       scale_color_gradientn(colors = pal, name = "") +
       labs(
-        x = "PCAs",
-        y = "Residuals",
+        x = "PCAs 1",
+        y = "PCAs 2",
         title = paste("R=",format(aux$estimate, digits = 2)," p=",format(aux$p.value , digits = 2))
       ) +
       theme_minimal()
