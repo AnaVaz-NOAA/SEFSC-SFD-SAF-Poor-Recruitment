@@ -12,12 +12,12 @@ library(wesanderson)
 graphics.off()
 # load recdevs, indexes and EOF
 # set the diretory with the assessment files
-setwd("./csv_files")
+#setwd("./csv_files")
 RecDev      <- read.csv("RecruitmentResiduals_Feb23.csv")
 Season   <- read.csv("Anomaly_Seasonal.csv")
 SpSeason <- read.csv("Anomaly_Spawning_Seasonal.csv")
 
-yearsPlot <- 1998:2020
+yearsPlot <- 1993:2021
 color_palette <- rainbow(length(unique(yearsPlot)))
 coloraux = colorRampPalette(brewer.pal(11, "Spectral"))
 color_palette = coloraux(length(unique(yearsPlot)))
@@ -84,14 +84,14 @@ for (iSpp in 1:10) {
     
     # Create the first panel with different axes
     plot1 <- ggplot(df, aes(x = yearsPlot)) +
-      geom_line(aes(y = x, color = "PCA"), linetype = "solid", linewidth = 1.5) +
-      geom_line(aes(y = y, color = "Residuals"), linetype = "solid", linewidth = 1.5) +
+      geom_line(aes(y = x, color = "Var 1"), linetype = "solid", linewidth = 1.5) +
+      geom_line(aes(y = y, color = "Var 2"), linetype = "solid", linewidth = 1.5) +
       geom_hline(yintercept = 0, color = "gray70", linetype = "dashed", linewidth = 1) +
       geom_text(aes(label = paste("R=", format(estimate, digits = 2))), 
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
       geom_text(aes(label = paste("p=", format(p.value, digits = 2))), 
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
-      scale_color_manual(values = c("PCA" = "#F21A00", "Residuals" = "#3B9AB2")) +
+      scale_color_manual(values = c("Var 1" = "#F21A00", "Var 2" = "#3B9AB2")) +
       labs(
         title = paste(NamePlotModesSeason[iEOF-1], spNamePlot[iSpp]),
         y = NULL,
@@ -114,8 +114,8 @@ for (iSpp in 1:10) {
       ) +
       scale_color_gradientn(colors = pal, name = "") +
       labs(
-        x = "PCAs",
-        y = "Residuals",
+        x = "Var 1",
+        y = "Var 2",
         title = paste("R=",format(aux$estimate, digits = 2)," p=",format(aux$p.value , digits = 2))
       ) +
       theme_minimal()
@@ -131,16 +131,6 @@ plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
-
-png(gsub(" ","",paste("../images/Correlation_Anomal_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
-heatmap.2(plot_matrix, 
-          col  = colorPlot, 
-          Rowv = NA, 
-          Colv = NA, 
-          margins = c(10,10), 
-          xlab= "", 
-          ylab = "")
-dev.off()
 
 melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_Anomal_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
@@ -202,14 +192,14 @@ for (iSpp in 1:10) {
     
     # Create the first panel with different axes
     plot1 <- ggplot(df, aes(x = yearsPlot)) +
-      geom_line(aes(y = x, color = "PCA"), linetype = "solid", linewidth = 1.5) +
-      geom_line(aes(y = y, color = "Residuals"), linetype = "solid", linewidth = 1.5) +
+      geom_line(aes(y = x, color = "Var 1"), linetype = "solid", linewidth = 1.5) +
+      geom_line(aes(y = y, color = "Var 2"), linetype = "solid", linewidth = 1.5) +
       geom_hline(yintercept = 0, color = "gray70", linetype = "dashed", linewidth = 1) +
       geom_text(aes(label = paste("R=", format(estimate, digits = 2))), 
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
       geom_text(aes(label = paste("p=", format(p.value, digits = 2))), 
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
-      scale_color_manual(values = c("PCA" = "#F21A00", "Residuals" = "#3B9AB2")) +
+      scale_color_manual(values = c("Var 1" = "#F21A00", "Var 2" = "#3B9AB2")) +
       labs(
         title = paste(NamePlotModesSpawnSeason[iEOF-1], spNamePlot[iSpp]),
         y = NULL,
@@ -249,16 +239,6 @@ plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
-
-png(gsub(" ","",paste("../images/Correlation_Anomal_SpSeason_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
-heatmap.2(plot_matrix, 
-          col  = colorPlot, 
-          Rowv = NA, 
-          Colv = NA, 
-          margins = c(15,15), 
-          xlab= "", 
-          ylab = "")
-dev.off()
 
 melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_Anomal_SpSeason_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
