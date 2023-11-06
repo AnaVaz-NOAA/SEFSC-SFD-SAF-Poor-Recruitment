@@ -197,7 +197,6 @@ SST Winter
 
 ## Correlation Anomalies
 
-
 ::: columns
 ::: {.column width="75%"}
 ::: r-stack
@@ -208,7 +207,6 @@ SST Winter
 :::
 
 ::: {.column width="25%"}
-
 ::: smaller
 -   Bottom Temperature Winter
 
@@ -216,10 +214,8 @@ SST Winter
 
 -   SST Spring
 :::
-
 :::
 :::
-
 
 ## Winter Bottom Temperature
 
@@ -365,7 +361,6 @@ SST
 :::
 
 ::: {.column width="45%"}
-
 ![](./images/wavelet/wavelet_days_bottomT_smoothed1.png){width="400" height="150"}
 
 ![](./images/wavelet/wavelet_days_SSH_smoothed1.png){width="400" height="150"}
@@ -381,3 +376,79 @@ SST
 ![](images/wavelet/wavelet_period_sst.png){width="150" height="150"}
 :::
 :::
+
+## Power Bottom Temperature
+
+::: columns
+::: {.column width="50%"}
+::: smaller
+64-128 d
+:::
+
+![](./images/wavelet/power_bottomT_64_128.png){width="400" height="150"} ::: smaller 128-256 d
+:::
+
+![](./images/wavelet/power_bottomT_128_256.png){width="400" height="150"}
+:::
+
+::: {.column width="50%"}
+::: smaller
+256-512 d
+:::
+
+![](./images/wavelet/power_bottomT_256_512.png){width="400" height="150"} ::: smaller 512-1024 d
+:::
+
+![](./images/wavelet/power_bottomT_512_1024.png){width="400" height="150"} ::: :::
+
+## Power SSH
+
+::: columns
+::: {.column width="50%"}
+::: smaller
+64-128 d
+:::
+
+![](./images/wavelet/power_ssh_64_128.png){width="400" height="150"} ::: smaller 128-256 d
+:::
+
+![](./images/wavelet/power_ssh_128_256.png){width="400" height="150"}
+:::
+
+::: {.column width="50%"}
+::: smaller
+256-512 d
+:::
+
+![](./images/wavelet/power_ssh_256_512.png){width="400" height="150"} ::: smaller 512-1024 d
+:::
+
+![](./images/wavelet/power_ssh_512_1024.png){width="400" height="150"} ::: :::
+
+## Power SST
+
+::: columns
+::: {.column width="50%"}
+::: smaller
+64-128 d
+:::
+
+![](./images/wavelet/power_sst_64_128.png){width="400" height="150"} ::: smaller 128-256 d
+:::
+
+![](./images/wavelet/power_sst_128_256.png){width="400" height="150"}
+:::
+
+::: {.column width="50%"}
+::: smaller
+256-512 d
+:::
+
+![](./images/wavelet/power_sst_256_512.png){width="400" height="150"} ::: smaller 512-1024 d
+:::
+
+![](./images/wavelet/power_sst_512_1024.png){width="400" height="150"} ::: :::
+
+## Spatial Power
+
+![](images/Screen Shot 2023-11-06 at 9.11.55 AM.png)
