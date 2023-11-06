@@ -3,6 +3,100 @@ title: "Spectral"
 format: gfm
 editor: source
 ---
+# Inter-Annual 
+
+::: {layout-ncol="3"}
+
+## Bottom Temperature 1993-2021 
+![](../images/analyses/InterAnnual_bottomT.png)
+
+## Bottom Temperature 1993-2009 
+![](../images/analyses/InterAnnual1_bottomT.png)
+
+## Bottom Temperature 2010-2021 
+![](../images/analyses/InterAnnual2_bottomT.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SSH 1993-2021 
+![](../images/analyses/InterAnnual_ssh.png)
+
+## SSH 1993-2009 
+![](../images/analyses/InterAnnual1_ssh.png)
+
+## SSH 2010-2021 
+![](../images/analyses/InterAnnual2_ssh.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SST 1993-2021 
+![](../images/analyses/InterAnnual_sst.png)
+
+## SST 1993-2009 
+![](../images/analyses/InterAnnual1_sst.png)
+
+## SST 2010-2021 
+![](../images/analyses/InterAnnual2_sst.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## Mixed Layer 1993-2021 
+![](../images/analyses/InterAnnual_mixedlayer.png)
+
+## Mixed Layer 1993-2009 
+![](../images/analyses/InterAnnual1_mixedlayer.png)
+
+## Mixed Layer 2010-2021 
+![](../images/analyses/InterAnnual2_mixedlayer.png)
+
+::: 
+
+# Annual 
+
+::: {layout-ncol="3"}
+
+## Bottom Temperature 1993-2021 
+![](../images/analyses/Annual_bottomT.png)
+
+## Bottom Temperature 1993-2009 
+![](../images/analyses/Annual1_bottomT.png)
+
+## Bottom Temperature 2010-2021 
+![](../images/analyses/Annual2_bottomT.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SSH 1993-2021 
+![](../images/analyses/Annual_ssh.png)
+
+## SSH 1993-2009 
+![](../images/analyses/Annual1_ssh.png)
+
+## SSH 2010-2021 
+![](../images/analyses/Annual2_ssh.png)
+
+::: 
+
+::: {layout-ncol="3"}
+
+## SST 1993-2021 
+![](../images/analyses/Annual_sst.png)
+
+## SST 1993-2009 
+![](../images/analyses/Annual1_sst.png)
+
+## SST 2010-2021 
+![](../images/analyses/Annual2_sst.png)
+
+::: 
 
 ::: {layout-ncol="3"}
 
@@ -123,4 +217,4 @@ editor: source
 ## Mixed Layer 2010-2021 
 ![](../images/analyses/Synoptic2_mixedlayer.png)
 
-::: 
+:::
