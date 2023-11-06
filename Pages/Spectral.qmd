@@ -4,6 +4,7 @@ format: gfm
 editor: source
 ---
 
+::: {layout-ncol="3"}
 
 ## Mixed Layer 1993-2021 
 ![](../images/analyses/Annual_mixedlayer.png)

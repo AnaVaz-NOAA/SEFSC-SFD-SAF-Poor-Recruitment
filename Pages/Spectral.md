@@ -1,19 +1,39 @@
 Spectral
 ================
 
-## Mixed Layer 1993-2021
+<div>
 
-![](../images/analyses/Annual_mixedlayer.png)
+<table style="width:100%;">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><div width="33.3%"
+data-layout-align="center">
+<h2 id="mixed-layer-1993-2021">Mixed Layer 1993-2021</h2>
+<p><img src="../images/analyses/Annual_mixedlayer.png"
+data-fig.extended="false" /></p>
+</div></td>
+<td style="text-align: center;"><div width="33.3%"
+data-layout-align="center">
+<h2 id="mixed-layer-1993-2009">Mixed Layer 1993-2009</h2>
+<p><img src="../images/analyses/Annual1_mixedlayer.png"
+data-fig.extended="false" /></p>
+</div></td>
+<td style="text-align: center;"><div width="33.3%"
+data-layout-align="center">
+<h2 id="mixed-layer-2010-2021">Mixed Layer 2010-2021</h2>
+<p><img src="../images/analyses/Annual2_mixedlayer.png"
+data-fig.extended="false" /></p>
+</div></td>
+</tr>
+</tbody>
+</table>
 
-## Mixed Layer 1993-2009
-
-![](../images/analyses/Annual1_mixedlayer.png)
-
-## Mixed Layer 2010-2021
-
-![](../images/analyses/Annual2_mixedlayer.png)
-
-:::
+</div>
 
 # Intra-Annual
 
