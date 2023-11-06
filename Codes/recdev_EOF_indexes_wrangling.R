@@ -5,7 +5,7 @@ library(tidyr)
 library(R.matlab)
 
 # set the directory with the assessment files
-setwd("/Users/anavaz/Stuff/github/Poor-Recruitment-South-Atlantic/")
+#setwd("/Users/anavaz/Stuff/github/Poor-Recruitment-South-Atlantic/")
 filedir <- "./data/recruitment/updates/"
 
 # Get a list of all the files in the directory
@@ -13,8 +13,10 @@ file_list <- list.files(filedir)
 
 # it is in alphabetical order, define species define species names
 sppName <- c("Gag","GAm","GTr","RPo","RGr","BSB","RSn","Sca","Sno","Ver")
-NamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
-
+NamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish",
+              " Red Porgy","Red Grouper","Black Sea Bass",
+              "Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
+sppSeasonSp <- c(1,2,2,1,1,1,2,1,3,2)
 index <- 1
 
 # first year of assessments accross species is 1974, most recent is 2021
@@ -23,10 +25,13 @@ yearsAssessments <- 1973:2021
 # create matrix for saving recdevs
 File.out <- matrix(data=NA, nrow=length(yearsAssessments), ncol=10, dimnames=list(yearsAssessments, sppName))
 
-png("./images/TimeSeries/RecDev.png",res = 300,width = 2000, height = 2000)
-
+#png("./images/TimeSeries/RecDev.png",res = 300,width = 2000, height = 2000)
+png("./images/TimeSeries/RecDevPresSeason.png",res = 300,width = 4000, height = 1800)
 #Graph the time series of recruitment deviations
-par(mfrow = c(4, 3), mar=c(0.5, 0.5, 0.5, 0.5), oma=c(0, 0, 0, 0), mai=c(0.2, 0.2, 0.2, 0.2))
+
+par(mfrow = c(2, 5), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.5, 0.5, 0.5, 0.5))
+
+#par(mfrow = c(2, 5), mar=c(0.5, 0.5, 0.5, 0.5),oma=c(0, 0, 0, 0), mai=c(0.2, 0.2, 0.2, 0.2))
 
 # Loop through assessment files
 for (inFile in file_list) {
@@ -53,9 +58,17 @@ for (inFile in file_list) {
   File.out[yearsAssessments%in%yr,index] = dev
   
   # plot the graph
-  plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-    lines(yr,dev,lty=1, col=4); 
-    abline(h=0, col="gray70")
+  if (sppSeasonSp[index] == 1) {
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
+    lines(yr,dev,lty=1, col="blue4", lwd = 2);
+  }else if (sppSeasonSp[index] == 2) {
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
+    lines(yr,dev,lty=1, col="red3", lwd = 2);
+  } else {
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
+  lines(yr,dev,lty=1, col="black", lwd = 2);
+  }
+  abline(h=0, col="gray70")
   # to know what is the species
   index <- index +1
 }
@@ -298,10 +311,10 @@ for (inFile in file_list) {
 write.csv(File.out, file="./csv_files/EOF_Spawning_Seasonal_CNAPS.csv", quote=F)
 
 ################################################################################
-# now read ALL Seasonal (avg over time)
+# now read anomaly Seasonal (avg over time)
 # 
 # # set the diretory with the assessment files
-# filedir <- "/Users/anacarolvaz/Stuff/Current/SAtlantic/data/Averages/ALLSeasonal"
+# filedir <- "/Users/anacarolvaz/Stuff/Current/SAtlantic/data/Anomalies/Seasonal"
 # 
 # # Get a list of all the files in the directory
 # file_list <- list.files(filedir)
@@ -349,14 +362,14 @@ write.csv(File.out, file="./csv_files/EOF_Spawning_Seasonal_CNAPS.csv", quote=F)
 #   }
 # }
 # dev.off()
-# write.csv(File.out, file="ALL_Seasonal_feb23.csv", quote=F)
+# write.csv(File.out, file="Anomaly_Seasonal.csv", quote=F)
 # 
 # 
 # 
 # ################################################################################
 # # now read ALL Spawning Season (Winter - Feb to April, Summer - Jun to Aug
 # # set the diretory with the assessment files
-# filedir <- "/Users/anacarolvaz/Stuff/Current/SAtlantic/data/Averages/ALLSeasonalSp"
+# filedir <- "/Users/anacarolvaz/Stuff/Current/SAtlantic/data/Anomaly/SeasonalSp"
 # 
 # # Get a list of all the files in the directory
 # file_list <- list.files(filedir)
@@ -404,7 +417,7 @@ write.csv(File.out, file="./csv_files/EOF_Spawning_Seasonal_CNAPS.csv", quote=F)
 #   }
 # }
 # dev.off()
-# write.csv(File.out, file="ALL_Spawning_Seasonal_feb23.csv", quote=F)
+# write.csv(File.out, file="Anomaly_Spawning_Seasonal.csv", quote=F)
 # 
 # ################################################################################
 # # now read ALL Differential (4 cases)

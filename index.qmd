@@ -1,0 +1,342 @@
+---
+title: Poor Recruitment in the South Atlantic 
+author: Ana Vaz, Kyle Shertzer, Kevin Craig
+format: 
+  revealjs:
+    theme: [simple, ana_custom.scss] 
+    auto-stretch: false
+    incremental: true   
+    #embed-resources: true
+    
+footer: "Poor-Recruitment Monthly Meeting | 10/05/23"
+logo: figures_general/CIMAS.png
+editor: visual
+title-slide-attributes:
+  data-background-image: figures_general/noaa_background.png
+  data-background-size: cover
+  data-background-opacity: "1"
+  fontcolor: $navy-blue
+---
+
+## Introduction
+
+::: smaller
+-   Signs of recent low recruitment for several species in the grouper-snapper complex in the South Atlantic
+:::
+
+::: r-stack
+
+![](images/TimeSeries/RecDevPres.png){.fragment fig-align="center" width="1200" height="500"}
+
+![](images/TimeSeries/RecDevPresSeason.png){.fragment fig-align="center" width="1200" height="500"}
+
+:::
+
+## Introduction
+
+::: smaller
+-   Low recruitment pattern restricted to Winter spawners
+-   Suggests influence of enviromental patterns
+:::
+
+![](images/TimeSeries/RecDevPresSeason.png){fig-align="center" width="1200" height="500"}
+
+## Objectives
+
+- Investigate potential physical drivers of poor recruitment
+  
+  - Mechanistic explanation or
+  
+  - Physical processes with same time variability 
+
+  - *Hypothesis:* decreased upweling leading to lower primary productivity 
+    - Stratification of water column
+    - Gulf Stream dynamics
+  
+
+## Methods
+
+**CNAPS (4km resolution)**
+
+-   SST
+
+-   Bottom Temperature
+
+-   SSH
+
+-   Depth Mixed Layer (as proportion of depth)
+
+-   Surface Salinity
+
+::: smaller
+-   For future incorporation: Chlorophyll (match-mismatch hypothesis)
+
+    -   Merged Satellite Chrolophyll from Copernicus (SeaWiFS, MODIS, MERIS, VIIRS-SNPP & JPSS1, OLCI-S3A & S3B)
+:::
+
+# Study area
+
+-   Currently bounded at Cape Canaveral (\~28.5ºN) and Cape Hatteras (\~35ºN) from shore to the 700m isobath
+
+-   **Time:**
+
+    -   Monthly Averaged time series for 1993-2023
+
+    -   Seasonally Averaged (Winter - JFM, Spring - AMJ, Summer - JAS, Fall - OND)
+
+    -   Spawning Seasonal Averages
+
+        -   Winter: FMA, Summer: JJA
+
+## Analyses
+
+-   Empirical Orthogonal Functions (EOF)
+
+    -   All fields at different temporal scales
+    -   Correlation of EOFs (PCAs) with recruitment deviations
+
+-   Averages, SD, trends
+
+-   Wavelet analyses
+
+-   Power at different frequencies and time periods
+
+-   Colwell constancy
+
+## Correlations (Seasonal)
+
+::: columns
+::: {.column width="75%"}
+::: r-stack
+![](images/Summary/Correlation_EOF_Season_Species_heatmap.png){.fragment fig-align="center" width="550" height="550"}
+
+![](images/Summary/Correlation_EOF_Season_Species_heatmap2.png){.fragment fig-align="center" width="550" height="550"}
+:::
+:::
+
+::: {.column width="25%"}
+::: smaller
+-   Bottom Temperature Winter Mode 2
+
+-   SSH Spring Mode 1
+
+-   SSH Winter Mode 1
+
+-   SST Winter Mode 2
+:::
+:::
+:::
+
+## Correlations (Seasonal Spawning)
+
+::: columns
+::: {.column width="75%"}
+::: r-stack
+![](./images/Summary/Correlation_EOF_SpSeason_Species_heatmap.png){.fragment fig-align="center" width="550" height="550"}
+
+![](./images/Summary/Correlation_EOF_SpSeason_Species_heatmap2.png){.fragment fig-align="center" width="550" height="550"}
+:::
+:::
+
+::: {.column width="25%"}
+::: smaller
+-   Bottom Temperature Winter Spawning (Feb-Apr) Mode 2
+
+-   SSH Winter Spawning (Feb-Apr) Mode 1
+
+-   SST Winter Spawning (Feb-Apr) Mode 2
+:::
+:::
+:::
+
+## Anomalies
+
+::: columns
+::: {.column width="50%"}
+::: smaller
+SSH Winter
+:::
+
+![](images/Summary/ssh_Winter_anomaly_constant.png){width="500" height="200"}
+
+::: smaller
+SSH Spring
+:::
+
+![](images/anomalies/ssh_Spring_anomaly_constant.png){width="500" height="200"}
+:::
+
+::: {.column width="50%"}
+::: smaller
+Bottom Temperature Winter
+:::
+
+![](images/Summary/bottomT_Winter_anomaly_constant.png){width="500" height="200"}
+
+::: smaller
+SST Winter
+:::
+
+![](images/Summary/sst_Winter_anomaly_constant.png){width="500" height="200"}
+:::
+:::
+
+## Winter Bottom Temperature
+
+::: columns
+::: {.column width="50%"}
+::: {.smaller .absolute top="60" left="10"}
+Average
+:::
+
+![](./images/Summary/bottomT_Winter_Avg_seasonal.png){.absolute width="300" height="300" top="60" left="200"}
+
+::: {.smaller .absolute bottom="250" left="10"}
+EOF Mode 2
+:::
+
+![](./images/Summary/bottomT_constant_Winter_mode2_CNAPS.png){.absolute width="300" height="300" bottom="10" left="200"}
+:::
+
+::: {.column width="50%"}
+::: {.smaller .absolute top="60" right="100"}
+STD
+:::
+
+![](./images/Summary/bottomT_Winter_Std_seasonal.png){.absolute width="300" height="300" top="60" right="200"}
+
+::: {.smaller .absolute bottom="250" right="100"}
+Trend
+:::
+
+![](./images/Summary/bottomT_Winter_seasonal.png){.absolute width="300" height="300" bottom="10" right="200"}
+:::
+:::
+
+## Winter SSH
+
+::: columns
+::: {.column width="50%"}
+::: {.smaller .absolute top="60" left="10"}
+Average
+:::
+
+![](./images/Summary/ssh_Winter_Avg_seasonal.png){.absolute width="300" height="300" top="60" left="200"}
+
+::: {.smaller .absolute bottom="250" left="10"}
+EOF Mode 2
+:::
+
+![](./images/Summary/ssh_constant_Winter_mode2_CNAPS.png){.absolute width="300" height="300" bottom="10" left="200"}
+:::
+
+::: {.column width="50%"}
+::: {.smaller .absolute top="60" right="100"}
+STD
+:::
+
+![](./images/Summary/ssh_Winter_Std_seasonal.png){.absolute width="300" height="300" top="60" right="200"}
+
+::: {.smaller .absolute bottom="250" right="100"}
+Trend
+:::
+
+![](./images/Summary/ssh_Winter_seasonal.png){.absolute width="300" height="300" bottom="10" right="200"}
+:::
+:::
+
+## Winter SST
+
+::: columns
+::: {.column width="50%"}
+::: {.smaller .absolute top="60" left="10"}
+Average
+:::
+
+![](./images/Summary/sst_Winter_Avg_seasonal.png){.absolute width="300" height="300" top="60" left="200"}
+
+::: {.smaller .absolute bottom="250" left="10"}
+EOF Mode 2
+:::
+
+![](./images/Summary/sst_constant_Winter_mode2_CNAPS.png){.absolute width="300" height="300" bottom="10" left="200"}
+:::
+
+::: {.column width="50%"}
+::: {.smaller .absolute top="60" right="100"}
+STD
+:::
+
+![](./images/Summary/sst_Winter_Std_seasonal.png){.absolute width="300" height="300" top="60" right="200"}
+
+::: {.smaller .absolute bottom="250" right="100"}
+Trend
+:::
+
+![](./images/Summary/sst_Winter_seasonal.png){.absolute width="300" height="300" bottom="10" right="200"}
+:::
+:::
+
+## Hovmöller Diagram Winter 30o
+
+::: columns
+::: {.column width="30%"}
+::: smaller
+Bottom Temperature
+:::
+
+![](./images/Summary/hovmoller_bottomT_30_Winter.png){width="300" height="450"}
+:::
+
+::: {.column width="30%"}
+::: smaller
+SSH
+:::
+
+![](images/Summary/hovmoller_ssh_30_Winter.png){width="300" height="450"}
+:::
+
+::: {.column width="30%"}
+::: smaller
+SST
+:::
+
+![](images/Summary/hovmoller_sst_30_Winter.png){width="300" height="450"}
+:::
+:::
+
+## Wavelet
+
+::: columns
+::: {.column width="20%"}
+::: {.smaller .absolute top="100" left="0"}
+Bottom
+
+Temperature
+:::
+
+::: {.smaller .absolute top="300" left="0"}
+SSH
+:::
+
+::: {.smaller .absolute bottom="170" left="0"}
+SST
+:::
+:::
+
+::: {.column width="45%"}
+![](images/wavelet/wavelet_days_bottomT_smoothed1.png){width="400" height="150"}
+
+![](images/wavelet/wavelet_days_SSH_smoothed1.png){width="400" height="150"}
+
+![](images/wavelet/wavelet_days_SST_smoothed1.png){width="400" height="150"}
+:::
+
+::: {.column width="35%"}
+![](images/wavelet/wavelet_period_bottomT.png){width="150" height="150"}
+
+![](images/wavelet/wavelet_period_ssh.png){width="150" height="150"}
+
+![](images/wavelet/wavelet_period_sst.png){width="150" height="150"}
+:::
+:::
