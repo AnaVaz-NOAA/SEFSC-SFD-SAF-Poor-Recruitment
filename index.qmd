@@ -25,11 +25,9 @@ title-slide-attributes:
 :::
 
 ::: r-stack
-
 ![](images/TimeSeries/RecDevPres.png){.fragment fig-align="center" width="1200" height="500"}
 
 ![](images/TimeSeries/RecDevPresSeason.png){.fragment fig-align="center" width="1200" height="500"}
-
 :::
 
 ## Introduction
@@ -43,16 +41,16 @@ title-slide-attributes:
 
 ## Objectives
 
-- Investigate potential physical drivers of poor recruitment
-  
-  - Mechanistic explanation or
-  
-  - Physical processes with same time variability 
+-   Investigate potential physical drivers of poor recruitment
 
-  - *Hypothesis:* decreased upweling leading to lower primary productivity 
-    - Stratification of water column
-    - Gulf Stream dynamics
-  
+    -   Mechanistic explanation or
+
+    -   Physical processes with same time variability
+
+    -   *Hypothesis:* decreased upweling leading to lower primary productivity
+
+        -   Stratification of water column
+        -   Gulf Stream dynamics
 
 ## Methods
 
@@ -148,6 +146,30 @@ title-slide-attributes:
 :::
 :::
 :::
+
+## Correlation Variables
+
+::: columns
+
+::: {.column width="33%"}
+
+![](images/Summary/BottomTWinterMode2SSHWinterMode1.png){width="400" height="400"}
+:::
+
+::: {.column width="33%"}
+
+![](images/Summary/BottomTWinterMode2SSTWinterMode2.png){width="400" height="400"}
+
+:::
+
+::: {.column width="33%"}
+
+![](images/Summary/SSHWinterMode1SSTWinterMode2.png){width="400" height="400"}
+
+:::
+
+:::
+
 
 ## Anomalies
 
