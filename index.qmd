@@ -399,10 +399,15 @@ SST
 256-512 d
 :::
 
-![](./images/wavelet/power_bottomT_256_512.png){width="400" height="150"} ::: smaller 512-1024 d
+![](./images/wavelet/power_bottomT_256_512.png){width="400" height="150"} 
+
+::: smaller 
+512-1024 d
 :::
 
-![](./images/wavelet/power_bottomT_512_1024.png){width="400" height="150"} ::: :::
+![](./images/wavelet/power_bottomT_512_1024.png){width="400" height="150"} 
+
+::: :::
 
 ## Power SSH
 
@@ -476,4 +481,4 @@ SST
 
 ## Spatial Power
 
-![](images/Screen Shot 2023-11-06 at 9.11.55 AM.png)
+![](images/Screen Shot 2023-11-06 at 9.11.55 AM.png){width="600" height="800"} 
