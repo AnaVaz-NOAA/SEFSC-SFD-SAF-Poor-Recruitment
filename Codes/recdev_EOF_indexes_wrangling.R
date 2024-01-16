@@ -26,10 +26,10 @@ yearsAssessments <- 1973:2021
 File.out <- matrix(data=NA, nrow=length(yearsAssessments), ncol=10, dimnames=list(yearsAssessments, sppName))
 
 #png("./images/TimeSeries/RecDev.png",res = 300,width = 2000, height = 2000)
-png("./images/TimeSeries/RecDevPresSeason.png",res = 300,width = 4000, height = 1800)
+png("./images/TimeSeries/RecDevSeason.png",res = 300, width = 2500, height = 3000)
 #Graph the time series of recruitment deviations
 
-par(mfrow = c(2, 5), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.5, 0.5, 0.5, 0.5))
+par(mfrow = c(4, 3), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.3, 0.3, 0.3, 0.3))
 
 #par(mfrow = c(2, 5), mar=c(0.5, 0.5, 0.5, 0.5),oma=c(0, 0, 0, 0), mai=c(0.2, 0.2, 0.2, 0.2))
 
