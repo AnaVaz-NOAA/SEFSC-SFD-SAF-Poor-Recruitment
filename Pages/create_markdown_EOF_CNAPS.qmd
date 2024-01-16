@@ -1,0 +1,393 @@
+---
+title: "My Quarto Document"
+output:
+    format: gfm
+execute: 
+  eval: true
+  echo: true
+---
+
+# Create markdown for CNAPS_no trend
+
+# Create markdown for CNAPS with trend
+
+-   Anomalies
+-   EOFs
+
+```{r}
+
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+NameSeason <- c("Winter","Spring","Summer","Fall")
+NameSeasonSp <- c("Winter","Summer")
+NameModes  <- c("Mode 1","Mode 2")
+
+myname <- c("bottomT","Salinity","ssh","sst","mixedlayer")
+mynameUp <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeason,NamePlot)
+NamePlotModesSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameModes,NameSeasonSp,NamePlot)
+NamePlotModesSpawnSeason <- paste(aux$Var3, aux$Var2, aux$Var1)
+
+# create combinations of names and combine the names
+aux <- expand.grid(NamePlot, NameModes)
+NamePlotModes <- paste(aux$Var1, aux$Var2)
+
+spNamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
+
+NameIndexes <- c("AMO","MEI","NAO")
+
+pathfigs <- ("./images/CNAPS_constant/")
+# Name for seasonal: 
+# myname,'_',sName,'_mode',num2str(i),'_CNAPS.png
+# myname,'_',sName,'_temporal_mode',num2str(i),'_CNAPS.png
+# spawning is Spawning_Winter and Spawning_Summer
+# Name for monthly:
+# myname,'_temporal_mode',num2str(i),'_CNAPS.png
+# myname,'_mode',num2str(i),'_CNAPS
+
+cat("# Monthly anomalies \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomlies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  cat(paste0("## ", NamePlot[iVar], "\n"))
+  fig_name <- paste0(pathfigs, myname[iVar],'_anomaly.png')
+  cat(paste0('![](', fig_name, ')\n\n'),sep="")
+}
+
+cat("::: \n\n")
+
+cat("# EOF Monthly \n\n")
+
+for (iVar in seq_along(NamePlot)) {
+  cat("::: {layout-ncol=\"2\"}\n\n")
+
+  for (iMode in seq_along(NameModes)) {
+    cat(paste0("## ", NamePlot[iVar], " ",NameModes[iMode], "\n\n"))
+    fig_name <- paste0(pathfigs, myname[iVar],'_constant_mode',iMode,'_CNAPS.png')
+    cat(paste0('![](', fig_name, ')\n'),sep="")
+    fig_name <- paste0(pathfigs, myname[iVar],'_constant_temporal_mode',iMode,'_CNAPS.png')
+    cat(paste0('![](', fig_name, ')\n\n'))
+  }
+  cat("::: \n\n")
+}
+
+cat("# Spawning season anomalies \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomalies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  for (iSeason in seq_along(NameSeasonSp)) {
+    cat(paste0("## ", NamePlot[iVar],' ',NameSeasonSp[iSeason], "\n"))
+    fig_name <- paste0(pathfigs, myname[iVar],'_Spawning_',NameSeasonSp[iSeason],'_anomaly_constant.png')
+    cat(paste0('![](', fig_name, ')\n\n'),sep="")
+  }
+}
+
+cat("::: \n\n")
+
+cat("# EOF Seasonal \n\n")
+
+for (iVar in seq_along(NamePlot)) {
+  cat(paste0("## ", NamePlot[iVar], "\n\n"))
+  cat("::: {layout-ncol=\"2\"}\n\n")
+  
+  for (iSeason in seq_along(NameSeason)) {
+    for (iMode in seq_along(NameModes)) {
+      cat(paste0("### ", NamePlot[iVar]," ",NameSeason[iSeason]," ",NameModes[iMode], "\n\n"))
+      fig_name <- paste0(pathfigs, myname[iVar],'_linear_',NameSeason[iSeason],'_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n'))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_',NameSeason[iSeason],'_temporal_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n\n'))
+    }  
+  }
+  cat("::: \n\n")
+}
+
+cat("# Seasonal anomalies \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+# first plot anomalies series monthly 
+for (iVar in seq_along(NamePlot)) {
+  for (iSeason in seq_along(NameSeason)) {
+    cat(paste0("## ", NamePlot[iVar],' ',NameSeason[iSeason], "\n"))
+    fig_name <- paste0(pathfigs, myname[iVar],'_',NameSeason[iSeason],'_anomaly_constant.png')
+    cat(paste0('![](', fig_name, ')\n\n'),sep="")
+  }
+}
+
+cat("::: \n\n")
+
+cat("# EOF Seasonal Spawning \n\n")
+
+for (iVar in seq_along(NamePlot)) {
+  cat(paste0("## ", NamePlot[iVar], "\n\n"))
+  cat("::: {layout-ncol=\"2\"}\n\n")
+
+  for (iSeason in seq_along(NameSeasonSp)) {
+    for (iMode in seq_along(NameModes)) {
+      cat(paste0("### ", NamePlot[iVar]," Spawning ",NameSeasonSp[iSeason]," ",NameModes[iMode], "\n\n"))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_Spawning_',NameSeasonSp[iSeason],'_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n'))
+      fig_name <- paste0(pathfigs, myname[iVar],'_constant_Spawning_',NameSeasonSp[iSeason],'_temporal_mode',iMode,'_CNAPS.png')
+      cat(paste0('![](', fig_name, ')\n\n'))
+    }  
+  }  
+  cat("::: \n\n")
+}
+
+```
+
+```{r}
+
+cat("# Correlation Heatmap \n\n")
+
+filedir <- "./images/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+file_plot <- file_list[grep("^Correlation.*\\.png$",file_list)]
+ 
+for (i in seq_along(file_plot)) {
+  cat(paste0('![](', filedir,file_plot[i], ')\n\n'),sep="")
+}
+
+cat("# Correlations EOF Season \n\n")
+
+filedir <- "./images/CorrelationEOFSeason/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+
+for (iSp in seq_along(spNamePlot)) {
+  cat(paste0("## ", spNamePlot[iSp], "\n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    cat(paste0("### ", NamePlot[iVar], "\n\n"))
+  
+    cat("::: {layout-ncol=\"2\"}\n\n")
+      
+    file_plot <- file_list[grep(gsub(" ","",paste0("^",spNamePlot[iSp], 
+                                                      mynameUp[iVar],
+                                                      ".*\\.png$")),file_list)]
+    if (length(file_plot) > 0) {
+      for (iplot in 1:length(file_plot)){
+        fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+        cat(paste0('![](', fig_name, ')\n\n'),sep="")
+      }
+    }
+  }
+}
+
+cat("::: \n\n")
+
+cat("# Correlations EOF Season Spawning \n\n")
+
+filedir <- "./images/CorrelationEOFSeasonSp/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+
+for (iSp in seq_along(spNamePlot)) {
+  cat(paste0("## ", spNamePlot[iSp], "\n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    cat(paste0("### ", NamePlot[iVar], "\n\n"))
+  
+    cat("::: {layout-ncol=\"2\"}\n\n")
+      
+    file_plot <- file_list[grep(gsub(" ","",paste0("^",spNamePlot[iSp], 
+                                                      mynameUp[iVar],
+                                                      ".*\\.png$")),file_list)]
+    if (length(file_plot) > 0) {
+      for (iplot in 1:length(file_plot)){
+        fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+        cat(paste0('![](', fig_name, ')\n\n'),sep="")
+      }
+    }
+  }
+}
+
+
+cat("::: \n\n")
+
+
+```
+
+# Create markdown for Time Series
+
+-   Change point
+-   Correlation
+
+```{r}
+
+filedir <- "./images/ChangePoint/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(path = filedir, pattern = "^Breaks")
+
+cat("# Change Point Summary \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+for (iVar in 1:length(file_list)) {
+  file_plot <- file_list[iVar]
+  fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+  cat(paste0('![](', fig_name, ')\n\n'),sep="")
+}
+
+cat("::: \n\n")
+
+# Get a list of all the files in the directory
+file_list <- list.files(path = filedir)
+
+cat("# Change Point \n\n")
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+for (iVar in seq_along(mynameUp)) {
+  file_plot <- file_list[grep(gsub(" ","",paste0("^",mynameUp[iVar],".*\\.png$")),file_list)]
+  if (length(file_plot) > 0) {
+    for (iplot in 1:length(file_plot)){
+      fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+      cat(paste0('![](', fig_name, ')\n\n'),sep="")
+    }
+  }
+}
+
+cat("::: \n\n")
+
+
+cat("::: {layout-ncol=\"2\"}\n\n")
+
+for (iSp in seq_along(spNamePlot)) {
+  file_plot <- file_list[grep(gsub(" ","",paste0("^",spNamePlot[iSp],".*\\.png$")),file_list)]
+  if (length(file_plot) > 0) {
+    for (iplot in 1:length(file_plot)){
+      fig_name <- gsub(" ","",paste0(filedir, file_plot[iplot]))
+      cat(paste0('![](', fig_name, ')\n\n'),sep="")
+    }
+  }
+}
+
+cat("::: \n\n")
+
+```
+
+# Create markdown for Spectral_EnvPred
+
+-   Barneche et al. results
+-   Muniz et al. spectral results
+
+```{r}
+
+cat("Barneche et al., 2018: Considers two components of environmental predictability: seasonality and colour. Seasonality represents the regularity in the timing and magnitude of fluctuations in the average environmental state over seasons. Colour of environmental noise represents how predictable and similar the environment is between successive time points, or how far into the future the environmental state is likely to stay the same. \n\n")
+cat("Unbounded & Unbounded Seasonality: fraction of the total variance that is due to predictable seasonal periodicity \n")
+cat("Color: White noise occurs when there is no correlation between one measurement and the next, while for reddened noise, there is some correlation between measurements separated by a finite time-scale \n")
+cat("Constancy (C): measures the extent to which the environment is the same for all months in all years \n")
+cat("Contingency (M): measures the extent to which the environmental differences between months are the same in all years \n")
+cat("Predictability (P): is the sum of Constancy (C) and Contingency (M) \n\n")
+
+cat("Calculate spectral density. Define frequency band cutoffs based on Muñiz et al., 2021 \n")
+cat("(1) Interannual frequencies 384–1152 days (>1-3 years) \n")
+cat("(2) Annual frequencies 101–383 days \n")
+cat("(3) Intra-seasonal frequencies 20–100 days \n")
+cat("(4) Synoptic frequencies 16–19 days \n")
+cat("Normalize the band energy by the total spectral density to find the relative contributions \n")
+ 
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","Salinity","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+col_names  <- c("USeasonal", "BSeasonal", "Colour", "Constancy", 
+                "Contigency","Predictability", "InterAnnual", 
+                "Annual", "IntraAnnual", "Synoptic", 
+                "TrendLinear", "Trend", "Avg", "Std")
+Full_names <- c("Unbounded Seasonal", "Bounded Seasonal", "Colour",
+                "Constancy","Contigency","Predictability", 
+                "Inter-Annual", "Annual", "Intra-Annual",
+                "Synoptic", "Trend Linear", "Trend", "Average", "Standard Deviation")
+
+pathfigs <- ("./images/analyses/")
+# Name for analyses: 
+# col_names,'_',myname,'.png'
+
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# ",Full_names[iaux]," \n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    file_list <- list.files(path = pathfigs, pattern = paste0("^", col_names[iaux], "\\d*_", myname[iVar], "\\.png$"))
+    
+    cat("::: {layout-ncol=\"3\"}\n\n")
+    # find pattern in the length
+    for (iFile in 1:length(file_list)) {
+      switch(iFile,
+             {cat(paste0("## ", NamePlot[iVar], " 1993-2021 \n"))},
+             {cat(paste0("## ", NamePlot[iVar], " 1993-2009 \n"))},
+             {cat(paste0("## ", NamePlot[iVar], " 2010-2021 \n"))})
+      fig_name <- paste0(pathfigs,file_list[iFile])
+      cat(paste0('![](', fig_name, ')\n\n'),sep="")
+    }
+    cat("::: \n\n")
+  }
+}
+```
+
+# Create markdown for Seasonal Colwell
+
+-   Colwell analyses for seasonal variables
+
+```{r}
+
+cat("Adapted Colwell's 1974 indexes for each season \n")
+cat("Constancy (C): measures the extent to which the environment is the same for all months in all years \n")
+cat("Contingency (M): measures the extent to which the environmental differences between months are the same in all years \n")
+cat("Predictability (P): is the sum of Constancy (C) and Contingency (M) \n")
+ cat("Calculated over the entire period, and also for 1993-2009 and 2010-present \n\n")
+ 
+# Names of Variables to plot
+NamePlot   <- c("Bottom Temperature","Salinity","SSH","SST","Mixed Layer")
+myname     <- c("bottomT","Salinity","ssh","sst","mixedlayer")
+mynameUp   <- c("BottomT","Salinity","SSH","SST","MixedLayer")
+col_names  <- c("Constancy","Contigency","Predictability")
+Full_names <- c("Constancy","Contigency","Predictability")
+seasons <- c("Fall", "Summer", "Spring", "Winter")
+
+pathfigs <- ("./images/analyses/")
+# Name for analyses: 
+# col_names,'_',myname,'_',season,'.png'
+for (iaux in seq_along(col_names)) {
+  cat(paste0("# ",Full_names[iaux]," \n\n"))
+  
+  for (iVar in seq_along(NamePlot)) {
+    
+    for (season in seasons) {
+      cat(paste0("# ", season, "\n\n"))
+      
+      
+      #file_list <- list.files(path = pathfigs, pattern = paste0("^", col_names[iaux], "\\d*_", myname[iVar], "\\.png$"))
+      file_list <- list.files(path = pathfigs, pattern = paste0("^", col_names[iaux], "\\d*_", myname[iVar], "_", season, "\\.png$"))
+      
+      cat("::: {layout-ncol=\"3\"}\n\n")
+      # find pattern in the length
+      for (iFile in 1:length(file_list)) {
+        switch(iFile,
+               {cat(paste0("## ", NamePlot[iVar], " 1993-2021 \n"))},
+               {cat(paste0("## ", NamePlot[iVar], " 1993-2009 \n"))},
+               {cat(paste0("## ", NamePlot[iVar], " 2010-2021 \n"))})
+        fig_name <- paste0(pathfigs,file_list[iFile])
+        cat(paste0('![](', fig_name, ')\n\n'),sep="")
+      }
+      cat("::: \n\n")
+    }
+  }
+}
+```
