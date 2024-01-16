@@ -12,10 +12,18 @@ library(wesanderson)
 graphics.off()
 # load recdevs, indexes and EOF
 # set the diretory with the assessment files
-# setwd("./csv_files")
-RecDev   <- read.csv("RecruitmentResiduals_Feb23.csv")
-CHL       <- read.csv("CHL_averages.csv")
-Upwelling <- read.csv("upwelling.csv")
+setwd("./csv_files")
+RecDev <- read.csv("RecruitmentResiduals_Feb23.csv")
+# Read the CSV file
+CHL    <- read.csv("CHL_averages.csv")
+# Extract the YEAR column and other numeric columns
+years  <- CHL$YEAR
+data   <- CHL[, -1]  # Exclude the YEAR column
+
+# Plot all columns
+matplot(years, data, type = "l", lty = 1, col = 1:ncol(data), xlab = "Year", ylab = "Value", main = "CHL Averages")
+# Add legend
+legend("topright", legend = colnames(data), col = 1:ncol(data), lty = 1)
 
 yearsPlot <- 1993:2021
 color_palette <- rainbow(length(unique(yearsPlot)))
@@ -23,28 +31,18 @@ coloraux = colorRampPalette(brewer.pal(11, "Spectral"))
 color_palette = coloraux(length(unique(yearsPlot)))
 
 # it is in alphabetical order
-NamePlot <- c("Shallow","Mid","Deep","EF","Mid SAB","NC")
+NamePlot   <- c("Shallow","Mid","Deep","EF","Mid SAB","NC")
 NameSeason <- c("Annual","Winter","Spring","Summer","Fall")
 
 # create combinations of names and combine the names
 aux <- expand.grid(NameSeason,NamePlot)
 NamePlotSeason <- paste(aux$Var1, aux$Var2)
 
-spNamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
-
-# Read the CSV file
-CHL <- read.csv("CHL_averages.csv")
-
-# Extract the YEAR column and other numeric columns
-years <- CHL$YEAR
-data <- CHL[, -1]  # Exclude the YEAR column
-
-# Plot all columns
-matplot(years, data, type = "l", lty = 1, col = 1:ncol(data), xlab = "Year", ylab = "Value", main = "CHL Averages")
-
-# Add legend
-legend("topright", legend = colnames(data), col = 1:ncol(data), lty = 1)
-
+spNamePlot <- c("Gag Grouper", "Greater Amberjack",
+                "Gray Triggerfish", " Red Porgy",
+                "Red Grouper", "Black Sea Bass",
+                "Red Snapper", "Scamp", "Snowy Grouper",
+                "Vermilion Snapper")
 #------------------------------------------------------------------
 # For SEASONAL
 graphics.off()
@@ -66,7 +64,7 @@ yearsPlot <- unique(CHL_RecDev[,1])
 for (iSpp in 1:10) {
   for (iEOF in 2:itot) {
     # correlation and save coef. and p
-    x <- CHL_RecDev[,iEOF]-mean(CHL_RecDev[,iEOF])
+    x <- CHL_RecDev[,iEOF]
     y <- CHL_RecDev[,iSpp+itot]
     # correlation and save coef. and p
     aux <- cor.test(x, y, use = "complete.obs")

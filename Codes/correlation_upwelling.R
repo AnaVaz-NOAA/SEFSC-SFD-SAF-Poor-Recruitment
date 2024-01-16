@@ -10,7 +10,6 @@ library(ggplot2)
 library(wesanderson)
 library(tidyr)
 
-
 graphics.off()
 # load recdevs, indexes and EOF
 # set the diretory with the assessment files
@@ -47,7 +46,6 @@ seasonal_wide <- seasonal_averages %>%
 # Write the result to a new CSV file
 write.csv(seasonal_wide, "seasonal_averages_wide.csv", row.names = FALSE)
 
-
 # Print the resulting data frame
 print(seasonal_averages)
 # Extract the YEAR column and other numeric columns
@@ -81,7 +79,7 @@ yearsPlot <- unique(CHL_RecDev[,1])
 for (iSpp in 1:10) {
   for (iEOF in 2:itot) {
     # correlation and save coef. and p
-    x <- CHL_RecDev[,iEOF]-mean(CHL_RecDev[,iEOF])
+    x <- CHL_RecDev[,iEOF]
     y <- CHL_RecDev[,iSpp+itot]
     # correlation and save coef. and p
     aux <- cor.test(x, y, use = "complete.obs")
@@ -186,6 +184,7 @@ ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
     panel.grid.minor = element_line(color = "lightgray", size = 0.5)  # Remove minor grid lines
   )
 dev.off()
+
 #------------------------------------------------------------------
 # For Spawning SEASONAL
 graphics.off()
