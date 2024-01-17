@@ -5,7 +5,7 @@ library(R.matlab)
 ################################################################################
 # now read all EOF Seasonal (PCA for time)
 
-# set the diretory with the assessment files
+# set the diretory 
 filedir <- "~/Stuff/Current/SAtlantic/data/EOF_CNAPS/ChSeason/"
 
 # Get a list of all the files in the directory
