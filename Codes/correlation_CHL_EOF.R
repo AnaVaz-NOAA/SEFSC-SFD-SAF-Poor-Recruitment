@@ -13,7 +13,7 @@ graphics.off()
 # load recdevs, indexes and EOF
 # set the diretory with the assessment files
 #setwd("./csv_files")
-RecDev   <- read.csv("RecruitmentResiduals_Feb23.csv")
+RecDev  <- read.csv("RecruitmentResiduals_Feb23.csv")
 CHL     <- read.csv("Chl_EOF_SeasonalSp.csv")
 
 yearsPlot <- 1993:2021
