@@ -278,7 +278,7 @@ for ivar = 1
       set(hFig,'Visible','off');
       title('Detrend constant');
       anomaly(unique(yy), blaux);
-      axis([min(yy) max(yy) -lim lim]);
+      axis([min(yy) max(yy) -0.4 0.4]);
       eval(['print -dpng ',myname,'_',sName,'_anomaly_constant.png']);
       eval(['save ',myname,'_',sName,'_anomaly blaux']);
       close all;
