@@ -31,8 +31,6 @@ png("./images/TimeSeries/RecDevSeason.png",res = 300, width = 2500, height = 300
 
 par(mfrow = c(4, 3), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.3, 0.3, 0.3, 0.3))
 
-#par(mfrow = c(2, 5), mar=c(0.5, 0.5, 0.5, 0.5),oma=c(0, 0, 0, 0), mai=c(0.2, 0.2, 0.2, 0.2))
-
 # Loop through assessment files
 for (inFile in file_list) {
   # Construct the full file path
@@ -49,7 +47,6 @@ for (inFile in file_list) {
     # start at age 1, needs to remove 1 from their year
     yraux  <- fileaux$t.series$year - 1
   }
-  
   # Limit each time series to years where recruitment deviations are estimated
   yr  <- yraux[devaux!=0  & !is.na(devaux)]
   dev <- devaux[devaux!=0 & !is.na(devaux)]
@@ -60,10 +57,10 @@ for (inFile in file_list) {
   # plot the graph
   if (sppSeasonSp[index] == 1) {
     plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-    lines(yr,dev,lty=1, col="blue4", lwd = 2);
+    lines(yr,dev,lty=1, col="dodgerblue4", lwd = 2);
   }else if (sppSeasonSp[index] == 2) {
     plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-    lines(yr,dev,lty=1, col="red3", lwd = 2);
+    lines(yr,dev,lty=1, col="tomato4", lwd = 2);
   } else {
     plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
   lines(yr,dev,lty=1, col="black", lwd = 2);
@@ -196,7 +193,6 @@ for (inFile in file_list) {
     # increase index
     index <- index +1
   }
-
 }
 write.csv(File.out, file="./csv_files/EOF_CNAPS.csv", quote=F)
 
@@ -359,8 +355,7 @@ for (inFile in file_list) {
 }
 dev.off()
 write.csv(File.out, file="Anomaly_Seasonal.csv", quote=F)
-# 
-# 
+
 # ################################################################################
 # # now read ALL Spawning Season (Winter - Feb to April, Summer - Jun to Aug
 # # set the diretory with the assessment files
@@ -409,6 +404,7 @@ for (inFile in file_list) {
 }
 dev.off()
 write.csv(File.out, file="Anomaly_Spawning_Seasonal.csv", quote=F)
+
 
 # ################################################################################
 # # now read ALL Differential (4 cases)
