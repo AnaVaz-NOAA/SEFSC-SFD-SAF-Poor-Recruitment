@@ -3,6 +3,7 @@
 library(Hmisc)
 library(tidyr)
 library(R.matlab)
+library(metR)
 
 # set the directory with the assessment files
 #setwd("/Users/anavaz/Stuff/github/Poor-Recruitment-South-Atlantic/")
@@ -394,7 +395,7 @@ for (inFile in file_list) {
       dev.off()
     }
     png(gsub(" ","",(paste("Anomaly_SpSeasonal_",NamePlot[((index-1)/16)+1],".png"))),res = 300,width = 2000, height = 1500)
-    par(mfrow = c(2, 5), mar=c(.2, .2, .2, .2), oma=c(0, 0, 0, 0), mai=c(.25, .25, .25, .25))
+    par(mfrow = c(4, 3), mar=c(.2, .2, .2, .2), oma=c(0, 0, 0, 0), mai=c(.25, .25, .25, .25))
   }
   plot(yearsEOF, rep(0,length(yearsEOF)), ylim=c(-limit, limit), type="n", ylab="", xlab="", main = NamePlotModes[index])
   lines(yearsEOF, File.out[,index], lty=1, col=4)
@@ -405,6 +406,101 @@ for (inFile in file_list) {
 dev.off()
 write.csv(File.out, file="Anomaly_Spawning_Seasonal.csv", quote=F)
 
+################################################################################
+# now read anomaly Seasonal (avg over time)
+# 
+# set the diretory with the assessment files
+filedir <- "~/Stuff/Current/SAtlantic/data/CNAPS_Shelf_15/anomaly/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+
+# it is in alphabetical order, define species define species names
+NamePlot <- c("Bottom Temp" ,"Mixed Layer", "Salinity", "SSH", "SST")
+NameSeason <- c("Fall", "Spring", "Summer", "Winter")
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameSeason,NamePlot)
+NamePlotModes <- paste(aux$Var2, aux$Var1)
+
+index <- 1
+#Graph the EOF series
+
+yearsEOF <- seq(1993,2021)
+# create matrix for saving recdevs
+File.out <- matrix(data=NA, nrow=length(yearsEOF), ncol=20, dimnames=list(yearsEOF, NamePlotModes))
+
+# Loop through EOF files
+for (inFile in file_list) {
+  # Construct the full file path
+  filename <- file.path(filedir, inFile)
+  EOFaux   <- readMat(filename)
+  File.out[,index]  <- EOFaux$blaux
+  
+  # plot each season
+  limit <- max(abs(File.out[,index]))
+  # check if newplot  if index == 1, or index divided by 5 is 0
+  if (index == 1 || (index-1)%%20 == 0) {
+    if (index > 1) {
+      dev.off()
+    }
+    png(gsub(" ","",(paste("Anomaly_Seasonal_Shelf15_",NamePlot[((index-1)/16)+1],".png"))),res = 300,width = 2000, height = 1500)
+    par(mfrow = c(4, 5), mar=c(.2, .2, .2, .2), oma=c(0, 0, 0, 0), mai=c(.25, .25, .25, .25))
+  }
+  plot(yearsEOF, rep(0,length(yearsEOF)), ylim=c(-limit, limit), type="n", ylab="", xlab="", main = NamePlotModes[index])
+  lines(yearsEOF, File.out[,index], lty=1, col=4)
+  abline(h=0, col="gray70")
+  # increase index
+  index <- index +1
+}
+dev.off()
+write.csv(File.out, file="Anomaly_Seasonal_Shelf15.csv", quote=F)
+
+filedir <- "~/Stuff/Current/SAtlantic/data/CNAPS_Shelf_50/anomaly/"
+
+# Get a list of all the files in the directory
+file_list <- list.files(filedir)
+
+# it is in alphabetical order, define species define species names
+NamePlot <- c("Bottom Temp" ,"Mixed Layer", "Salinity", "SSH", "SST")
+NameSeason <- c("Fall", "Spring", "Summer", "Winter")
+
+# create combinations of names and combine the names
+aux <- expand.grid(NameSeason,NamePlot)
+NamePlotModes <- paste(aux$Var2, aux$Var1)
+
+index <- 1
+#Graph the EOF series
+
+yearsEOF <- seq(1993,2021)
+# create matrix for saving recdevs
+File.out <- matrix(data=NA, nrow=length(yearsEOF), ncol=20, dimnames=list(yearsEOF, NamePlotModes))
+
+# Loop through EOF files
+for (inFile in file_list) {
+  # Construct the full file path
+  filename <- file.path(filedir, inFile)
+  EOFaux   <- readMat(filename)
+  File.out[,index]  <- EOFaux$blaux
+  
+  # plot each season
+  limit <- max(abs(File.out[,index]))
+  # check if newplot  if index == 1, or index divided by 5 is 0
+  if (index == 1 || (index-1)%%20 == 0) {
+    if (index > 1) {
+      dev.off()
+    }
+    png(gsub(" ","",(paste("Anomaly_Seasonal_Shelf50_",NamePlot[((index-1)/16)+1],".png"))),res = 300,width = 2000, height = 1500)
+    par(mfrow = c(4, 5), mar=c(.2, .2, .2, .2), oma=c(0, 0, 0, 0), mai=c(.25, .25, .25, .25))
+  }
+  plot(yearsEOF, rep(0,length(yearsEOF)), ylim=c(-limit, limit), type="n", ylab="", xlab="", main = NamePlotModes[index])
+  lines(yearsEOF, File.out[,index], lty=1, col=4)
+  abline(h=0, col="gray70")
+  # increase index
+  index <- index +1
+}
+dev.off()
+write.csv(File.out, file="Anomaly_Seasonal_Shelf50.csv", quote=F)
 
 # ################################################################################
 # # now read ALL Differential (4 cases)

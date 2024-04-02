@@ -189,7 +189,7 @@ plot_matrix[p_matrix > pcut] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 png(gsub(" ","",paste("../images/Correlation_EOF_Season.png")),res = 300, width = 2000, height = 2000)
-heatmap.2(plot_matrix, g
+heatmap.2(plot_matrix,
           col  = colorPlot, 
           Rowv = NA, 
           Colv = NA, 

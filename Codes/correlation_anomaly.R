@@ -154,7 +154,7 @@ dev.off()
 graphics.off()
 
 # create a matrix with only dates both have data
-EOFSpSeason_RecDev <- merge(EOFSpSeason, RecDev, by = "X")
+EOFSpSeason_RecDev <- merge(SpSeason, RecDev, by = "X")
 
 # we have 5 Anomal variables, vs 2 seasons (10) and 10 species
 itot <- (5*2)+1
