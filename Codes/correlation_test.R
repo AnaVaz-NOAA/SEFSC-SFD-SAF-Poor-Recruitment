@@ -1,4 +1,4 @@
-# Make correlations between indexes, EOF and recdev
+ # Make correlations between indexes, EOF and recdev
 # calculate spectral analyses
 library(gplots)
 library(RColorBrewer)

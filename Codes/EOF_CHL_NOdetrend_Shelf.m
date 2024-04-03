@@ -367,3 +367,5 @@ for ivar = 1
       eval(['save EOF_space_',mynameP,'_',sName,'_CNAPS EOFSpace']);
     end % end season
 end
+
+Your responses will guide internal activities and provide suggestions for actionable measures that leadership can take to improve our working satisfaction. We lacked a clear overview of our group's concerns in recent leadership meetings, and your insights will fill this gap."
