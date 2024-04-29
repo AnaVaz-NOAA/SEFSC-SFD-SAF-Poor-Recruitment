@@ -1,302 +1,173 @@
 library(ggplot2)
 library(dplyr)
 library(tidyr)
+library(lubridate)
+library(R.matlab)
 
 filepath <- ("./data/CNAPS_Shelf_15/")
 
-# get lat and lon
-filename <- (gsub(" ","",paste(filepath,"latlon_CNAPS_Shelf.mat")))
-latlon   <- readMat(filename)
-latlon   <- latlon$latlon
-plotyear <- seq(1993,2021)
+# Convert data to matrix and transpose
+dataux <- read.csv("./data/HM_UI_subsurface.csv", header = FALSE)
+data_matrix <- t(as.matrix(dataux))
 
-# load matfile
-for (ivar in 1:4) {
-  varname <- switch(ivar,
-                    'ssh',
-                    'bottomT',
-                    'sst',
-                    'mixedlayer')
-  vartitle <- switch(ivar,
-                     'SSH',
-                     'Bottom Temperature',
-                     'SST',
-                     'Mixed Layer')
-  # work the variable
-  # loop all sites and do 1) envPred, 2) spectral analyses for entire time (breakdown in frequencies), 3) trend
-  filename <- (gsub(" ","",paste(filepath,"seasonal_avg_",varname,"_CNAPS_Shelf.mat")))
-  VarMaux  <- readMat(filename)
-  VarM     <- VarMaux$seasonal.avg
-  rm(VarMaux)
+# Create a sequence of months,  years and lats
+months <- rep(1:12, each = 28)
+years <- rep(1993:2020, times = 12)
+latitudes <- seq(28, 35.44, by = 0.04)
+
+# Define latitude ranges
+latitude_ranges <- cut(latitudes, breaks = c(27, 30, 31, 32, 33, 34, 36),
+                       labels = c("28-30", "30-31", "31-32", "32-33", "33-34", "34-35"))
+
+# Create a data frame with latitude range, month, year, and upwelling
+data <- data.frame(Latitude = rep(latitude_ranges, each = length(years)),
+                   Month = months,
+                   Year = years,
+                   Upwelling = as.vector(data_matrix))
+
+# Define seasons
+seasons <- data.frame(
+  Season = c("Winter", "Spring", "Summer", "Fall"),
+  Month = c(1, 4, 7, 10, 2, 5, 8, 11, 3, 6, 9, 12)
+)
+data <- merge(data, seasons, by = "Month")
+
+# Calculate seasonal averages
+seasonal_averages <- data %>%
+  group_by(Latitude, Year, Season) %>%
+  summarise(AvgUp = mean(Upwelling, na.rm = TRUE))
+
+# Create a data frame with all latitude ranges
+all_avg_anomalies <- data.frame(Latitude = unique(latitude_ranges))
+
+for (iseason in 1:4) {
+  seasonname <- switch(iseason,
+                       'Winter',
+                       'Spring',
+                       'Summer',
+                       'Fall')
   
-  all_avg_anomalies <- data.frame(Latitude = unique(latlon[,1]))
+  # Filter seasonal averages for the specified season
+  season_data <- filter(seasonal_averages, Season == seasonname)
   
-  for (iseason in 1:4){
-    seasonname <- switch(iseason,
-                         'Winter',
-                         'Spring',
-                         'Summer',
-                         'Fall')
-    varSeason <- VarM[ , ,iseason]
-    varSeason <- t(varSeason)
-    varSeason_df <- as.data.frame(varSeason)
-    varSeason_df$Lat <- latlon[, 1]
-    varSeason_df$Lon <- latlon[, 2]
+  # Create an empty plot
+  anomaly_plot <- ggplot() +
+    labs(title = paste("Upwelling Subsurface Anomalies: ", seasonname),
+         x = "Year", y = "Upwelling Subsurface Anomaly") +
+    theme_light()
+  
+  # Create an empty data frame to store the data
+  season_data_combined <- data.frame()
+  
+  # Loop through latitude ranges
+  for (lat_range in unique(season_data$Latitude)) {
+    # Filter data for the specific latitude range and season
+    lat_season_data <- filter(season_data, Latitude == lat_range)
     
-    # Combine latlon information with VarM
-    average_data <- varSeason_df %>%
-      group_by(Lat) %>%
-      summarize_all(mean, na.rm = TRUE)
-    melted_data <- reshape2::melt(average_data, id.vars = c("Lat", "Lon"))
-    # Replace 'V' with empty string and convert to numeric
-    melted_data$Year <- as.numeric(sub("V", "", melted_data$variable))
+    # Calculate long-term average (climatology) for this latitude range and season
+    climatology <- mean(lat_season_data$AvgUp)
     
-    # Replace 'variable' with corresponding years from 'plotyear'
-    melted_data$variable <- as.character(plotyear[melted_data$Year])
-    global_mean <- mean(melted_data$value, na.rm = TRUE)
-    # Create the anomaly variable
-    melted_data$anomaly <- melted_data$value - global_mean
-    minP <- min(melted_data$anomaly)
-    maxP <- max(melted_data$anomaly)
-    sizeP <- (maxP - minP)/10
+    # Calculate anomalies
+    lat_season_data$Anomaly <- lat_season_data$AvgUp - climatology
     
-    plot <- ggplot(data = melted_data, aes(x = variable, y = Lat, fill = anomaly)) +
-      geom_tile() +
-      scale_fill_stepsn(colors = c("#08306B", "white", "#67000D"),
-                        limits = c(minP, maxP),
-                        values = rescale(c(minP, 0, maxP)),
-                        n.breaks = 20) +
-      coord_cartesian(expand = FALSE) +
-      scale_x_discrete() +
-      labs(title = glue("Anomaly {vartitle} ({min(melted_data$variable)}-{max(melted_data$variable)})")) +
-      theme_light() 
-    ggsave(gsub(" ","",paste("gg_",varname,"_",seasonname,"_15.png")), plot, width = 10, height = 5, dpi = 300)
+    # Add data to combined data frame
+    season_data_combined <- rbind(season_data_combined, lat_season_data)
     
-    # Calculate the average anomaly per latitude and standard deviation
-    avg_anomaly <- melted_data %>%
-      group_by(Lat) %>%
-      summarise(avg_anomaly = mean(anomaly),
-                sd_anomaly = sd(anomaly))
-    
-    # Plot: Average Anomaly per Latitude
-    avg_plot <- ggplot(avg_anomaly, aes(x = avg_anomaly, y = Lat)) +
-      geom_point(color = "dodgerblue4") +
-      geom_errorbarh(aes(xmin = avg_anomaly - sd_anomaly, xmax = avg_anomaly + sd_anomaly), height = 0) +
-      labs(x = "Average Anomaly", y = "Latitude", title = paste("Average Anomaly per Latitude")) +
-      theme_light()
-    ggsave(gsub(" ","",paste("avg_Lat_",varname,"_",seasonname,"_15.png")), avg_plot, width = 5, height = 10, dpi = 300)
-    
-    all_avg_anomalies[[paste0(seasonname)]] <- avg_anomaly$avg_anomaly
-  } 
-  write.csv(all_avg_anomalies, file = gsub(" ","",paste("shelf_",varname,"_anomaly_15.csv")), row.names = FALSE)
+    # Add anomaly curve to the plot
+    # Plot anomalies over time
+    anomaly_plot <- anomaly_plot +
+      geom_line(data = lat_season_data, aes(x = Year, y = Anomaly, color = as.factor(Latitude))) +
+      scale_color_brewer(palette = "Paired")  # Adjust color palette as needed
+  }
+  
+  # Save the combined data frame to CSV
+  write.csv(season_data_combined, file = paste0("Season_", seasonname, "_UpSub.csv"), row.names = FALSE)
+  
+  # Save the plot
+  ggsave(paste0("Upwelling_Subsurface_Anomalies_Season_", seasonname, ".png"), 
+         anomaly_plot, width = 8, height = 6, dpi = 300)
 }
 
-variables <- c("sst", "ssh", "bottomT", "mixedlayer", "GlbColour", "modis", "UpSurf", "UpSub")
-seasons <- c("Winter","Spring","Summer", "Fall")
+#------------------------------------------------------------------
 
-auxdf <- list()
-pcut <- 0.01
+# Convert data to matrix and transpose
+dataux <- read.csv("./data/HM_UI_surface.csv", header = FALSE)
+data_matrix <- t(as.matrix(dataux))
 
-for (season in seasons){
-  # Iterate over each variable
-  # create new correlation for each season
-  corr_matrix <- matrix(NA, nrow=8, ncol=8, dimnames=list(variables, variables))
-  p_matrix    <- matrix(NA, nrow=8, ncol=8, dimnames=list(variables, variables))
+# Create a sequence of months,  years and lats
+months <- rep(1:12, each = 28)
+years <- rep(1993:2020, times = 12)
+latitudes <- seq(28, 35.48, by = 0.04)
+
+# Define latitude ranges
+latitude_ranges <- cut(latitudes, breaks = c(27, 30, 31, 32, 33, 34, 36),
+                       labels = c("28-30", "30-31", "31-32", "32-33", "33-34", "34-35"))
+
+# Create a data frame with latitude range, month, year, and upwelling
+data <- data.frame(Latitude = rep(latitude_ranges, each = length(years)),
+                   Month = months,
+                   Year = years,
+                   Upwelling = as.vector(data_matrix))
+
+# Define seasons
+seasons <- data.frame(
+  Season = c("Winter", "Spring", "Summer", "Fall"),
+  Month = c(1, 4, 7, 10, 2, 5, 8, 11, 3, 6, 9, 12)
+)
+data <- merge(data, seasons, by = "Month")
+
+# Calculate seasonal averages
+seasonal_averages <- data %>%
+  group_by(Latitude, Year, Season) %>%
+  summarise(AvgUp = mean(Upwelling, na.rm = TRUE))
+
+# Create a data frame with all latitude ranges
+all_avg_anomalies <- data.frame(Latitude = unique(latitude_ranges))
+
+for (iseason in 1:4) {
+  seasonname <- switch(iseason,
+                       'Winter',
+                       'Spring',
+                       'Summer',
+                       'Fall')
   
-  for (variable in variables) {
-    # Read the data
-    filename <- paste0(variable, "_anomaly_15.csv")
-    df <- read.csv(filename, stringsAsFactors = FALSE)
+  # Filter seasonal averages for the specified season
+  season_data <- filter(seasonal_averages, Season == seasonname)
+  
+  # Create an empty plot
+  anomaly_plot <- ggplot() +
+    labs(title = paste("Upwelling Surface Anomalies: ", seasonname),
+         x = "Year", y = "Surface Upwelling Anomaly") +
+    theme_light()
+  
+  # Create an empty data frame to store the data
+  season_data_combined <- data.frame()
+  
+  # Loop through latitude ranges
+  for (lat_range in unique(season_data$Latitude)) {
+    # Filter data for the specific latitude range and season
+    lat_season_data <- filter(season_data, Latitude == lat_range)
     
-    # If GlbColour, modis, UpSurf, and UpSub needs to interp lat
-    if (variable %in% c("GlbColour", "modis", "UpSurf", "UpSub")) {
-      valueadd <- approx(df$Latitude, df[[season]], xout = sstLat)
-    } else {
-      # dont need to interpolate as are in the right in the same lat
-      valueadd <- df[[season]] 
-    }
-    # new def to the newdf
-    auxdf[[variable]] <- valueadd
+    # Calculate long-term average (climatology) for this latitude range and season
+    climatology <- mean(lat_season_data$AvgUp)
+    
+    # Calculate anomalies
+    lat_season_data$Anomaly <- lat_season_data$AvgUp - climatology
+    
+    # Add data to combined data frame
+    season_data_combined <- rbind(season_data_combined, lat_season_data)
+    
+    # Add anomaly curve to the plot
+    # Plot anomalies over time
+    anomaly_plot <- anomaly_plot +
+      geom_line(data = lat_season_data, aes(x = Year, y = Anomaly, color = as.factor(Latitude))) +
+      scale_color_brewer(palette = "Paired")  # Adjust color palette as needed
   }
-  newdf <- as.data.frame(auxdf)
-  # now loop to correlate
-  for (season1 in 1:8) {
-    for (season2 in 1:8) {
-      # correlation and save coef. and p
-      x <- newdf[,season1]
-      y <- newdf[,season2]
-      
-      # correlation and save coef. and p
-      aux <- cor.test(x, y, use = "complete.obs")
-      corr_matrix[season1,season2] <- aux$estimate
-      p_matrix[season1,season2] <- aux$p.value
-    } # end one variable 
-  }  # end second variable
   
-  plot_matrix <- corr_matrix
-  plot_matrix[p_matrix > pcut] <- NaN
-  # plot the correlation
-  colorPlot <- brewer.pal(9, "RdBu")
+  # Save the combined data frame to CSV
+  write.csv(season_data_combined, file = paste0("Season_", seasonname, "_UpSurf.csv"), row.names = FALSE)
   
-  melted_cor_matrix <- melt(plot_matrix)
-  plot <- ggplot(melted_cor_matrix, 
-                 aes(x = Var1, y = Var2, fill = value)) +
-    geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-    scale_fill_gradient2(low = "#3B9AB2", 
-                         mid = "white", 
-                         high = "#F21A00", 
-                         na.value = "white", midpoint = 0) +
-    theme_minimal() +
-    theme(
-      axis.text.x = element_text(angle = 90, hjust = 1),
-      panel.background = element_rect(fill = "white"),  
-      # Set the background color to white
-      plot.background = element_rect(fill = "white"), 
-      # Set the plot background to white
-      panel.grid.major = element_line(color = "lightgray", 
-                                      size = 0.5),  
-      # Add light gray grid lines
-      panel.grid.minor = element_line(color = "lightgray", 
-                                      size = 0.5) 
-      # Remove minor grid lines
-    )
-  ggsave(gsub(" ","", paste("Correlation_latitudes_",season,"_15.png")),
-         plot, dpi = 300, width = 12, height = 12)
-} # end seasons
-
-
-#------------------------------------------------------------------
-# FOR 50 - 300
-#------------------------------------------------------------------
-
-variables <- c("sst", "ssh", "bottomT", "mixedlayer", "GlbColour", "modis","UpSurf","UpSub")
-seasons <- c("Summer", "Spring", "Fall", "Winter")
-
-variable_data <- list()
-
-# Iterate over each variable
-for (variable in variables) {
-  # Read the data for the current variable
-  filename <- paste0(variable, "_anomaly_50.csv")
-  df <- read.csv(filename, stringsAsFactors = FALSE)
-  df_long <- pivot_longer(df, cols = -Latitude, names_to = "Season", values_to = "Value")
-  df_long$Variable <- variable
-  variable_data[[variable]] <- df_long
+  # Save the plot
+  ggsave(paste0("Upwelling_Surface_Anomalies_Season_", seasonname, ".png"), 
+         anomaly_plot, width = 8, height = 6, dpi = 300)
 }
-
-# Combine data frames for all variables
-combined_data <- bind_rows(variable_data)
-
-# Plot variables for each season
-plot <- ggplot(combined_data, aes(x = Latitude, y = Value, color = Variable)) +
-  geom_line() +
-  facet_wrap(~ Season, scales = "free") +
-  labs(title = "Variables by Season", x = "Latitude", y = "Value", color = "Variable") +
-  theme_light()
-print(plot)
-ggsave("variables_by_season_50.png", plot, width = 12, height = 8, dpi = 300)
-
-max_per_variable <- combined_data %>%
-  group_by(Variable) %>%
-  summarise(max_value = max(Value, na.rm = TRUE))
-
-# Merge the maximum values back to the combined data
-combined_data <- left_join(combined_data, max_per_variable, by = "Variable")
-
-# Normalize the values by dividing each value by its corresponding maximum value
-combined_data$Normalized_Value <- combined_data$Value / combined_data$max_value
-
-# Plot variables for each season with normalized values
-plot <- ggplot(combined_data, aes(x = Latitude, y = Normalized_Value, color = Variable)) +
-  geom_line() +
-  facet_wrap(~ Season, scales = "free") +
-  labs(title = "Variables by Season (Normalized)", x = "Latitude", y = "Normalized Value", color = "Variable") +
-  theme_light()
-ggsave("variables_by_season_normalized_50.png", plot, width = 12, height = 8, dpi = 300)
-
-variables <- c("sst", "ssh", "bottomT", "mixedlayer", "GlbColour", "modis", "UpSurf", "UpSub")
-seasons <- c("Winter","Spring","Summer", "Fall")
-
-# save the latitude to interpolate
-filename <- paste0("sst_anomaly_50.csv")
-df <- read.csv(filename, stringsAsFactors = FALSE)
-sstLat <- df$Latitude
-
-auxdf <- list()
-pcut <- 0.01
-
-for (season in seasons){
-  # Iterate over each variable
-  # create new correlation for each season
-  corr_matrix <- matrix(NA, nrow=8, ncol=8, dimnames=list(variables, variables))
-  p_matrix    <- matrix(NA, nrow=8, ncol=8, dimnames=list(variables, variables))
-  
-  for (variable in variables) {
-    # Read the data
-    filename <- paste0(variable, "_anomaly_50.csv")
-    df <- read.csv(filename, stringsAsFactors = FALSE)
-    
-    # If GlbColour, modis, UpSurf, and UpSub needs to interp lat
-    if (variable %in% c("GlbColour", "modis", "UpSurf", "UpSub")) {
-      valueadd <- approx(df$Latitude, df[[season]], xout = sstLat)
-      original_data <- data.frame(Latitude = df$Latitude, Value = df[[season]], Type = "Original")
-      interpolated_data <- data.frame(Latitude = sstLat, Value = valueadd, Type = "Interpolated")
-      # Plot
-      plot <- ggplot() +
-        geom_point(data = original_data, aes(x = Latitude, y = Value), color = "dodgerblue3") +
-        geom_line(data = interpolated_data, aes(x = Latitude, y = Value.y), color = "tomato3") +
-        labs(title = "Original (blue) vs Interpolated (red)", x = "Latitude", y = "Value")
-      ggsave(gsub(" ","", paste("check_interp_",season,"_",variable,".png")),
-             plot, dpi = 300, width = 12, height = 12)
-    } else {
-      # dont need to interpolate as are in the right in the same lat
-      valueadd <- df[[season]] 
-    }
-    # new def to the newdf
-    auxdf[[variable]] <- valueadd
-  }
-  newdf <- as.data.frame(auxdf)
-  # now loop to correlate
-  for (season1 in 1:8) {
-    for (season2 in 1:8) {
-      # correlation and save coef. and p
-      x <- newdf[,season1]
-      y <- newdf[,season2]
-      
-      # correlation and save coef. and p
-      aux <- cor.test(x, y, use = "complete.obs")
-      corr_matrix[season1,season2] <- aux$estimate
-      p_matrix[season1,season2] <- aux$p.value
-    } # end one variable 
-  }  # end second variable
-  
-  plot_matrix <- corr_matrix
-  plot_matrix[p_matrix > pcut] <- NaN
-  # plot the correlation
-  colorPlot <- brewer.pal(9, "RdBu")
-  
-  melted_cor_matrix <- melt(plot_matrix)
-  plot <- ggplot(melted_cor_matrix, 
-                 aes(x = Var1, y = Var2, fill = value)) +
-    geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-    scale_fill_gradient2(low = "#3B9AB2", 
-                         mid = "white", 
-                         high = "#F21A00", 
-                         na.value = "white", midpoint = 0) +
-    theme_minimal() +
-    theme(
-      axis.text.x = element_text(angle = 90, hjust = 1),
-      panel.background = element_rect(fill = "white"),  
-      # Set the background color to white
-      plot.background = element_rect(fill = "white"), 
-      # Set the plot background to white
-      panel.grid.major = element_line(color = "lightgray", 
-                                      size = 0.5),  
-      # Add light gray grid lines
-      panel.grid.minor = element_line(color = "lightgray", 
-                                      size = 0.5) 
-      # Remove minor grid lines
-    )
-  ggsave(gsub(" ","", paste("Correlation_latitudes_",season,"_50.png")),
-         plot, dpi = 300, width = 12, height = 12)
-} # end seasons

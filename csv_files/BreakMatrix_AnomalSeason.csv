@@ -1,0 +1,59 @@
+,Variable,Method,Breaks
+1,Bottom T Fall,CPT,2020
+2,Bottom T Fall,CPT,2021
+3,Bottom T Fall,Breakpoints,2014
+4,Bottom T Spring,CPT,2020
+5,Bottom T Spring,CPT,2021
+6,Bottom T Spring,Breakpoints,2013
+7,Bottom T Summer,CPT,2020
+8,Bottom T Summer,CPT,2021
+9,Bottom T Summer,Breakpoints,2015
+10,Bottom T Winter,CPT,2020
+11,Bottom T Winter,CPT,2021
+12,Bottom T Winter,Breakpoints,2000
+13,Bottom T Winter,Breakpoints,2013
+14,Mixed Layer Fall,CPT,2020
+15,Mixed Layer Fall,CPT,2021
+16,Mixed Layer Spring,CPT,2020
+17,Mixed Layer Spring,CPT,2021
+18,Mixed Layer Summer,CPT,2020
+19,Mixed Layer Summer,CPT,2021
+20,Mixed Layer Summer,Breakpoints,2002
+21,Mixed Layer Summer,Breakpoints,2014
+22,Mixed Layer Winter,CPT,2020
+23,Mixed Layer Winter,CPT,2021
+24,Salinity Fall,CPT,2020
+25,Salinity Fall,CPT,2021
+26,Salinity Spring,CPT,2020
+27,Salinity Spring,CPT,2021
+28,Salinity Summer,CPT,2020
+29,Salinity Summer,CPT,2021
+30,Salinity Summer,Breakpoints,2002
+31,Salinity Summer,Breakpoints,2006
+32,Salinity Winter,CPT,2020
+33,Salinity Winter,CPT,2021
+34,SSH Fall,CPT,1994
+35,SSH Fall,CPT,2021
+36,SSH Fall,Breakpoints,2013
+37,SSH Spring,CPT,1994
+38,SSH Spring,CPT,2021
+39,SSH Spring,Breakpoints,2011
+40,SSH Summer,CPT,2020
+41,SSH Summer,CPT,2021
+42,SSH Summer,Breakpoints,2006
+43,SSH Winter,CPT,2020
+44,SSH Winter,CPT,2021
+45,SSH Winter,Breakpoints,2013
+46,SST Fall,CPT,2020
+47,SST Fall,CPT,2021
+48,SST Fall,Breakpoints,2014
+49,SST Spring,CPT,2020
+50,SST Spring,CPT,2021
+51,SST Spring,Breakpoints,2014
+52,SST Summer,CPT,2020
+53,SST Summer,CPT,2021
+54,SST Summer,Breakpoints,2013
+55,SST Winter,CPT,2020
+56,SST Winter,CPT,2021
+57,SST Winter,Breakpoints,2000
+58,SST Winter,Breakpoints,2011

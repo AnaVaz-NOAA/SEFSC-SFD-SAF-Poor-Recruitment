@@ -46,10 +46,10 @@ p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, sp
 yearsPlot <- unique(Up_RecDev[,1])
 
 # Print the resulting data frame
-print(seasonal_averages)
+#print(seasonal_averages)
 # Extract the YEAR column and other numeric columns
-years <- CHL$YEAR
-data <- CHL[, -1]  # Exclude the YEAR column
+#years <- CHL$YEAR
+#data <- CHL[, -1]  # Exclude the YEAR column
 
 for (iSpp in 1:10) {
   for (iEOF in 2:itot) {
@@ -129,10 +129,11 @@ melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_UpDeep_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-  scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
+  scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
@@ -149,10 +150,11 @@ melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_UpDeep_Season_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-  scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
+  scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
@@ -212,7 +214,7 @@ for (iSpp in 1:10) {
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
         geom_text(aes(label = paste("p=", format(p.value, digits = 2))), 
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
-        scale_color_manual(values = c("RecDev" = "#F21A00", "Upwelling" = "#3B9AB2")) +
+        scale_color_manual(values = c("RecDev" = "tomato3", "Upwelling" = "dodgerblue3")) +
         labs(
           title = paste(NamePlotSeason[iEOF-1], spNamePlot[iSpp]),
           y = NULL,
@@ -258,10 +260,11 @@ melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_UpSurf_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-  scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
+  scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
@@ -278,10 +281,11 @@ melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_UpSurf_Season_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-  scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
+  scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
@@ -405,10 +409,11 @@ melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_UpDeep_SeasonSp_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-  scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
+  scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
@@ -426,10 +431,11 @@ melted_cor_matrix <- melt(plot_matrix)
 png(gsub(" ","",paste("../images/Correlation_UpDeep_SeasonSp_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
-  scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
+  scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
@@ -536,7 +542,8 @@ ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
@@ -557,7 +564,8 @@ ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 16),  # Adjust size as needed
+    axis.text.y = element_text(size = 16),  # Adjust size as needed
     panel.background = element_rect(fill = "white"),  # Set the background color to white
     plot.background = element_rect(fill = "white"), # Set the plot background to white
     panel.grid.major = element_line(color = "lightgray", size = 0.5),  # Add light gray grid lines
