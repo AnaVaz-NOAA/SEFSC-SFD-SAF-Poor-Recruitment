@@ -284,7 +284,7 @@ NamePlotModesSeason <- paste(aux$Var2, aux$Var1)
 NameSeason <- c("Summer","Winter")
 # create combinations of names and combine the names
 aux <- expand.grid(NameSeason,NamePlot)
-NamePlotModesSpawnSeason <- paste(aux$Var2, aux$Var1)
+NamePlotSpawnSeason <- paste(aux$Var2, aux$Var1)
 
 # create combinations of names and combine the names
 aux <- expand.grid(NamePlot, NameModes)
