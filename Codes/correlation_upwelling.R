@@ -11,12 +11,9 @@ library(wesanderson)
 library(tidyr)
 
 graphics.off()
-# load recdevs, indexes and EOF
-# set the diretory with the assessment files
-#setwd("./csv_files")
-RecDev <- read.csv("RecruitmentResiduals_Feb23.csv")
-deepUp <- read.csv("seasonal_deep_upwelling.csv")
-surfUp <- read.csv("seasonal_surface_upwelling.csv")
+RecDev <- read.csv("./csv_files/RecruitmentResiduals_Feb23.csv")
+deepUp <- read.csv("./csv_files/seasonal_deep_upwelling.csv")
+surfUp <- read.csv("./csv_files/seasonal_surface_upwelling.csv")
 
 yearsPlot <- 1993:2021
 color_palette <- rainbow(length(unique(yearsPlot)))
@@ -113,7 +110,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationUpDeepSeason/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationUpDeepSeason/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -122,11 +119,13 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
+write.csv(plot_matrixr, file = paste0("./csv_files/Correlation_UpDeep.csv"), row.names = FALSE)
+r
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpDeep_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpDeep_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -147,7 +146,7 @@ plot_matrix[p_matrix > 0.05] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpDeep_Season_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpDeep_Season_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -244,7 +243,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationUpSurfSeason/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationUpSurfSeason/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -253,11 +252,13 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
+write.csv(plot_matrix, file = paste0("./csv_files/Correlation_UpSurf.csv"), row.names = FALSE)
+
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpSurf_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpSurf_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -278,7 +279,7 @@ plot_matrix[p_matrix > 0.05] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpSurf_Season_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpSurf_Season_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -299,9 +300,9 @@ dev.off()
 #-----------------------------------------
 #-----------------------------------------
 
-RecDev <- read.csv("RecruitmentResiduals_Feb23.csv")
-deepUp <- read.csv("seasonalSp_deep_upwelling.csv")
-surfUp <- read.csv("seasonalSp_surface_upwelling.csv")
+RecDev <- read.csv("./csv_files/RecruitmentResiduals_Feb23.csv")
+deepUp <- read.csv("./csv_files/seasonalSp_deep_upwelling.csv")
+surfUp <- read.csv("./csv_files/seasonalSp_surface_upwelling.csv")
 
 yearsPlot <- 1993:2021
 color_palette <- rainbow(length(unique(yearsPlot)))
@@ -392,7 +393,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationUpDeepSeasonSp/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationUpDeepSeasonSp/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -406,7 +407,7 @@ plot_matrix[p_matrix > pcut] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpDeep_SeasonSp_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpDeep_SeasonSp_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -428,7 +429,7 @@ plot_matrix[p_matrix > 0.05] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpDeep_SeasonSp_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpDeep_SeasonSp_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -522,7 +523,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationUpSurfSeasonSp/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationUpSurfSeasonSp/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -536,7 +537,7 @@ plot_matrix[p_matrix > pcut] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpSurf_SeasonSp_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpSurf_SeasonSp_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +
@@ -558,7 +559,7 @@ plot_matrix[p_matrix > 0.05] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_UpSurf_SeasonSp_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_UpSurf_SeasonSp_Species_heatmap05.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "#3B9AB2", mid = "white", high = "#F21A00", na.value = "white", midpoint = 0) +

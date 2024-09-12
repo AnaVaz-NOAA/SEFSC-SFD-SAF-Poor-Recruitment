@@ -13,9 +13,9 @@ graphics.off()
 # load recdevs, indexes and EOF
 # set the diretory with the assessment files
 #setwd("./csv_files")
-RecDev      <- read.csv("RecruitmentResiduals_Feb23.csv")
-Season   <- read.csv("Anomaly_Seasonal.csv")
-SpSeason <- read.csv("Anomaly_Spawning_Seasonal.csv")
+RecDev      <- read.csv("./csv_files/RecruitmentResiduals_Feb23.csv")
+Season   <- read.csv("./csv_files/Anomaly_Seasonal.csv")
+SpSeason <- read.csv("./csv_files/Anomaly_Spawning_Seasonal.csv")
 
 yearsPlot <- 1993:2021
 color_palette <- rainbow(length(unique(yearsPlot)))
@@ -118,7 +118,7 @@ for (iSpp in 1:10) {
       theme_minimal()
     
     # Create a grid of the two plots
-    png(gsub(" ","",paste("../images/CorrelationAnomlSeason/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+    png(gsub(" ","",paste("./images/CorrelationAnomlSeason/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
     grid.arrange(plot1, plot2, ncol = 1)
     dev.off()
     }
@@ -127,11 +127,12 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
+write.csv(plot_matrix, file="./csv_files/Correlation_Anomal_Season_Species.csv", quote=F)
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anomal_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anomal_Season_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -229,7 +230,7 @@ for (iSpp in 1:10) {
       theme_minimal()
     
     # Create a grid of the two plots
-    png(gsub(" ","",paste("../images/CorrelationAnomalSeasonSp/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+    png(gsub(" ","",paste("./images/CorrelationAnomalSeasonSp/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
     grid.arrange(plot1, plot2, ncol = 1)
     dev.off()
     }
@@ -242,7 +243,7 @@ plot_matrix[p_matrix > pcut] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anomal_SpSeason_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anomal_SpSeason_Species_heatmap.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -259,9 +260,9 @@ dev.off()
 #------------------------------------------------------------------
 # Chl Globcolour 15
 #------------------------------------------------------------------
-RecDev      <- read.csv("RecruitmentResiduals_Feb23.csv")
-Season   <- read.csv("Anomaly_Seasonal_ChlShelf15.csv")
-SpSeason <- read.csv("Anomaly_Seasonal_ChlSpShelf15.csv")
+RecDev      <- read.csv("./csv_files/RecruitmentResiduals_Feb23.csv")
+Season   <- read.csv("./csv_files/Anomaly_Seasonal_ChlShelf15.csv")
+SpSeason <- read.csv("./csv_files/Anomaly_Seasonal_ChlSpShelf15.csv")
 
 yearsPlot <- 1998:2021
 color_palette <- rainbow(length(unique(yearsPlot)))
@@ -281,10 +282,6 @@ NameSeason <- c("Summer","Winter")
 # create combinations of names and combine the names
 aux <- expand.grid(NameSeason,NamePlot)
 NamePlotSpawnSeason <- paste(aux$Var2, aux$Var1)
-
-# create combinations of names and combine the names
-aux <- expand.grid(NamePlot, NameModes)
-NamePlotModes <- paste(aux$Var1, aux$Var2)
 
 spNamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
 
@@ -369,7 +366,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSeason15/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationAnomlChlSeason15/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -378,11 +375,12 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
+write.csv(plot_matrix, file="./csv_files/Correlation_Anoml_ChlShelf15.csv", quote=F)
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anoml_ChlShelf15_Rect.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anoml_ChlShelf15_Rect.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -480,7 +478,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSpSeason15/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationAnomlChlSpSeason15/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -493,7 +491,7 @@ plot_matrix[p_matrix > pcut] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anoml_ChlSpShelf15_Rect.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anoml_ChlSpShelf15_Rect.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -512,7 +510,7 @@ dev.off()
 #------------------------------------------------------------------
 graphics.off()
 
-Season   <- read.csv("Anomaly_Seasonal_ChlShelf50.csv")
+Season   <- read.csv("./csv_files/Anomaly_Seasonal_ChlShelf50.csv")
 EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 
 # 4 seasons
@@ -592,7 +590,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSeason50/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationAnomlChlSeason50/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -601,11 +599,13 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
+write.csv(plot_matrix, file="./csv_files/Correlation_Anoml_ChlShelf50.csv", quote=F)
+
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anoml_ChlShelf50_Rect.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anoml_ChlShelf50_Rect.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -624,7 +624,7 @@ dev.off()
 #------------------------------------------------------------------
 graphics.off()
 
-SpSeason <- read.csv("Anomaly_Seasonal_ChlSpShelf50.csv")
+SpSeason <- read.csv("./csv_files/Anomaly_Seasonal_ChlSpShelf50.csv")
 # create a matrix with only dates both have data
 EOFSpSeason_RecDev <- merge(SpSeason, RecDev, by = "X")
 
@@ -705,7 +705,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSpSeason50/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationAnomlChlSpSeason50/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -718,7 +718,7 @@ plot_matrix[p_matrix > pcut] <- NaN
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anoml_ChlSpShelf50_Rect.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anoml_ChlSpShelf50_Rect.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -737,7 +737,7 @@ dev.off()
 #------------------------------------------------------------------
 graphics.off()
 
-Season   <- read.csv("Anomaly_Seasonal_ChlModis15.csv")
+Season   <- read.csv("./csv_files/Anomaly_Seasonal_ChlModis15.csv")
 EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 
 # 4 seasons
@@ -817,7 +817,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlModisChlSeason15/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationAnomlModisChlSeason15/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -826,11 +826,12 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
+write.csv(plot_matrix, file="./csv_files/Correlation_Anoml_Modis15.csv", quote=F)
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anoml_Modis15.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anoml_Modis15.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
@@ -849,7 +850,7 @@ dev.off()
 #------------------------------------------------------------------
 graphics.off()
 
-Season   <- read.csv("Anomaly_Seasonal_ChlModis50.csv")
+Season   <- read.csv("./csv_files/Anomaly_Seasonal_ChlModis50.csv")
 EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 
 # 4 seasons
@@ -929,7 +930,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlModisSeason50/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("./images/CorrelationAnomlChlModisSeason50/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -938,11 +939,12 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
+write.csv(plot_matrix, file="./csv_files/Correlation_Anoml_Modis50.csv", quote=F)
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
 melted_cor_matrix <- melt(plot_matrix)
-png(gsub(" ","",paste("../images/Correlation_Anoml_Modis50.png")),res = 300, width = 2000, height = 2000)
+png(gsub(" ","",paste("./images/Correlation_Anoml_Modis50.png")),res = 300, width = 2000, height = 2000)
 ggplot(melted_cor_matrix, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white", size = 0.5) +  # Add white grid lines
   scale_fill_gradient2(low = "dodgerblue3", mid = "white", high = "tomato3", na.value = "white", midpoint = 0) +
