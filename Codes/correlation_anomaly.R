@@ -27,18 +27,14 @@ NamePlot <- c("Bottom T","Mixed Layer","Salinity","SSH","SST")
 NameSeason <- c("Fall","Spring","Summer","Winter")
 
 # create combinations of names and combine the names
-aux <- expand.grid(NameSeason,NamePlot)
-NamePlotModesSeason <- paste(aux$Var2, aux$Var1)
+aux <- expand.grid(NameSeason, NamePlot)
+NamePlotSeason <- paste(aux$Var2, aux$Var1)
 
 # it is in alphabetical order
-NameSeason <- c("Summer","Winter")
+NameSeason <- c("Summer", "Winter")
 # create combinations of names and combine the names
-aux <- expand.grid(NameSeason,NamePlot)
-NamePlotModesSpawnSeason <- paste(aux$Var2, aux$Var1)
-
-# create combinations of names and combine the names
-aux <- expand.grid(NamePlot, NameModes)
-NamePlotModes <- paste(aux$Var1, aux$Var2)
+aux <- expand.grid(NameSeason, NamePlot)
+NamePlotSpawnSeason <- paste(aux$Var2, aux$Var1)
 
 spNamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish"," Red Porgy","Red Grouper","Black Sea Bass","Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
 
@@ -55,8 +51,8 @@ EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 itot = 5*4+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSeason_RecDev[,1])
 
@@ -94,7 +90,7 @@ for (iSpp in 1:10) {
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
       scale_color_manual(values = c("Anomaly" = "tomato3", "Recruitment" = "dodgerblue3")) +
       labs(
-        title = paste(NamePlotModesSeason[iEOF-1], spNamePlot[iSpp]),
+        title = paste(NamePlotSeason[iEOF-1], spNamePlot[iSpp]),
         y = NULL,
         x = NULL
       ) +
@@ -122,7 +118,7 @@ for (iSpp in 1:10) {
       theme_minimal()
     
     # Create a grid of the two plots
-    png(gsub(" ","",paste("../images/CorrelationAnomlSeason/",spNamePlot[iSpp],NamePlotModesSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+    png(gsub(" ","",paste("../images/CorrelationAnomlSeason/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
     grid.arrange(plot1, plot2, ncol = 1)
     dev.off()
     }
@@ -160,8 +156,8 @@ EOFSpSeason_RecDev <- merge(SpSeason, RecDev, by = "X")
 itot <- (5*2)+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSpawnSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSpawnSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSpawnSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSpawnSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSpSeason_RecDev[,1])
 
@@ -205,7 +201,7 @@ for (iSpp in 1:10) {
                 x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
       scale_color_manual(values = c("Anomaly" = "tomato3", "Recruitment" = "dodgerblue3")) +
       labs(
-        title = paste(NamePlotModesSpawnSeason[iEOF-1], spNamePlot[iSpp]),
+        title = paste(NamePlotSpawnSeason[iEOF-1], spNamePlot[iSpp]),
         y = NULL,
         x = NULL
       ) +
@@ -233,7 +229,7 @@ for (iSpp in 1:10) {
       theme_minimal()
     
     # Create a grid of the two plots
-    png(gsub(" ","",paste("../images/CorrelationAnomalSeasonSp/",spNamePlot[iSpp],NamePlotModesSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+    png(gsub(" ","",paste("../images/CorrelationAnomalSeasonSp/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
     grid.arrange(plot1, plot2, ncol = 1)
     dev.off()
     }
@@ -278,13 +274,13 @@ NameSeason <- c("Fall","Spring","Summer","Winter")
 
 # create combinations of names and combine the names
 aux <- expand.grid(NameSeason,NamePlot)
-NamePlotModesSeason <- paste(aux$Var2, aux$Var1)
+NamePlotSeason <- paste(aux$Var2, aux$Var1)
 
 # it is in alphabetical order
 NameSeason <- c("Summer","Winter")
 # create combinations of names and combine the names
 aux <- expand.grid(NameSeason,NamePlot)
-NamePlotModesSpawnSeason <- paste(aux$Var2, aux$Var1)
+NamePlotSpawnSeason <- paste(aux$Var2, aux$Var1)
 
 # create combinations of names and combine the names
 aux <- expand.grid(NamePlot, NameModes)
@@ -306,8 +302,8 @@ EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 itot = 4+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSeason_RecDev[,1])
 
@@ -345,7 +341,7 @@ for (iSpp in 1:10) {
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
         scale_color_manual(values = c("Anomaly Chl" = "tomato3", "Recruitment" = "dodgerblue3")) +
         labs(
-          title = paste(NamePlotModesSeason[iEOF-1], spNamePlot[iSpp]),
+          title = paste(NamePlotSeason[iEOF-1], spNamePlot[iSpp]),
           y = NULL,
           x = NULL
         ) +
@@ -373,7 +369,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSeason15/",spNamePlot[iSpp],NamePlotModesSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("../images/CorrelationAnomlChlSeason15/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -411,8 +407,8 @@ EOFSpSeason_RecDev <- merge(SpSeason, RecDev, by = "X")
 itot <- (2)+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSpawnSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSpawnSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSpawnSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSpawnSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSpSeason_RecDev[,1])
 
@@ -456,7 +452,7 @@ for (iSpp in 1:10) {
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
         scale_color_manual(values = c("Anomaly" = "tomato3", "Recruitment" = "dodgerblue3")) +
         labs(
-          title = paste(NamePlotModesSpawnSeason[iEOF-1], spNamePlot[iSpp]),
+          title = paste(NamePlotSpawnSeason[iEOF-1], spNamePlot[iSpp]),
           y = NULL,
           x = NULL
         ) +
@@ -484,7 +480,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSpSeason15/",spNamePlot[iSpp],NamePlotModesSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("../images/CorrelationAnomlChlSpSeason15/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -523,8 +519,8 @@ EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 itot <- (4)+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSeason_RecDev[,1])
 
@@ -568,7 +564,7 @@ for (iSpp in 1:10) {
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
         scale_color_manual(values = c("Anomaly" = "tomato3", "Recruitment" = "dodgerblue3")) +
         labs(
-          title = paste(NamePlotModesSeason[iEOF-1], spNamePlot[iSpp]),
+          title = paste(NamePlotSeason[iEOF-1], spNamePlot[iSpp]),
           y = NULL,
           x = NULL
         ) +
@@ -596,7 +592,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSeason50/",spNamePlot[iSpp],NamePlotModesSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("../images/CorrelationAnomlChlSeason50/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -636,8 +632,8 @@ EOFSpSeason_RecDev <- merge(SpSeason, RecDev, by = "X")
 itot <- (2)+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSpawnSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSpawnSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSpawnSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSpawnSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSpSeason_RecDev[,1])
 
@@ -681,7 +677,7 @@ for (iSpp in 1:10) {
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
         scale_color_manual(values = c("Anomaly" = "tomato3", "Recruitment" = "dodgerblue3")) +
         labs(
-          title = paste(NamePlotModesSpawnSeason[iEOF-1], spNamePlot[iSpp]),
+          title = paste(NamePlotSpawnSeason[iEOF-1], spNamePlot[iSpp]),
           y = NULL,
           x = NULL
         ) +
@@ -709,7 +705,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlSpSeason50/",spNamePlot[iSpp],NamePlotModesSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("../images/CorrelationAnomlChlSpSeason50/",spNamePlot[iSpp],NamePlotSpawnSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -748,8 +744,8 @@ EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 itot <- (4)+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSeason_RecDev[,1])
 
@@ -793,7 +789,7 @@ for (iSpp in 1:10) {
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
         scale_color_manual(values = c("Anomaly" = "tomato3", "Recruitment" = "dodgerblue3")) +
         labs(
-          title = paste(NamePlotModesSeason[iEOF-1], spNamePlot[iSpp]),
+          title = paste(NamePlotSeason[iEOF-1], spNamePlot[iSpp]),
           y = NULL,
           x = NULL
         ) +
@@ -821,7 +817,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlModisChlSeason15/",spNamePlot[iSpp],NamePlotModesSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("../images/CorrelationAnomlModisChlSeason15/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }
@@ -860,8 +856,8 @@ EOFSeason_RecDev <- merge(Season, RecDev, by = "X")
 itot <- (4)+1
 
 # for results of EOF vs indexes
-corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
-p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotModesSeason, spNamePlot))
+corr_matrix <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
+p_matrix    <- matrix(NA, nrow=itot-1, ncol=10, dimnames=list(NamePlotSeason, spNamePlot))
 
 yearsPlot <- unique(EOFSeason_RecDev[,1])
 
@@ -905,7 +901,7 @@ for (iSpp in 1:10) {
                   x = Inf, y = Inf, hjust = 1, vjust = 0, size = 5) +
         scale_color_manual(values = c("Anomaly" = "tomato3", "Recruitment" = "dodgerblue3")) +
         labs(
-          title = paste(NamePlotModesSeason[iEOF-1], spNamePlot[iSpp]),
+          title = paste(NamePlotSeason[iEOF-1], spNamePlot[iSpp]),
           y = NULL,
           x = NULL
         ) +
@@ -933,7 +929,7 @@ for (iSpp in 1:10) {
         theme_minimal()
       
       # Create a grid of the two plots
-      png(gsub(" ","",paste("../images/CorrelationAnomlChlModisSeason50/",spNamePlot[iSpp],NamePlotModesSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
+      png(gsub(" ","",paste("../images/CorrelationAnomlChlModisSeason50/",spNamePlot[iSpp],NamePlotSeason[iEOF-1],".png")),res = 300, width = 2000, height = 2000)
       grid.arrange(plot1, plot2, ncol = 1)
       dev.off()
     }

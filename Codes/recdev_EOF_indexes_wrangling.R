@@ -26,6 +26,72 @@ yearsAssessments <- 1973:2021
 # create matrix for saving recdevs
 File.out <- matrix(data=NA, nrow=length(yearsAssessments), ncol=10, dimnames=list(yearsAssessments, sppName))
 
+# FOR AFS TALK
+
+# First plot all the blue lines together
+png("./images/TimeSeries/RecDevBlue.png", res = 300, width = 2500, height = 3000)
+par(mfrow = c(4, 3), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.3, 0.3, 0.3, 0.3))
+
+index <- 1
+for (inFile in file_list) {
+  filename <- file.path(filedir, inFile)
+  fileaux <- dget(filename)
+  devaux  <- fileaux$t.series$logR.dev
+  
+  if (index == 6) { 
+    yraux  <- fileaux$t.series$year 
+  } else {
+    yraux  <- fileaux$t.series$year - 1
+  }
+  
+  yr  <- yraux[devaux != 0 & !is.na(devaux)]
+  dev <- devaux[devaux != 0 & !is.na(devaux)]
+  
+  File.out[yearsAssessments %in% yr, index] = dev
+  
+  if (sppSeasonSp[index] == 1) {  # Plot only blue
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
+    lines(yr, dev, lty=1, col="dodgerblue4", lwd = 2)
+    abline(h=0, col="gray70")
+  }
+  
+  index <- index + 1
+}
+dev.off()
+
+# Now plot all the red lines together
+png("./images/TimeSeries/RecDevRed.png", res = 300, width = 2500, height = 3000)
+par(mfrow = c(4, 3), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.3, 0.3, 0.3, 0.3))
+
+index <- 1
+for (inFile in file_list) {
+  filename <- file.path(filedir, inFile)
+  fileaux <- dget(filename)
+  devaux  <- fileaux$t.series$logR.dev
+  
+  if (index == 6) { 
+    yraux  <- fileaux$t.series$year 
+  } else {
+    yraux  <- fileaux$t.series$year - 1
+  }
+  
+  yr  <- yraux[devaux != 0 & !is.na(devaux)]
+  dev <- devaux[devaux != 0 & !is.na(devaux)]
+  
+  File.out[yearsAssessments %in% yr, index] = dev
+  
+  if (sppSeasonSp[index] == 2) {  # Plot only red
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
+    lines(yr, dev, lty=1, col="tomato4", lwd = 2)
+    abline(h=0, col="gray70")
+  }
+  
+  index <- index + 1
+}
+dev.off()
+
+
+
 #png("./images/TimeSeries/RecDev.png",res = 300,width = 2000, height = 2000)
 png("./images/TimeSeries/RecDevSeason.png",res = 300, width = 2500, height = 3000)
 #Graph the time series of recruitment deviations
