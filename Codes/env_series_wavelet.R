@@ -189,6 +189,7 @@ for (ivar in 1:5) {
            timetcl = -0.5, # draws outward ticks
            show.date = TRUE, date.format = "%F", timelab = "") # have date
   dev.off()
+  
   png(gsub(" ","",paste("./images/power_",varname,"_256_512.png")), 
       width = 2000, height = 1200, res = 300)
   plot(as.POSIXct(datetime),colSums(my.wAnnual$Power),type="l")

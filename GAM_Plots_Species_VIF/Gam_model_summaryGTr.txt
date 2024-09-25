@@ -1,0 +1,26 @@
+
+Family: gaussian 
+Link function: identity 
+
+Formula:
+y ~ Bottom.Temp.Summer + Bottom.Temp.Winter + Salinity.Winter + 
+    SSH.Summer + SSH.Winter + SST.Summer + SST.Winter + ChlModis15.Spring + 
+    ChlModis15.Winter + ChlModis50.Winter
+
+Parametric coefficients:
+                     Estimate Std. Error   t value Pr(>|t|)
+(Intercept)        -3.951e-01  3.587e-08 -11015163      NaN
+Bottom.Temp.Summer  6.253e-02  2.606e-08   2399791      NaN
+Bottom.Temp.Winter -7.982e-01  6.794e-08 -11749437      NaN
+Salinity.Winter     1.379e+00  1.082e-07  12743159      NaN
+SSH.Summer         -1.153e+01  1.421e-06  -8115456      NaN
+SSH.Winter         -1.615e+00  4.067e-07  -3972179      NaN
+SST.Summer          5.972e-01  3.378e-08  17678482      NaN
+SST.Winter         -7.951e-02  2.417e-08  -3290166      NaN
+ChlModis15.Spring   2.272e-01  8.795e-08   2583883      NaN
+ChlModis15.Winter  -3.566e-01  4.049e-08  -8807604      NaN
+ChlModis50.Winter   1.746e+00  2.632e-07   6633431      NaN
+
+
+R-sq.(adj) =   -Inf   Deviance explained =  100%
+-REML = -9.1298  Scale est. = 1.9252e-16  n = 11
