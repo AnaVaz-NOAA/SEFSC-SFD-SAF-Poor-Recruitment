@@ -1,0 +1,28 @@
+
+Family: gaussian 
+Link function: identity 
+
+Formula:
+y ~ s(SSH.Summer, k = 5) + s(SST.Summer, k = 5) + s(SST.Winter, 
+    k = 5) + s(ChlModis15.Spring, k = 5) + s(ChlModis15.Winter, 
+    k = 5) + s(ChlModis50.Winter, k = 5)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.37327    0.05835  -6.397  0.00087 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                       edf Ref.df     F p-value  
+s(SSH.Summer)        1.000  1.000 9.625  0.0210 *
+s(SST.Summer)        3.111  3.588 1.830  0.2558  
+s(SST.Winter)        2.239  2.731 1.800  0.3051  
+s(ChlModis15.Spring) 1.000  1.000 0.997  0.3566  
+s(ChlModis15.Winter) 1.000  1.000 1.004  0.3550  
+s(ChlModis50.Winter) 1.000  1.000 4.128  0.0884 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.737   Deviance explained = 90.1%
+-REML = 12.174  Scale est. = 0.054484  n = 16
