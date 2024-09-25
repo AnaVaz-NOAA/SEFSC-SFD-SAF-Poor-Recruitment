@@ -119,8 +119,8 @@ for (iSpp in 1:10) {
 
 plot_matrix <- corr_matrix
 plot_matrix[p_matrix > pcut] <- NaN
-write.csv(plot_matrixr, file = paste0("./csv_files/Correlation_UpDeep.csv"), row.names = FALSE)
-r
+write.csv(plot_matrix, file = paste0("./csv_files/Correlation_UpDeep.csv"), row.names = FALSE)
+
 # plot the correlation
 colorPlot <- brewer.pal(9, "RdBu")
 
@@ -182,8 +182,6 @@ yearsPlot <- unique(Up_RecDev[,1])
 for (iSpp in 1:10) {
   for (iEOF in 2:itot) {
     # correlation and save coef. and p
-    x <- CHL_RecDev[,iEOF]
-    y <- CHL_RecDev[,iSpp+itot]
     x <- Up_RecDev[,iEOF]-mean(Up_RecDev[,iEOF])
     y <- Up_RecDev[,iSpp+itot]
     # correlation and save coef. and p

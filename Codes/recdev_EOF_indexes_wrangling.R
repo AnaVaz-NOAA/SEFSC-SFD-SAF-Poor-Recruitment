@@ -6,17 +6,14 @@ library(R.matlab)
 library(metR)
 
 # set the directory with the assessment files
-#setwd("/Users/anavaz/Stuff/github/Poor-Recruitment-South-Atlantic/")
 filedir <- "./data/recruitment/updates/"
 
 # Get a list of all the files in the directory
 file_list <- list.files(filedir)
 
 # it is in alphabetical order, define species define species names
-sppName <- c("Gag","GAm","GTr","RPo","RGr","BSB","RSn","Sca","Sno","Ver")
-NamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish",
-              " Red Porgy","Red Grouper","Black Sea Bass",
-              "Red Snapper","Scamp","Snowy Grouper ","Vermilion Snapper")
+sppName <- c("Gag","GAm","GTr","RPo","RGr", "BSB", "RSn", "Sca","Sno","Ver")
+NamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish", " Red Porgy","Red Grouper","Black Sea Bass", "Red Snapper","Scamp", "Snowy Grouper ", "Vermilion Snapper")
 sppSeasonSp <- c(1,2,2,1,1,1,2,1,3,2)
 index <- 1
 
@@ -27,72 +24,6 @@ yearsAssessments <- 1973:2021
 File.out <- matrix(data=NA, nrow=length(yearsAssessments), ncol=10, dimnames=list(yearsAssessments, sppName))
 
 # FOR AFS TALK
-
-# First plot all the blue lines together
-png("./images/TimeSeries/RecDevBlue.png", res = 300, width = 2500, height = 3000)
-par(mfrow = c(4, 3), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.3, 0.3, 0.3, 0.3))
-
-index <- 1
-for (inFile in file_list) {
-  filename <- file.path(filedir, inFile)
-  fileaux <- dget(filename)
-  devaux  <- fileaux$t.series$logR.dev
-  
-  if (index == 6) { 
-    yraux  <- fileaux$t.series$year 
-  } else {
-    yraux  <- fileaux$t.series$year - 1
-  }
-  
-  yr  <- yraux[devaux != 0 & !is.na(devaux)]
-  dev <- devaux[devaux != 0 & !is.na(devaux)]
-  
-  File.out[yearsAssessments %in% yr, index] = dev
-  
-  if (sppSeasonSp[index] == 1) {  # Plot only blue
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-    lines(yr, dev, lty=1, col="dodgerblue4", lwd = 2)
-    abline(h=0, col="gray70")
-  }
-  
-  index <- index + 1
-}
-dev.off()
-
-# Now plot all the red lines together
-png("./images/TimeSeries/RecDevRed.png", res = 300, width = 2500, height = 3000)
-par(mfrow = c(4, 3), mar=c(1.5, 1.5, 1.5, 1.5), oma=c(1, 1, 1, 1), mai=c(0.3, 0.3, 0.3, 0.3))
-
-index <- 1
-for (inFile in file_list) {
-  filename <- file.path(filedir, inFile)
-  fileaux <- dget(filename)
-  devaux  <- fileaux$t.series$logR.dev
-  
-  if (index == 6) { 
-    yraux  <- fileaux$t.series$year 
-  } else {
-    yraux  <- fileaux$t.series$year - 1
-  }
-  
-  yr  <- yraux[devaux != 0 & !is.na(devaux)]
-  dev <- devaux[devaux != 0 & !is.na(devaux)]
-  
-  File.out[yearsAssessments %in% yr, index] = dev
-  
-  if (sppSeasonSp[index] == 2) {  # Plot only red
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-    lines(yr, dev, lty=1, col="tomato4", lwd = 2)
-    abline(h=0, col="gray70")
-  }
-  
-  index <- index + 1
-}
-dev.off()
-
-
-
-#png("./images/TimeSeries/RecDev.png",res = 300,width = 2000, height = 2000)
 png("./images/TimeSeries/RecDevSeason.png",res = 300, width = 2500, height = 3000)
 #Graph the time series of recruitment deviations
 
@@ -117,22 +48,21 @@ for (inFile in file_list) {
   # Limit each time series to years where recruitment deviations are estimated
   yr  <- yraux[devaux!=0  & !is.na(devaux)]
   dev <- devaux[devaux!=0 & !is.na(devaux)]
-
   # File.out[yearsAssessments%in%yr,index] = (dev - mean(dev))/sd(dev);
   File.out[yearsAssessments%in%yr,index] = dev
-  
   # plot the graph
   if (sppSeasonSp[index] == 1) {
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-    lines(yr,dev,lty=1, col="dodgerblue4", lwd = 2);
-  }else if (sppSeasonSp[index] == 2) {
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-    lines(yr,dev,lty=1, col="tomato4", lwd = 2);
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
+    lines(yr, dev, lty = 1 , col="tomato3", lwd = 3);
+  } else if (sppSeasonSp[index] == 2) {
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
+    lines(yr, dev, lty=1, col="limegreen", lwd = 3);
   } else {
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index])
-  lines(yr,dev,lty=1, col="black", lwd = 2);
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
+  lines(yr, dev, lty=1, col="tomato3", lwd = 3);
   }
-  abline(h=0, col="gray70")
+  abline(h=0, col="gray70", lwd = 3)
+  abline(v=2010, col="goldenrod", lwd = 1)
   # to know what is the species
   index <- index +1
 }
