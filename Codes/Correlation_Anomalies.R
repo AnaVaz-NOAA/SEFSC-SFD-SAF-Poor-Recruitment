@@ -114,6 +114,3 @@ ggplot(melted_cor_matrix, aes(x = variable, y = X, fill = value)) +
     plot.margin = margin(1, 1, 1, 1, "cm")  
   ) 
 dev.off()
-
-
-

@@ -15,6 +15,7 @@ trip <- read.csv("./csv_files/tripole_idx.txt")
 
 amoc$NewTime <- parse_date_time(amoc$Time, orders = c("dmy HMS", "dmY HMS"), tz = "UTC")
 
+# Separate seasons
 get_season <- function(date) {
   month <- month(date)
   if (month %in% c(12, 1, 2)) {
@@ -28,6 +29,7 @@ get_season <- function(date) {
   }
 }
 
+# get dates, seasons and years
 amoc$Season <- sapply(amoc$NewTime, get_season)
 amoc$Year   <- year(amoc$NewTime)
 
@@ -41,12 +43,12 @@ climatology <- seasonal_avg_by_year %>%
   group_by(Season) %>%
   summarise(LongTerm_Avg = mean(Avg_AMOC, na.rm = TRUE))
 
-# Merge long-term averages 
+# Merge averages 
 seasonal_anomalies <- seasonal_avg_by_year %>%
   left_join(climatology, by = "Season") %>%
   mutate(Anomaly = Avg_AMOC - LongTerm_Avg)
 
-# Function to plot anomalies for each season
+# plot anomalies
 plot_anomaly <- function(season_data, season_name) {
   ggplot(season_data, aes(x = Year, y = Anomaly, fill = Anomaly > 0)) +
     geom_bar(stat = "identity", position = "identity", width = 0.8) +
@@ -57,31 +59,18 @@ plot_anomaly <- function(season_data, season_name) {
     theme(plot.title = element_text(hjust = 0.5))
 }
 
-# Split the data by season
+# Split by season
 seasons <- unique(seasonal_anomalies$Season)
 
-# Loop through each season and plot anomalies
+# Loop seasons and plot
 for (season in seasons) {
   season_data <- seasonal_anomalies %>% filter(Season == season)
   print(plot_anomaly(season_data, season))
 }
 
-# Function to create ribbon plot of anomalies for each season
-plot_ribbon_anomaly <- function(season_data, season_name) {
-  ggplot(season_data, aes(x = Year)) +
-    geom_ribbon(aes(ymin = 0, ymax = ifelse(Anomaly > 0, Anomaly, 0)), fill = "tomato3", alpha = 0.8) +
-    geom_ribbon(aes(ymin = ifelse(Anomaly < 0, Anomaly, 0), ymax = 0), fill = "steelblue3", alpha = 0.8) +
-    geom_line(aes(y = Anomaly), color = "gray60") +  # Add a black line to show the anomaly curve
-    labs(title = paste("AMOC Anomaly ", season_name),
-         x = "Year", y = "Anomaly") +
-    theme_minimal() +
-    theme(plot.title = element_text(hjust = 0.5))
-}
-
-# Create a list to store the plots for each season
 seasonal_plots <- list()
 
-# Loop through each season and create the ribbon plots
+# ribbon plots
 for (season in unique(seasonal_anomalies$Season)) {
   season_data <- seasonal_anomalies %>% filter(Season == season)
   plot <- plot_ribbon_anomaly(season_data, season)
@@ -89,7 +78,6 @@ for (season in unique(seasonal_anomalies$Season)) {
   print(plot)  # This will display each plot
 }
 
-# Optional: Save each plot as a separate file (e.g., PNG or PDF)
 for (season in names(seasonal_plots)) {
   ggsave(filename = paste0("anomaly_amoc_", season, ".png"),
          plot = seasonal_plots[[season]], width = 8, height = 5)
@@ -111,32 +99,21 @@ climatology <- seasonal_avg_by_year %>%
   group_by(Season) %>%
   summarise(LongTerm_Avg = mean(Avg_Trip, na.rm = TRUE))
 
-# Merge long-term averages 
+# Merge averages 
 seasonal_anomalies <- seasonal_avg_by_year %>%
   left_join(climatology, by = "Season") %>%
   mutate(Anomaly = Avg_Trip - LongTerm_Avg)
 
-# Function to plot anomalies for each season
-plot_anomaly <- function(season_data, season_name) {
-  ggplot(season_data, aes(x = Year, y = Anomaly, fill = Anomaly > 0)) +
-    geom_bar(stat = "identity", position = "identity", width = 0.8) +
-    scale_fill_manual(values = c("TRUE" = "tomato3", "FALSE" = "steelblue3"), guide = FALSE) +
-    labs(title = paste("Tripole Anomaly ", season_name),
-         x = "Year", y = "Anomaly") +
-    theme_minimal() +
-    theme(plot.title = element_text(hjust = 0.5))
-}
-
-# Split the data by season
+# Split data by season
 seasons <- unique(seasonal_anomalies$Season)
 
-# Loop through each season and plot anomalies
+# Loop throughseasons and plot anomalies
 for (season in seasons) {
   season_data <- seasonal_anomalies %>% filter(Season == season)
   print(plot_anomaly(season_data, season))
 }
 
-# Function to create ribbon plot of anomalies for each season
+# Create ribbon plot of anomalies
 plot_ribbon_anomaly <- function(season_data, season_name) {
   ggplot(season_data, aes(x = Year)) +
     geom_ribbon(aes(ymin = 0, ymax = ifelse(Anomaly > 0, Anomaly, 0)), fill = "tomato3", alpha = 0.8) +
@@ -148,24 +125,21 @@ plot_ribbon_anomaly <- function(season_data, season_name) {
     theme(plot.title = element_text(hjust = 0.5))
 }
 
-# Create a list to store the plots for each season
+# list for plots season
 seasonal_plots <- list()
 
-# Loop through each season and create the ribbon plots
+# ribbon plots
 for (season in unique(seasonal_anomalies$Season)) {
   season_data <- seasonal_anomalies %>% filter(Season == season)
   plot <- plot_ribbon_anomaly(season_data, season)
   seasonal_plots[[season]] <- plot
-  print(plot)  # This will display each plot
+  print(plot)  
 }
 
-# Optional: Save each plot as a separate file (e.g., PNG or PDF)
 for (season in names(seasonal_plots)) {
   ggsave(filename = paste0("anomaly_tripole_", season, ".png"),
          plot = seasonal_plots[[season]], width = 8, height = 5)
 }
-
-
 
 # Calculate annual averages
 annual_avgT <- trip %>%
@@ -191,20 +165,20 @@ long_term_avgA <- mean(annual_avgA$Avg_AMOC, na.rm = TRUE)
 annual_avgA <- annual_avgA %>%
   mutate(Anomaly_A = Avg_AMOC - long_term_avgA) 
 
-# Create a complete year sequence based on the range of years in the two datasets
+# Create a complete year
 complete_years <- data.frame(Year = seq(min(c(annual_avgT$Year, annual_avgA$Year)), 
                                         max(c(annual_avgT$Year, annual_avgA$Year)), 
                                         by = 1))
 
-# Join the complete years with annual averages for TripoleIndex
+# Join the complete years
 annual_avgT_complete <- complete_years %>%
   left_join(annual_avgT, by = "Year")
 
-# Join the complete years with annual averages for MOC_new
+# Join the complete years 
 annual_avgA_complete <- complete_years %>%
   left_join(annual_avgA, by = "Year")
 
-# Combine both datasets into one
+# Combine datasets into one
 combined_avg <- annual_avgT_complete %>%
   rename(Avg_Trip = Avg_Trip, Anomaly_T = Anomaly_T) %>%
   left_join(annual_avgA_complete, by = "Year") %>%
