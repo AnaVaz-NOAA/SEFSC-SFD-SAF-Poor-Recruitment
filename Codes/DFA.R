@@ -67,7 +67,7 @@ for (iSpp in 1:10) {
     covarNamePlot <- covarNames[iCovar - 1]
     
     # Prepare data for DFA
-    x <- CovarSeason_RecDev[, iCovar, drop = FALSE]  # Ensure x is a data frame/matrix
+    x <- CovarSeason_RecDev[, iCovar, drop = FALSE]       # Ensure x is a data frame/matrix
     y <- CovarSeason_RecDev[, iSpp + itot, drop = FALSE]  # Ensure y is a data frame/matrix
     
     # Combine x and y into a single data frame/matrix for DFA

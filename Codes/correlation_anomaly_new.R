@@ -68,9 +68,23 @@ for (iseason in NameSeason) {
     plot = plot,
     width = 20,  
     height = 20, 
-    dpi = 300)
-}
+    dpi = 300)}
 
+# Loop seasons for winter spawners
+for (iseason in NameSeason) {
+  #  columns with season name
+  season_vars <- grep(iseason, colnames(Season_RecDev), value = TRUE)
+  season_data <- cbind(Season_RecDev[, WSp], Season_RecDev[, season_vars])
+  
+  # check if worked
+  print(paste("Variables for", iseason, ":"))
+  print(season_vars)
+  
+  ggsave( filename = gsub(" ", "", paste("./images/Pairs_WSp_", iseason, ".png")),
+          plot = plot,
+          width = 20,  
+          height = 20, 
+          dpi = 300)}
 
 SSp <-  c(itot+2,itot+3,itot+7,itot+10)
 # Loop seasons for winter spawners
@@ -94,13 +108,90 @@ for (iseason in NameSeason) {
           dpi = 300)
 }
 
+# Define a custom panel function for the upper triangle
+panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor = 0.8, ...) {
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr = c(0, 1, 0, 1))
+  r <- cor(x, y, use = "complete.obs")
+  txt <- formatC(r, digits = digits, format = "f")
+  text(0.5, 0.5, paste0(prefix, txt), cex = cex.cor * abs(r))
+}
+
+# Define a custom panel function for the lower triangle
+panel.smooth <- function(x, y, ...) {
+  points(x, y, pch = 19, col = "blue", cex = 0.6)
+  lines(lowess(x, y), col = "red", lwd = 2, ...)
+}
+
+# Generate pairwise plots for seasonal data
+for (iseason in NameSeason) {
+  # Identify the columns for the specific season
+  season_vars <- grep(iseason, colnames(Season_RecDev), value = TRUE)
+  season_data <- cbind(Season_RecDev[, WSp], Season_RecDev[, season_vars])
+  
+  # Filter the columns for complete cases to avoid NA issues
+  season_data <- season_data[complete.cases(season_data), ]
+  
+  # Set up file for saving the plot
+  output_file <- gsub(" ", "", paste0("./images/Pairs_New_WSp_", iseason, ".png"))
+  
+  # Save the plot as a PNG
+  png(filename = output_file, width = 1500, height = 1500, res = 300)
+  
+  # Use `pairs` with custom panels
+  pairs(
+    season_data,
+    upper.panel = panel.cor,    # Show correlations in the upper panel
+    lower.panel = panel.smooth, # Show scatterplots and smooth fits in the lower panel
+    diag.panel = function(x) {  # Add histograms to the diagonal
+      par(new = TRUE)
+      hist(x, col = "lightgray", probability = TRUE, main = "", axes = FALSE)
+      lines(density(x), col = "darkblue", lwd = 2)
+    },
+    main = paste("Pairwise Plot for", iseason, "Seasonal Data")
+  )
+  
+  # Close the PNG device
+  dev.off()
+}
+
+# Repeat for SSp data
+for (iseason in NameSeason) {
+  # Identify the columns for the specific season
+  season_vars <- grep(iseason, colnames(Season_RecDev), value = TRUE)
+  season_data <- cbind(Season_RecDev[, SSp], Season_RecDev[, season_vars])
+  
+  # Filter the columns for complete cases to avoid NA issues
+  season_data <- season_data[complete.cases(season_data), ]
+  
+  # Set up file for saving the plot
+  output_file <- gsub(" ", "", paste0("./images/Pairs_New_SSp_", iseason, ".png"))
+  
+  # Save the plot as a PNG
+  png(filename = output_file, width = 1500, height = 1500, res = 300)
+  
+  # Use `pairs` with custom panels
+  pairs(
+    season_data,
+    upper.panel = panel.cor,    # Show correlations in the upper panel
+    lower.panel = panel.smooth, # Show scatterplots and smooth fits in the lower panel
+    diag.panel = function(x) {  # Add histograms to the diagonal
+      par(new = TRUE)
+      hist(x, col = "lightgray", probability = TRUE, main = "", axes = FALSE)
+      lines(density(x), col = "darkblue", lwd = 2)
+    },
+    main = paste("Pairwise Plot for", iseason, "Seasonal Data")
+  )
+  
+  # Close the PNG device
+  dev.off()
+}
+
 # it is in alphabetical order
 NameSeason <- c("Summer", "Winter")
 # create combinations of names and combine the names
 aux <- expand.grid(NameSeason, NamePlot)
 NamePlotSpawnSeason <- paste(aux$Var2, aux$Var1)
-
-
 
 for (iSpp in 1:10) {
   for (iVar in 2:itot) {
