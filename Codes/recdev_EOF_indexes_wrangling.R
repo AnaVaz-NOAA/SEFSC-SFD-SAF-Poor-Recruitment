@@ -12,13 +12,13 @@ filedir <- "./data/recruitment/updates/"
 file_list <- list.files(filedir)
 
 # it is in alphabetical order, define species define species names
-sppName <- c("Gag","GAm","GTr","RPo","RGr", "BSB", "RSn", "Sca","Sno","Ver")
-NamePlot <- c("Gag Grouper","Greater Amberjack","Gray Triggerfish", " Red Porgy","Red Grouper","Black Sea Bass", "Red Snapper","Scamp", "Snowy Grouper ", "Vermilion Snapper")
-sppSeasonSp <- c(1,2,2,1,1,1,2,1,3,2)
+sppName <- c("BSB","Gag","GAm","GTr","RPo","RGr","RSn", "Sca","Sno","Ver")
+NamePlot <- c("Black Sea Bass","Gag Grouper","Greater Amberjack","Gray Triggerfish", " Red Porgy","Red Grouper", "Red Snapper","Scamp", "Snowy Grouper ", "Vermilion Snapper")
+sppSeasonSp <- c(1,1,2,2,1,1,2,1,3,2)
 index <- 1
 
 # first year of assessments accross species is 1974, most recent is 2021
-yearsAssessments <- 1973:2021
+yearsAssessments <- 1973:2023
 
 # create matrix for saving recdevs
 File.out <- matrix(data=NA, nrow=length(yearsAssessments), ncol=10, dimnames=list(yearsAssessments, sppName))
@@ -39,11 +39,11 @@ for (inFile in file_list) {
   devaux  <- fileaux$t.series$logR.dev; 
   
   # black sea bass (6th file) start at age 0, all others at age 1
-  if (index == 6) { 
-    yraux  <- fileaux$t.series$year 
+  if (index == 1) { 
+    yraux  <- fileaux$t.series$year + 1
   } else {
     # start at age 1, needs to remove 1 from their year
-    yraux  <- fileaux$t.series$year - 1
+    yraux  <- fileaux$t.series$year
   }
   # Limit each time series to years where recruitment deviations are estimated
   yr  <- yraux[devaux!=0  & !is.na(devaux)]
@@ -52,13 +52,13 @@ for (inFile in file_list) {
   File.out[yearsAssessments%in%yr,index] = dev
   # plot the graph
   if (sppSeasonSp[index] == 1) {
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.9, 1.9), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
     lines(yr, dev, lty = 1 , col="tomato3", lwd = 3);
   } else if (sppSeasonSp[index] == 2) {
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.9, 1.9), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
     lines(yr, dev, lty=1, col="limegreen", lwd = 3);
   } else {
-    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.5, 1.5), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
+    plot(yearsAssessments, rep(0,length(yearsAssessments)), ylim=c(-1.9, 1.9), type="n", ylab="log residuals", xlab="", main = NamePlot[index], cex.lab=1.5, cex.axis=1.3, cex.main=1.7)
   lines(yr, dev, lty=1, col="tomato3", lwd = 3);
   }
   abline(h=0, col="gray70", lwd = 3)
