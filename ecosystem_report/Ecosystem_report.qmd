@@ -1,0 +1,36 @@
+---
+title: "Ecosystem considerations for Red Snapper "
+format: gfm
+editor: visual
+bibliography: references.bib
+---
+
+Consider any known evidence regarding ecosystem, climate, species interactions(e.g., predation studies), habitat considerations, species range modifications(expansions or contractions), regime shifts, larval movement between stockboundaries, and/or episodic events (for example: upwelling events) that would reasonably be expected to affect Red Snapper population dynamics and are appropriate for inclusion in the stock assessment (e.g., Larval Transport Modeling, Karnauskas et al. 2022).
+
+## Ecosystem, climate and species interactions
+
+## Larval movement between stock boundaries, and/or episodic events
+
+## Discards
+
+## Habitat considerations
+
+**Depth distribution** 
+
+-   @bacheler2021 used an acoustic positioning system of 44 red snapper off North Carolina in 2019 and found mean movement rate and distance off bottom varied by individual, with larger red snapper generally moving faster and spending more time farther off the bottom than smaller individuals. Mean hourly red snapper movement rate was lower during the day than at night and was negatively related to bottom water temperature. Moreover, red snapper spent more time off the bottom during the day than at night, and vertical movements were mostly related to bottom upwelling events that sporadically occurred in May–July. These results and previous observations suggest that red snapper feed primarily on benthic organisms at night, and display diel vertical migration (i.e., thermotaxis) up to warmer waters (when present) during the day to aid digestive efficiency. 
+
+**Habitat selection** 
+
+-   @chatterjee2024 utilized movement modelling of acoustic telemetry data set of 35 red snapper and found that most red snapper selected for hardbottom habitat and for locations nearer to edge habitat.
+
+-   @bacheler2025a found that the relative abundance of red snapper has increased dramatically (∼ 1000 %) between 2011 and 2022 based on a long-term baited trap and video survey (SERFS). Red snapper were most commonly observed off the east coast of Florida, Georgia, and, to a lesser extent, off the Outer Banks of North Carolina. Red snapper were most commonly observed at moderate (40 m) depths and displayed a positive relationship with water temperature and patchy reef habitat.
+
+-   Preliminary surveys from the SERFS video trap survey we sampled with traps and video north of Hatteras in August 2024 (baited fish traps with attached gopro cameras). Two days (36 samples) were in the Kitty Hawk Wind Energy Area (all sand, no fish), one day (18 samples) were offshore of the Currituck Lighthouse in a mix of artificial and natural areas (some black sea bass and gray triggerfish, no red snapper because the water was too cold \~14 C), and one day was at Avon Rocks just east of Avon, NC - we caught a few small red snapper that day in 18 traps (water was much warmer). There might be a small number of red snapper north of Hatteras but not many. But hard to draw too many conclusions from a single sampling trip north of Hatteras (personal correspondence with Nate Bacheler). 
+
+## Species range modifications
+
+@cao2024 used reef video surveys (SERFS) and a joint spatiotemporal modeling framework and found no significant shift in red snapper centroids of distribution between 2011 and 2021 (neither offshore nor northward)
+
+## Regime shifts
+
+## 
