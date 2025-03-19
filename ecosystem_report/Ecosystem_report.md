@@ -1,5 +1,5 @@
 # Ecosystem considerations for Red Snapper
-
+sarah.roberts@noaa.gov, mandy.karnauskas@noaa.gov
 
 Consider any known evidence regarding ecosystem, climate, species
 interactions(e.g., predation studies), habitat considerations, species
@@ -12,9 +12,31 @@ al. 2022).
 
 ## Ecosystem, climate and species interactions
 
-## Larval movement between stock boundaries, and/or episodic events
+- Species interactions - Lauren Gentry and David Chagaris ECOSIM/ECOPATH
+  for RS
 
-## Discards
+- Matt Damiano and Matt Carr miniVAST if done
+
+## Larval movement between stock boundaries
+
+- Karnauskas paper
+
+- Genetic work from David Portnoy
+  (<https://academic.oup.com/icesjms/article/79/1/12/6453068>)
+
+- Paul rutterhousen - release mortality paper
+
+- Will Patterson (UF) talking about David Portnoy genetic work
+
+## Episodic events
+
+- Upwelling can be a driver but not necessarily an episodic event. 
+
+- Matt and Laurent Cherubin work on cold snaps. 
+
+## Life history and seasonality
+
+- spawning
 
 ## Habitat considerations
 
@@ -33,8 +55,16 @@ al. 2022).
   snapper feed primarily on benthic organisms at night, and display diel
   vertical migration (i.e., thermotaxis) up to warmer waters (when
   present) during the day to aid digestive efficiency. 
+- (Mitchell et al. 2014) found older, larger (\>50 cm FL) red snapper
+  are generally distributed throughout depths(shallow: \<29.0 m; middle:
+  29.0–48.9 m; deep: ≥49.0 m), whereas younger smaller (\<50 cm FL) Red
+  Snapper occurred disproportionately in shallower depths(\<29.0).
 
 **Habitat selection** 
+
+- Red snapper are associated with deep reef habitats in temperate and
+  tropical waters in the South Atlantic from North Carolina to Florida
+  and the Gulf of Mexico (Nelson and Manooch III 1982).
 
 - Chatterjee et al. (2024) utilized movement modelling of acoustic
   telemetry data set of 35 red snapper and found that most red snapper
@@ -50,7 +80,7 @@ al. 2022).
   displayed a positive relationship with water temperature and patchy
   reef habitat.
 
-- Preliminary surveys from the SERFS video trap survey we sampled with
+- Preliminary surveys from the SERFS video trap survey were sampled with
   traps and video north of Hatteras in August 2024 (baited fish traps
   with attached gopro cameras). Two days (36 samples) were in the Kitty
   Hawk Wind Energy Area (all sand, no fish), one day (18 samples) were
@@ -63,12 +93,32 @@ al. 2022).
   many conclusions from a single sampling trip north of Hatteras
   (personal correspondence with Nate Bacheler). 
 
+**Other environmental drivers**
+
+- salinity
+
+- temperature
+
+- dissolved oxygen
+
+- climatological indices (AMO/NAO)
+
+- primary productivity
+
+- Gulf Stream
+
+  - When the GS has a strong deflection (which happens in March/April)
+    it facilitates the origin of the so-called “Charleston Gyre”
+    (actually long lived large mesoscale eddies), which brings warm
+    waters (and larvae) to the shelf, while increasing productivity with
+    upwelling at the center. 
+
 ## Species range modifications
 
-Cao, Craig, and Damiano (2024) used reef video surveys (SERFS) and a
-joint spatiotemporal modeling framework and found no significant shift
-in red snapper centroids of distribution between 2011 and 2021 (neither
-offshore nor northward)
+- Cao, Craig, and Damiano (2024) used reef video surveys (SERFS) and a
+  joint spatiotemporal modeling framework and found no significant shift
+  in red snapper centroids of distribution between 2011 and 2021
+  (neither offshore nor northward)
 
 ## Regime shifts
 
@@ -114,6 +164,25 @@ John Fieberg. 2024. “Modelling Individual Variability in Habitat
 Selection and Movement Using Integrated Step-Selection Analysis.”
 *Methods in Ecology and Evolution* 15 (6): 1034–47.
 <https://doi.org/10.1111/2041-210X.14321>.
+
+</div>
+
+<div id="ref-mitchell2014depth" class="csl-entry">
+
+Mitchell, Warren A, G Todd Kellison, Nathan M Bacheler, Jennifer C
+Potts, Christina M Schobernd, and Loraine F Hale. 2014. “Depth Related
+Distribution of Postjuvenile Red Snapper in Southeastern US Atlantic
+Ocean Waters: Ontogenic Patterns and Implications for Management.”
+*Marine and Coastal Fisheries* 6 (1): 142–55.
+
+</div>
+
+<div id="ref-nelson1982growth" class="csl-entry">
+
+Nelson, Russell S, and Charles S Manooch III. 1982. “Growth and
+Mortality of Red Snappers in the West-Central Atlantic Ocean and
+Northern Gulf of Mexico.” *Transactions of the American Fisheries
+Society* 111 (4): 465–75.
 
 </div>
 

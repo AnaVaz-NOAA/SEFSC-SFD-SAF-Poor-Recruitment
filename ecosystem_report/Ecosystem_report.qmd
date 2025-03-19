@@ -3,21 +3,45 @@ title: "Ecosystem considerations for Red Snapper "
 format: gfm
 editor: visual
 bibliography: references.bib
+author: sarah.roberts@noaa.gov, mandy.karnauskas@noaa.gov
 ---
 
 Consider any known evidence regarding ecosystem, climate, species interactions(e.g., predation studies), habitat considerations, species range modifications(expansions or contractions), regime shifts, larval movement between stockboundaries, and/or episodic events (for example: upwelling events) that would reasonably be expected to affect Red Snapper population dynamics and are appropriate for inclusion in the stock assessment (e.g., Larval Transport Modeling, Karnauskas et al. 2022).
 
 ## Ecosystem, climate and species interactions
 
-## Larval movement between stock boundaries, and/or episodic events
+-   Species interactions - Lauren Gentry and David Chagaris ECOSIM/ECOPATH for RS
 
-## Discards
+-   Matt Damiano and Matt Carr miniVAST if done
+
+## Larval movement between stock boundaries
+
+-   Karnauskas paper
+
+-   Genetic work from David Portnoy (<https://academic.oup.com/icesjms/article/79/1/12/6453068>)
+
+-   Paul rutterhousen - release mortality paper
+
+-   Will Patterson (UF) talking about David Portnoy genetic work
+
+## Episodic events 
+
+-   Upwelling can be a driver but not necessarily an episodic event. 
+
+-   Matt and Laurent Cherubin work on cold snaps. 
+
+## Life history and seasonality 
+
+-   spawning
 
 ## Habitat considerations
+
+-   Red snapper are associated with deep reef habitats in temperate and tropical waters from North Carolina to the Yucatan Peninsula, including the Gulf of Mexico [@nelson1982growth]. They occur across a wide range of depths along the continental shelf and shelf break, and are typically found in depths of 50-100m [@manooch1998population]. In the Gulf of Mexico, benthic juveniles are found over shell hash and sand substrates, while adults are associated with hard-bottom structures.
 
 **Depth distribution** 
 
 -   @bacheler2021 used an acoustic positioning system of 44 red snapper off North Carolina in 2019 and found mean movement rate and distance off bottom varied by individual, with larger red snapper generally moving faster and spending more time farther off the bottom than smaller individuals. Mean hourly red snapper movement rate was lower during the day than at night and was negatively related to bottom water temperature. Moreover, red snapper spent more time off the bottom during the day than at night, and vertical movements were mostly related to bottom upwelling events that sporadically occurred in May–July. These results and previous observations suggest that red snapper feed primarily on benthic organisms at night, and display diel vertical migration (i.e., thermotaxis) up to warmer waters (when present) during the day to aid digestive efficiency. 
+-   [@mitchell2014depth] found older, larger (\>50 cm FL) red snapper are generally distributed throughout all depth zones (shallow: \<29.0 m; middle: 29.0–48.9 m; deep: ≥49.0 m), whereas younger smaller (\<50 cm FL) Red Snapper occurred disproportionately in shallower depths (\<29.0).
 
 **Habitat selection** 
 
@@ -25,11 +49,27 @@ Consider any known evidence regarding ecosystem, climate, species interactions(e
 
 -   @bacheler2025a found that the relative abundance of red snapper has increased dramatically (∼ 1000 %) between 2011 and 2022 based on a long-term baited trap and video survey (SERFS). Red snapper were most commonly observed off the east coast of Florida, Georgia, and, to a lesser extent, off the Outer Banks of North Carolina. Red snapper were most commonly observed at moderate (40 m) depths and displayed a positive relationship with water temperature and patchy reef habitat.
 
--   Preliminary surveys from the SERFS video trap survey we sampled with traps and video north of Hatteras in August 2024 (baited fish traps with attached gopro cameras). Two days (36 samples) were in the Kitty Hawk Wind Energy Area (all sand, no fish), one day (18 samples) were offshore of the Currituck Lighthouse in a mix of artificial and natural areas (some black sea bass and gray triggerfish, no red snapper because the water was too cold \~14 C), and one day was at Avon Rocks just east of Avon, NC - we caught a few small red snapper that day in 18 traps (water was much warmer). There might be a small number of red snapper north of Hatteras but not many. But hard to draw too many conclusions from a single sampling trip north of Hatteras (personal correspondence with Nate Bacheler). 
+-   Preliminary surveys from the SERFS video trap survey were sampled with traps and video north of Hatteras in August 2024 (baited fish traps with attached gopro cameras). Two days (36 samples) were in the Kitty Hawk Wind Energy Area (all sand, no fish), one day (18 samples) were offshore of the Currituck Lighthouse in a mix of artificial and natural areas (some black sea bass and gray triggerfish, no red snapper because the water was too cold \~14 C), and one day was at Avon Rocks just east of Avon, NC - we caught a few small red snapper that day in 18 traps (water was much warmer). There might be a small number of red snapper north of Hatteras but not many. But hard to draw too many conclusions from a single sampling trip north of Hatteras (personal correspondence with Nate Bacheler). 
+
+**Other environmental drivers**
+
+-   salinity
+
+-   temperature
+
+-   dissolved oxygen
+
+-   climatological indices (AMO/NAO)
+
+-   primary productivity
+
+-   Gulf Stream
+
+    -   When the GS has a strong deflection (which happens in March/April) it facilitates the origin of the so-called "Charleston Gyre" (actually long lived large mesoscale eddies), which brings warm waters (and larvae) to the shelf, while increasing productivity with upwelling at the center. 
 
 ## Species range modifications
 
-@cao2024 used reef video surveys (SERFS) and a joint spatiotemporal modeling framework and found no significant shift in red snapper centroids of distribution between 2011 and 2021 (neither offshore nor northward)
+-   @cao2024 used reef video surveys (SERFS) and a joint spatiotemporal modeling framework and found no significant shift in red snapper centroids of distribution between 2011 and 2021 (neither offshore nor northward)
 
 ## Regime shifts
 
