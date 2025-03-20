@@ -40,6 +40,15 @@ al. 2022).
 
 ## Habitat considerations
 
+- Red snapper are associated with deep reef habitats in temperate and
+  tropical waters from North Carolina to the Yucatan Peninsula,
+  including the Gulf of Mexico (Nelson and Manooch III 1982). They occur
+  across a wide range of depths along the continental shelf and shelf
+  break, and are typically found in depths of 50-100m (Manooch III et
+  al. 1998). IBenthic juveniles are found over shell hash and sand
+  substrates (evidence is all from the Gulf of Mexico), while adults are
+  associated with hard-bottom structures.
+
 **Depth distribution** 
 
 - Bacheler et al. (2021) used an acoustic positioning system of 44 red
@@ -56,15 +65,12 @@ al. 2022).
   vertical migration (i.e., thermotaxis) up to warmer waters (when
   present) during the day to aid digestive efficiency. 
 - (Mitchell et al. 2014) found older, larger (\>50 cm FL) red snapper
-  are generally distributed throughout depths(shallow: \<29.0 m; middle:
-  29.0–48.9 m; deep: ≥49.0 m), whereas younger smaller (\<50 cm FL) Red
-  Snapper occurred disproportionately in shallower depths(\<29.0).
+  are generally distributed throughout all depth zones (shallow:
+  \<29.0 m; middle: 29.0–48.9 m; deep: ≥49.0 m), whereas younger smaller
+  (\<50 cm FL) Red Snapper occurred disproportionately in shallower
+  depths (\<29.0).
 
 **Habitat selection** 
-
-- Red snapper are associated with deep reef habitats in temperate and
-  tropical waters in the South Atlantic from North Carolina to Florida
-  and the Gulf of Mexico (Nelson and Manooch III 1982).
 
 - Chatterjee et al. (2024) utilized movement modelling of acoustic
   telemetry data set of 35 red snapper and found that most red snapper
@@ -164,6 +170,14 @@ John Fieberg. 2024. “Modelling Individual Variability in Habitat
 Selection and Movement Using Integrated Step-Selection Analysis.”
 *Methods in Ecology and Evolution* 15 (6): 1034–47.
 <https://doi.org/10.1111/2041-210X.14321>.
+
+</div>
+
+<div id="ref-manooch1998population" class="csl-entry">
+
+Manooch III, Charles S, Jennifer C Potts, Douglas S Vaughan, and Michael
+L Burton. 1998. “Population Assessment of the Red Snapper from the
+Southeastern United States.” *Fisheries Research* 38 (1): 19–32.
 
 </div>
 

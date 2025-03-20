@@ -36,7 +36,7 @@ Consider any known evidence regarding ecosystem, climate, species interactions(e
 
 ## Habitat considerations
 
--   Red snapper are associated with deep reef habitats in temperate and tropical waters from North Carolina to the Yucatan Peninsula, including the Gulf of Mexico [@nelson1982growth]. They occur across a wide range of depths along the continental shelf and shelf break, and are typically found in depths of 50-100m [@manooch1998population]. In the Gulf of Mexico, benthic juveniles are found over shell hash and sand substrates, while adults are associated with hard-bottom structures.
+-   Red snapper are associated with deep reef habitats in temperate and tropical waters from North Carolina to the Yucatan Peninsula, including the Gulf of Mexico [@nelson1982growth]. They occur across a wide range of depths along the continental shelf and shelf break, and are typically found in depths of 50-100m [@manooch1998population]. Benthic juveniles are found over shell hash and sand substrates (evidence is all from the Gulf of Mexico), while adults are associated with hard-bottom structures.
 
 **Depth distribution** 
 
