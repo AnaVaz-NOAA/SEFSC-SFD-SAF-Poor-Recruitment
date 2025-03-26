@@ -45,7 +45,7 @@ al. 2022).
   including the Gulf of Mexico (Nelson and Manooch III 1982). They occur
   across a wide range of depths along the continental shelf and shelf
   break, and are typically found in depths of 50-100m (Manooch III et
-  al. 1998). IBenthic juveniles are found over shell hash and sand
+  al. 1998). Benthic juveniles are found over shell hash and sand
   substrates (evidence is all from the Gulf of Mexico), while adults are
   associated with hard-bottom structures.
 

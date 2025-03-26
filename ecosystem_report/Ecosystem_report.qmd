@@ -12,6 +12,8 @@ Consider any known evidence regarding ecosystem, climate, species interactions(e
 
 -   Species interactions - Lauren Gentry and David Chagaris ECOSIM/ECOPATH for RS
 
+    -   analyses that Lauren did - species interactions could drive something like black sea bass to local extinction. Ran through model what if keep rebuilding to 2024. Too much prey switching (generalist predators). Have niche overlap, different metrics. Need to put those numbers into context.
+
 -   Matt Damiano and Matt Carr miniVAST if done
 
 ## Larval movement between stock boundaries
@@ -50,6 +52,8 @@ Consider any known evidence regarding ecosystem, climate, species interactions(e
 -   @bacheler2025a found that the relative abundance of red snapper has increased dramatically (∼ 1000 %) between 2011 and 2022 based on a long-term baited trap and video survey (SERFS). Red snapper were most commonly observed off the east coast of Florida, Georgia, and, to a lesser extent, off the Outer Banks of North Carolina. Red snapper were most commonly observed at moderate (40 m) depths and displayed a positive relationship with water temperature and patchy reef habitat.
 
 -   Preliminary surveys from the SERFS video trap survey were sampled with traps and video north of Hatteras in August 2024 (baited fish traps with attached gopro cameras). Two days (36 samples) were in the Kitty Hawk Wind Energy Area (all sand, no fish), one day (18 samples) were offshore of the Currituck Lighthouse in a mix of artificial and natural areas (some black sea bass and gray triggerfish, no red snapper because the water was too cold \~14 C), and one day was at Avon Rocks just east of Avon, NC - we caught a few small red snapper that day in 18 traps (water was much warmer). There might be a small number of red snapper north of Hatteras but not many. But hard to draw too many conclusions from a single sampling trip north of Hatteras (personal correspondence with Nate Bacheler). 
+
+-   Ted - data on artificial reefs
 
 **Other environmental drivers**
 
